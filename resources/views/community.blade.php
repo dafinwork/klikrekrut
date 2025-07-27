@@ -81,30 +81,58 @@
     <div class="row g-4 align-items-center">
       <div class="col-md-6">
         <div class="d-flex flex-column gap-3">
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary">
+
+          <!-- Benefit 1 -->
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/andi.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Bulletin</h6>
             <p class="mb-0 text-muted">Dapatkan buletin mingguan tentang pasar kerja, berita rekrutmen, dan tren industri yang dibagikan hanya di dalam komunitas.</p>
           </div>
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary">
+
+          <!-- Benefit 2 -->
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/adam.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Event</h6>
             <p class="mb-0 text-muted">Dapatkan akses ke event edukasi rekrutmen dari para profesional dan rekruter perusahaan khusus member komunitas.</p>
           </div>
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary">
+
+          <!-- Benefit 3 -->
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/far.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Opportunities</h6>
             <p class="mb-0 text-muted">Akses informasi lowongan kerja, freelance dan kolaborasi dari para member yang ditawarkan hanya di dalam komunitas.</p>
           </div>
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary">
+
+          <!-- Benefit 4 -->
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/tangan.jpg">
             <h6 class="fw-bold text-dark mb-1">Career Discussion Group</h6>
             <p class="mb-0 text-muted">Berjejaring dan berdiskusi karir dengan member lain yang sebidang denganmu.</p>
           </div>
+
         </div>
       </div>
+
+      <!-- Gambar akan berubah -->
       <div class="col-md-6 text-center">
-        <img src="assets/img/klik.jpg" alt="Group Preview" class="img-fluid" style="max-height: 500px;">
+        <img id="benefit-image" src="assets/img/klik.jpg" alt="Benefit Preview" class="img-fluid transition-img" style="max-height: 500px;">
       </div>
     </div>
   </div>
 </section>
+<script>
+  document.querySelectorAll('.benefit-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const img = document.getElementById('benefit-image');
+      const newSrc = this.getAttribute('data-img');
+
+      // Tambahkan efek fade-out
+      img.classList.add('fade-out');
+
+      // Setelah animasi selesai, ganti gambar dan fade-in
+      setTimeout(() => {
+        img.setAttribute('src', newSrc);
+        img.classList.remove('fade-out');
+      }, 300); // sesuaikan waktunya dengan CSS transition (0.5s)
+    });
+  });
+</script>
 
 <!-- UPCOMING EVENT SECTION -->
 <section style="background-color: #4A7CA9; padding: 60px 0;">
