@@ -29,248 +29,261 @@
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-<header class="header d-flex align-items-center fixed-top">
-  <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
-    <a href="#" class="logo d-flex align-items-center">
-      <h1 class="sitename"><span class="bold">Klik</span><span>rekrut</span></h1>
-    </a>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+<!-- hero section -->
+<header class="header fixed-top">
+  <div class="container d-flex justify-content-between align-items-center py-2">
+<a href="#" class="logo d-flex align-items-center">
+  <img src="assets/img/logoklik.png" alt="Klikrekrut Logo" class="logo-full" />
+</a> <!-- di css namanya logo -->
+
+    <!-- Mobile toggle button -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- Navigation Menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ url('/find') }}">Find Employee</a></li>
-        <li><a href="{{ url('/job') }}">Find Job</a></li>
-        <li><a href="{{ url('/learning') }}">E-Learning</a></li>
-        <li><a href="{{ url('/community') }}">Community</a></li>
+        <li class="dropdown">
+          <a href="#">Services <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">Assistant</a></li>
+            <li><a href="{{ url('community') }}">Community</a></li>
+            <li><a href="{{ url('learning') }}">E-learning</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Free Resources</a></li>
+        <li class="dropdown">
+          <a href="#">Company <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Partner with us</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="btn btn-outline-light rounded-pill px-3 py-1">Book Free Consultation</a></li>
       </ul>
     </nav>
   </div>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".mobile-nav-toggle");
+    const navmenu = document.getElementById("navmenu");
+    const dropdowns = document.querySelectorAll(".navmenu .dropdown");
 
+    toggle.addEventListener("click", () => {
+      navmenu.classList.toggle("active");
+      document.body.classList.toggle("mobile-nav-active");
+    });
+
+    // Tutup dropdown saat klik dropdown lain
+    dropdowns.forEach(drop => {
+      const link = drop.querySelector("a");
+
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Tutup semua dulu
+        dropdowns.forEach(d => {
+          if (d !== drop) {
+            d.classList.remove("open");
+          }
+        });
+
+        // Toggle yang sekarang
+        drop.classList.toggle("open");
+
+        // Toggle tampilan dropdownnya
+        const submenu = drop.querySelector("ul");
+        submenu.style.display = drop.classList.contains("open") ? "block" : "none";
+      });
+    });
+
+    // Tutup nav saat klik luar
+    document.addEventListener("click", function (e) {
+      if (
+        document.body.classList.contains("mobile-nav-active") &&
+        !e.target.closest("#navmenu") &&
+        !e.target.closest(".mobile-nav-toggle")
+      ) {
+        navmenu.classList.remove("active");
+        document.body.classList.remove("mobile-nav-active");
+
+        // Tutup semua dropdown
+        dropdowns.forEach(d => {
+          d.classList.remove("open");
+          const submenu = d.querySelector("ul");
+          if (submenu) submenu.style.display = "none";
+        });
+      }
+    });
+  });
+</script>
 <main class="main">
 <!-- Tambahkan di layout atau halaman -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- Hero Section -->
-<section id="hero" class="hero section dark-background" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to bottom, #004AAD, #5DE0E6); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+<section id="hero" class="hero section position-relative" style="background: linear-gradient(to right, #5DE0E6, #004AAD); padding: 100px 0 0 0; overflow: hidden;">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center text-center" data-aos="fade-up">
-    <h4 class="mb-4" style="font-weight: 600; font-size: 1.1rem; color: white;">
-      <span style="color: white;">klik</span><span style="color: #ccc;">rekrut</span>
-    </h4>
-    <h1 class="mb-4" style="font-weight: 700; font-size: 2.7rem; line-height: 1.3; color: white;">
-      Making it Easy<br>
-      for Everyone to Get<br>
-      <span class="exclusive-text">Employees and Jobs.</span>
-    </h1>
-    <p id="typing-text" class="mb-5" style="font-size: 1rem; color: #f0f0f0;"></p>
-    <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-      <a href="https://api.whatsapp.com/send?phone=6289678868752" target="_blank" class="btn btn-outline-light rounded-pill px-4 py-2" style="font-weight: 500; border: 2px solid #fff;">
-        Hubungi Kami
-      </a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white" data-aos="fade-right">
+        <h1 class="mb-4 hero-title">
+          <span class="animated-word" style="--delay: 0.6s;">Membantu</span>
+          <span class="animated-word" style="--delay: 0.8s;">Anda</span><br>
+          <span class="animated-word" style="--delay: 1.2s;">Merekrut</span>
+          <span class="animated-word" style="--delay: 1.4s;">Tim Masa Depan</span>
+        </h1>
+        <p class="mb-4">Satu platform untuk kemudahan rekrutmen – mulai dari mencari pelamar, menemukan kandidat hingga melatih tim rekruter.</p>
+        <a href="#" class="btn btn-success rounded-pill px-4 py-2 pulse-button">Pesan Layanan</a>
+      </div>
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <img src="assets/img/org1.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
+      </div>
     </div>
   </div>
-</section>
-
-<!-- Custom Slider Section -->
-<section id="flip-cards-section" style="background-color: #ffffffff; padding: 60px 0;">
-  <div class="container" data-aos="fade-up">
-    <div class="row justify-content-center g-4" >
-      <!-- Card 1 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div>
-                <h5>Layanan Asisten</h5>
-                <p style="font-size: 0.9rem;">Rekrut Karyawan Lebih Mudah</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <a href="{{ url('/find') }}" class="btn btn-light">START FIND EMPLOYEE</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div>
-                <h5>Loker Cepat</h5>
-                <p style="font-size: 0.9rem;">Apply & Kami Proses ke Client</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <a href="{{ url('/job') }}" class="btn btn-light">START FIND JOB</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div>
-                <h5>Belajar Rekrutmen</h5>
-                <p style="font-size: 0.9rem;">Materi dari Rekruter</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <a href="{{ url('/learning') }}" class="btn btn-light">START LEARNING</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div>
-                <h5>Komunitas Jobseeker</h5>
-                <p style="font-size: 0.9rem;">Gabung dan Terhubung</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <a href="{{ url('/community') }}" class="btn btn-light">MEET OUR COMMUNITY</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Trusted By Section -->
-<section class="trusted-section" style="background-color: #f4f7fa; padding: 60px 0;">
-  <div class="trusted-container" data-aos="fade-up">
-    <h3 class="trusted-title text-center mb-5">
-      Telah dipercaya membantu rekrutmen<br>berbagai perusahaan di Indonesia
-    </h3>
-
-    <div class="row justify-content-center g-4">
-      
-      <!-- Item 1 - Hokkaido -->
-      <div class="col-md-6 col-lg-3">
-        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
-          <img src="assets/img/hokp.png" alt="Hokkaido Logo" class="trusted-img mb-3">
-          <a href="https://id.cheesetart.com/" target="_blank" class="text-decoration-none">
-            <h5 class="fw-bold text-dark">Hokkaido</h5>
-          </a>
-          <p class="text-muted" style="font-size: 0.9rem;">
-            Hokkaido adalah jaringan restoran Jepang yang terkenal dengan menu berkualitas dan pelayanan terbaik. Klik Rekrut dipercaya membantu merekrut staff operasional di beberapa cabangnya di Indonesia.
-          </p>
-        </div>
-      </div>
-
-      <!-- Item 2 - IRIJ -->
-      <div class="col-md-6 col-lg-3">
-        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
-          <img src="assets/img/irij.png" alt="Indonesia Research Institute Logo" class="trusted-img mb-3">
-          <a href="https://irij-jakarta.com/" target="_blank" class="text-decoration-none">
-            <h5 class="fw-bold text-dark">Indonesia Research Institute</h5>
-          </a>
-          <p class="text-muted" style="font-size: 0.9rem;">
-            Lembaga riset independen yang bergerak di bidang sosial, ekonomi, dan teknologi. Klik Rekrut terlibat dalam rekrutmen peneliti dan analis proyek nasional.
-          </p>
-        </div>
-      </div>
-
-      <!-- Item 3 - Sosialoka -->
-      <div class="col-md-6 col-lg-3">
-        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
-          <img src="assets/img/sosi.png" alt="Sosialoka Logo" class="trusted-img mb-3">
-          <a href="https://sosialoka.id/" target="_blank" class="text-decoration-none">
-            <h5 class="fw-bold text-dark">Sosialoka</h5>
-          </a>
-          <p class="text-muted" style="font-size: 0.9rem;">
-            Sosialoka adalah agensi digital marketing yang melayani brand lokal dan internasional. Klik Rekrut menyediakan talenta di bidang konten kreatif dan strategi digital.
-          </p>
-        </div>
-      </div>
-
-      <!-- Item 4 - Nurama -->
-      <div class="col-md-6 col-lg-3">
-        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
-          <img src="assets/img/nur.png" alt="Nurama Logo" class="trusted-img mb-3">
-          <a href="https://www.instagram.com/nurama.clo/" target="_blank" class="text-decoration-none">
-            <h5 class="fw-bold text-dark">Nurama</h5>
-          </a>
-          <p class="text-muted" style="font-size: 0.9rem;">
-            Nurama adalah perusahaan desain arsitektur dan interior modern. Kami membantu rekrutmen desainer dan project coordinator untuk proyek properti besar di Jakarta dan sekitarnya.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Animasi Hover Logo -->
 <style>
-  .trusted-img {
-    max-height: 60px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero-title .animated-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.3s ease-out forwards;
+  animation-delay: var(--delay);
+  animation-fill-mode: both; /* ✅ ini penting biar animasi awal tetap muncul */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse-button {
+  animation: pulse 1.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+.hero img {
+  clip-path: ellipse(60% 90% at 50% 50%);
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem !important;
+    text-align: center;
   }
 
-  .trusted-card:hover .trusted-img {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  .hero .btn {
+    display: block;
+    margin: 0 auto;
   }
+
+  .hero img {
+    max-height: 300px !important;
+    margin-top: 20px;
+  }
+
+  .hero p {
+    text-align: center;
+  }
+
+  .hero .col-lg-6 {
+    text-align: center;
+  }
+}
 </style>
 
-
+</section>
 
 <!-- KLIK Rekrut by Numbers Section -->
-<section style="background-color: #4A7CA9; color: #fff; padding: 60px 20px; text-align: center;">
+<section style="background-color: #363636; color: #fff; padding: 60px 20px; text-align: center;">
   <div class="container" data-aos="fade-up">
-    <!-- Title -->
-    <h2 style="font-weight: 700;">KLIK Rekrut by Numbers</h2>
-    <p style="margin-top: 10px; font-size: 18px; font-weight: 300;">
-      Empowering Indonesia’s Talent and Business Ecosystem.
-    </p>
 
-    <!-- Statistic Cards -->
+    <!-- Title -->
+    <h2 style="font-weight: 700; font-size: 1.6rem; color: #fff;">
+  Empowering Indonesia’s Talent and Business Ecosystem
+</h2>
+
+
+    <!-- Statistics -->
     <div class="row justify-content-center mt-5 g-4">
 
-      <!-- Card 1 -->
+      <!-- Stat 1 -->
       <div class="col-md-3 col-10">
-        <div style="background-color: #ffffff; padding: 30px 20px; border-radius: 20px;">
-          <h3 class="counter" data-target="7" style="font-size: 48px; font-weight: 700; color: #000;">0</h3>
-          <p style="margin: 0; font-weight: 500; color: #000;">Position Filled</p>
-        </div>
+        <h1 class="counter" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <p style="color: #e0e0e0; font-size: 0.95rem;">of successfully filled<br>our client needs</p>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Stat 2 -->
       <div class="col-md-3 col-10">
-        <div style="background-color: #ffffff; padding: 30px 20px; border-radius: 20px;">
-          <h3 class="counter" data-target="14" style="font-size: 48px; font-weight: 700; color: #000;">0</h3>
-          <p style="margin: 0; font-weight: 500; color: #000;">Talent Placement</p>
-        </div>
+        <h1 class="counter" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <p style="color: #e0e0e0; font-size: 0.95rem;">of talent elevate<br>their career</p>
       </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4 col-10">
-        <div style="background-color: #ffffff; padding: 30px 20px; border-radius: 20px;">
-          <h3 class="counter" data-target="90" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #000;">0%</h3>
-          <p style="margin: 0; font-weight: 500; color: #000;">of our client successfully grows their business</p>
-        </div>
+      <!-- Stat 3 -->
+      <div class="col-md-3 col-10">
+        <h1 class="counter" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0%</h1>
+        <p style="color: #e0e0e0; font-size: 0.95rem;">of our client successfully<br>grows their business</p>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- rekrutmen -->
+<section class="bg-gradient-to-b from-cyan-400 to-blue-700 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-4xl font-bold mb-10">
+            Menghadirkan solusi rekrutmen berbasis layanan digital <br>
+            yang memberdayakan bisnis dan talent di Indonesia
+        </h2>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
+                <h3 class="text-xl font-bold text-center">
+                    <span class="block">Recruitment</span>
+                    <span class="block">Assistant Service</span>
+                </h3>
+                <p class="text-center mt-4">Rekrut dengan Bantuan Asisten Rekrutmen.</p>
+                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
+                <h3 class="text-xl font-bold text-center">
+                    <span class="block">Recruitment</span>
+                    <span class="block">Community Service</span>
+                </h3>
+                <p class="text-center mt-4">Rekrut dan Komunikasi Langsung dengan Talent Dari Berbagai Bidang.</p>
+                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
+                <h3 class="text-xl font-bold text-center">
+                    <span class="block">Recruitment</span>
+                    <span class="block">Learning Service</span>
+                </h3>
+                <p class="text-center mt-4">Belajar Rekrutmen dari Rekruter.</p>
+                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+  </style>
 <!-- Count-Up Script -->
 <script>
   const counters = document.querySelectorAll('.counter');
@@ -280,8 +293,9 @@
       const suffix = counter.getAttribute('data-suffix') || '';
       const target = +counter.getAttribute('data-target');
       const count = +counter.innerText.replace(/\D/g, '');
-      const speed = 40; // semakin besar, semakin lambat tiap update
-      const increment = Math.ceil(target / 100); // semakin besar pembagi, semakin halus/lambat
+      
+      const speed = 50; // Semakin besar, semakin lambat (default: 30)
+      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
 
       if (count < target) {
         counter.innerText = `${count + increment}${suffix}`;
@@ -291,7 +305,6 @@
       }
     };
 
-    // Trigger only when element is visible
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -299,11 +312,13 @@
           observer.unobserve(counter);
         }
       });
-    }, { threshold: 1.0 });
+    }, { threshold: 0.9 });
 
     observer.observe(counter);
   });
 </script>
+
+
 
 <!-- What Our Clients Say Section -->
 <section style="background-color: #000; color: #fff; padding: 60px 20px; text-align: center; font-family: 'Inter', sans-serif;">
@@ -472,7 +487,6 @@
   // Jalankan animasi saat halaman dimuat
   window.addEventListener("DOMContentLoaded", type);
 </script>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
