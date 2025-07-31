@@ -85,7 +85,7 @@
                 <img src="assets/img/andi.jpg" alt="Product 1" class="product-img">
               </div>
               <div class="card-back d-flex flex-column justify-content-center align-items-center">
-                <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <img src="assets/img/far.jpg" alt="Product 2" class="product-img">
               </div>
               <div class="card-back d-flex flex-column justify-content-center align-items-center">
-                <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
                 <img src="assets/img/adam.jpg" alt="Product 3" class="product-img">
               </div>
               <div class="card-back d-flex flex-column justify-content-center align-items-center">
-                <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@
             <img src="assets/img/andi.jpg" alt="Product 4" class="product-img">
           </div>
           <div class="card-back d-flex flex-column justify-content-center align-items-center">
-            <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+            <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
             <img src="assets/img/far.jpg" alt="Product 5" class="product-img">
           </div>
           <div class="card-back d-flex flex-column justify-content-center align-items-center">
-            <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+            <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@
             <img src="assets/img/adam.jpg" alt="Product 6" class="product-img">
           </div>
           <div class="card-back d-flex flex-column justify-content-center align-items-center">
-            <a href="#" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
+            <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-warning rounded-pill px-4 py-2 fw-semibold">RP 19.000</a>
           </div>
         </div>
       </div>
@@ -213,9 +213,9 @@
           <div class="col-md-3 col-12 mb-4">
             <h6 style="font-weight: 700; font-size: 13px;">LAINNYA</h6>
             <div style="margin-top: 10px;">
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
+              <a href="https://www.tiktok.com/@klikrekrut" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
               <a href="https://www.instagram.com/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/ig.png" alt="Instagram" style="width: 20px;"></a>
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
+              <a href="https://www.linkedin.com/company/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
               <a href="#" style="margin-right: 10px;"><img src="assets/img/twt.png" alt="Twitter" style="width: 20px;"></a>
               <a href="#"><img src="assets/img/yt.png" alt="YouTube" style="width: 20px;"></a>
             </div>

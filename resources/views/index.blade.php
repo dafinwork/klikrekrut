@@ -153,45 +153,82 @@
 <!-- Trusted By Section -->
 <section class="trusted-section" style="background-color: #f4f7fa; padding: 60px 0;">
   <div class="trusted-container" data-aos="fade-up">
-    <h3 class="trusted-title">
+    <h3 class="trusted-title text-center mb-5">
       Telah dipercaya membantu rekrutmen<br>berbagai perusahaan di Indonesia
     </h3>
 
-    <div class="trusted-grid">
-      <div class="trusted-item">
-        <img src="assets/img/hokp.png" alt="Hokkaido Logo">
-        <div class="trusted-text">
-          <h4>Hokkaido</h4>
-          <p>Hokkaido adalah jaringan restoran Jepang yang terkenal dengan menu berkualitas dan pelayanan terbaik. Klik Rekrut dipercaya membantu merekrut staff operasional di beberapa cabangnya di Indonesia.</p>
+    <div class="row justify-content-center g-4">
+      
+      <!-- Item 1 - Hokkaido -->
+      <div class="col-md-6 col-lg-3">
+        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
+          <img src="assets/img/hokp.png" alt="Hokkaido Logo" class="trusted-img mb-3">
+          <a href="https://id.cheesetart.com/" target="_blank" class="text-decoration-none">
+            <h5 class="fw-bold text-dark">Hokkaido</h5>
+          </a>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            Hokkaido adalah jaringan restoran Jepang yang terkenal dengan menu berkualitas dan pelayanan terbaik. Klik Rekrut dipercaya membantu merekrut staff operasional di beberapa cabangnya di Indonesia.
+          </p>
         </div>
       </div>
 
-      <div class="trusted-item">
-        <img src="assets/img/irij.png" alt="Indonesia Research Institute Logo">
-        <div class="trusted-text">
-          <h4>Indonesia Research Institute</h4>
-          <p>Lembaga riset independen yang bergerak di bidang sosial, ekonomi, dan teknologi. Klik Rekrut terlibat dalam rekrutmen peneliti dan analis proyek nasional.</p>
+      <!-- Item 2 - IRIJ -->
+      <div class="col-md-6 col-lg-3">
+        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
+          <img src="assets/img/irij.png" alt="Indonesia Research Institute Logo" class="trusted-img mb-3">
+          <a href="https://irij-jakarta.com/" target="_blank" class="text-decoration-none">
+            <h5 class="fw-bold text-dark">Indonesia Research Institute</h5>
+          </a>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            Lembaga riset independen yang bergerak di bidang sosial, ekonomi, dan teknologi. Klik Rekrut terlibat dalam rekrutmen peneliti dan analis proyek nasional.
+          </p>
         </div>
       </div>
 
-      <div class="trusted-item">
-        <img src="assets/img/sosi.png" alt="Sosialoka Logo">
-        <div class="trusted-text">
-          <h4>Sosialoka</h4>
-          <p>Sosialoka adalah agensi digital marketing yang melayani brand lokal dan internasional. Klik Rekrut menyediakan talenta di bidang konten kreatif dan strategi digital.</p>
+      <!-- Item 3 - Sosialoka -->
+      <div class="col-md-6 col-lg-3">
+        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
+          <img src="assets/img/sosi.png" alt="Sosialoka Logo" class="trusted-img mb-3">
+          <a href="https://sosialoka.id/" target="_blank" class="text-decoration-none">
+            <h5 class="fw-bold text-dark">Sosialoka</h5>
+          </a>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            Sosialoka adalah agensi digital marketing yang melayani brand lokal dan internasional. Klik Rekrut menyediakan talenta di bidang konten kreatif dan strategi digital.
+          </p>
         </div>
       </div>
 
-      <div class="trusted-item">
-        <img src="assets/img/nur.png" alt="Nurama Logo">
-        <div class="trusted-text">
-          <h4>Nurama</h4>
-          <p>Nurama adalah perusahaan desain arsitektur dan interior modern. Kami membantu rekrutmen desainer dan project coordinator untuk proyek properti besar di Jakarta dan sekitarnya.</p>
+      <!-- Item 4 - Nurama -->
+      <div class="col-md-6 col-lg-3">
+        <div class="trusted-card text-center p-3 bg-white shadow rounded h-100">
+          <img src="assets/img/nur.png" alt="Nurama Logo" class="trusted-img mb-3">
+          <a href="https://www.instagram.com/nurama.clo/" target="_blank" class="text-decoration-none">
+            <h5 class="fw-bold text-dark">Nurama</h5>
+          </a>
+          <p class="text-muted" style="font-size: 0.9rem;">
+            Nurama adalah perusahaan desain arsitektur dan interior modern. Kami membantu rekrutmen desainer dan project coordinator untuk proyek properti besar di Jakarta dan sekitarnya.
+          </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<!-- Animasi Hover Logo -->
+<style>
+  .trusted-img {
+    max-height: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .trusted-card:hover .trusted-img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+
 
 <!-- KLIK Rekrut by Numbers Section -->
 <section style="background-color: #4A7CA9; color: #fff; padding: 60px 20px; text-align: center;">
@@ -374,14 +411,14 @@
               <li><a href="community" style="text-decoration: none; color: #333;">Community</a></li>
             </ul>
           </div>
-
+  
           <!-- LAINNYA + Sosmed -->
           <div class="col-md-3 col-12 mb-4">
             <h6 style="font-weight: 700; font-size: 13px;">LAINNYA</h6>
             <div style="margin-top: 10px;">
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
+              <a href="https://www.tiktok.com/@klikrekrut" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
               <a href="https://www.instagram.com/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/ig.png" alt="Instagram" style="width: 20px;"></a>
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
+              <a href="https://www.linkedin.com/company/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
               <a href="#" style="margin-right: 10px;"><img src="assets/img/twt.png" alt="Twitter" style="width: 20px;"></a>
               <a href="#"><img src="assets/img/yt.png" alt="YouTube" style="width: 20px;"></a>
             </div>

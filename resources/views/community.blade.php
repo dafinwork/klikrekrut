@@ -83,25 +83,25 @@
         <div class="d-flex flex-column gap-3">
 
           <!-- Benefit 1 -->
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/andi.jpg">
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/hand.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Bulletin</h6>
             <p class="mb-0 text-muted">Dapatkan buletin mingguan tentang pasar kerja, berita rekrutmen, dan tren industri yang dibagikan hanya di dalam komunitas.</p>
           </div>
 
           <!-- Benefit 2 -->
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/adam.jpg">
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/event.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Event</h6>
             <p class="mb-0 text-muted">Dapatkan akses ke event edukasi rekrutmen dari para profesional dan rekruter perusahaan khusus member komunitas.</p>
           </div>
 
           <!-- Benefit 3 -->
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/far.jpg">
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/join.jpg">
             <h6 class="fw-bold text-dark mb-1">Exclusive Opportunities</h6>
             <p class="mb-0 text-muted">Akses informasi lowongan kerja, freelance dan kolaborasi dari para member yang ditawarkan hanya di dalam komunitas.</p>
           </div>
 
           <!-- Benefit 4 -->
-          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/tangan.jpg">
+          <div class="p-3 bg-white shadow rounded border-start border-5 border-primary benefit-item" data-img="assets/img/business.jpg">
             <h6 class="fw-bold text-dark mb-1">Career Discussion Group</h6>
             <p class="mb-0 text-muted">Berjejaring dan berdiskusi karir dengan member lain yang sebidang denganmu.</p>
           </div>
@@ -255,9 +255,9 @@
           <div class="col-md-3 col-12 mb-4">
             <h6 style="font-weight: 700; font-size: 13px;">LAINNYA</h6>
             <div style="margin-top: 10px;">
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
+              <a href="https://www.tiktok.com/@klikrekrut" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
               <a href="https://www.instagram.com/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/ig.png" alt="Instagram" style="width: 20px;"></a>
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
+              <a href="https://www.linkedin.com/company/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
               <a href="#" style="margin-right: 10px;"><img src="assets/img/twt.png" alt="Twitter" style="width: 20px;"></a>
               <a href="#"><img src="assets/img/yt.png" alt="YouTube" style="width: 20px;"></a>
             </div>
