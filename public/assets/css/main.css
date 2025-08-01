@@ -156,7 +156,7 @@ h6 {
 
 /* Full logo style */
 .logo-full {
-  max-height: 48px;  /* Bisa diubah jadi 56px kalau masih kecil */
+  max-height: 70px;  /* Bisa diubah jadi 56px kalau masih kecil */
   width: auto;
   object-fit: contain;
 }
@@ -353,13 +353,13 @@ h6 {
 /* ========================
    Mobile Nav (Responsive) - Card Style
 ======================== */
-.mobile-nav-toggle {
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  display: none;
-  z-index: 1001;
-}
+  .mobile-nav-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+  }
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {

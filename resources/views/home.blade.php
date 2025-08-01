@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -129,12 +129,13 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 text-white" data-aos="fade-right">
-        <h1 class="mb-4 hero-title">
-          <span class="animated-word" style="--delay: 0.6s;">Membantu</span>
-          <span class="animated-word" style="--delay: 0.8s;">Anda</span><br>
-          <span class="animated-word" style="--delay: 1.2s;">Merekrut</span>
-          <span class="animated-word" style="--delay: 1.4s;">Tim Masa Depan</span>
-        </h1>
+<h1 class="mb-4 hero-title" style="font-weight: 700;">
+  <span class="animated-word" style="--delay: 0.6s;">Membantu</span>
+  <span class="animated-word" style="--delay: 0.8s;">Anda</span><br>
+  <span class="animated-word" style="--delay: 1.2s;">Merekrut</span>
+  <span class="animated-word" style="--delay: 1.4s;">Tim Masa Depan</span>
+</h1>
+
         <p class="mb-4">Satu platform untuk kemudahan rekrutmen – mulai dari mencari pelamar, menemukan kandidat hingga melatih tim rekruter.</p>
         <a href="#" class="btn btn-success rounded-pill px-4 py-2 pulse-button">Pesan Layanan</a>
       </div>
@@ -144,6 +145,10 @@
     </div>
   </div>
 <style>
+.hero-title {
+  font-weight: 700; /* atau 800 kalau mau lebih tebal */
+}
+
 .hero-title .animated-word {
   display: inline-block;
   opacity: 0;
@@ -167,6 +172,17 @@
 .pulse-button {
   animation: pulse 1.4s ease-in-out infinite;
   transform-origin: center;
+  width: auto;
+  display: inline-block;
+}
+
+/* Batasi lebar di mobile */
+@media (max-width: 576px) {
+  .pulse-button {
+    width: auto !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @keyframes pulse {
@@ -183,10 +199,23 @@
     text-align: center;
   }
 
+.hero .btn {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (max-width: 576px) {
   .hero .btn {
-    display: block;
-    margin: 0 auto;
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
+}
+
 
   .hero img {
     max-height: 300px !important;
@@ -204,86 +233,38 @@
 </style>
 
 </section>
-
-<!-- KLIK Rekrut by Numbers Section -->
-<section style="background-color: #363636; color: #fff; padding: 60px 20px; text-align: center;">
+<section style="background-color: #363636; color: #fff; padding: 30px 10px; text-align: center;">
   <div class="container" data-aos="fade-up">
 
     <!-- Title -->
-    <h2 style="font-weight: 700; font-size: 1.6rem; color: #fff;">
-  Empowering Indonesia’s Talent and Business Ecosystem
-</h2>
+    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 30px;">
+      Empowering Indonesia’s Talent and Business Ecosystem
+    </h2>
 
-
-    <!-- Statistics -->
-    <div class="row justify-content-center mt-5 g-4">
+    <!-- Statistik -->
+    <div class="row justify-content-center text-center g-4">
 
       <!-- Stat 1 -->
-      <div class="col-md-3 col-10">
-        <h1 class="counter" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
-        <p style="color: #e0e0e0; font-size: 0.95rem;">of successfully filled<br>our client needs</p>
+      <div class="col-12 col-md-4">
+        <h1 class="counter" data-target="7" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0</h1>
+        <p style="color: #e0e0e0; font-size: 0.85rem;">of successfully filled<br>our client needs</p>
       </div>
 
       <!-- Stat 2 -->
-      <div class="col-md-3 col-10">
-        <h1 class="counter" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
-        <p style="color: #e0e0e0; font-size: 0.95rem;">of talent elevate<br>their career</p>
+      <div class="col-12 col-md-4">
+        <h1 class="counter" data-target="14" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0</h1>
+        <p style="color: #e0e0e0; font-size: 0.85rem;">of talent elevate<br>their career</p>
       </div>
 
       <!-- Stat 3 -->
-      <div class="col-md-3 col-10">
-        <h1 class="counter" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0%</h1>
-        <p style="color: #e0e0e0; font-size: 0.95rem;">of our client successfully<br>grows their business</p>
+      <div class="col-12 col-md-4">
+        <h1 class="counter" data-target="90" data-suffix="%" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0%</h1>
+        <p style="color: #e0e0e0; font-size: 0.85rem;">of our client successfully<br>grows their business</p>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- rekrutmen -->
-<section class="bg-gradient-to-b from-cyan-400 to-blue-700 text-white py-12">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl md:text-4xl font-bold mb-10">
-            Menghadirkan solusi rekrutmen berbasis layanan digital <br>
-            yang memberdayakan bisnis dan talent di Indonesia
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
-                <h3 class="text-xl font-bold text-center">
-                    <span class="block">Recruitment</span>
-                    <span class="block">Assistant Service</span>
-                </h3>
-                <p class="text-center mt-4">Rekrut dengan Bantuan Asisten Rekrutmen.</p>
-                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
-                <h3 class="text-xl font-bold text-center">
-                    <span class="block">Recruitment</span>
-                    <span class="block">Community Service</span>
-                </h3>
-                <p class="text-center mt-4">Rekrut dan Komunikasi Langsung dengan Talent Dari Berbagai Bidang.</p>
-                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg text-black p-6 flex flex-col items-center">
-                <h3 class="text-xl font-bold text-center">
-                    <span class="block">Recruitment</span>
-                    <span class="block">Learning Service</span>
-                </h3>
-                <p class="text-center mt-4">Belajar Rekrutmen dari Rekruter.</p>
-                <a href="#" class="mt-6 text-blue-600 font-semibold">Read More</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-  </style>
 <!-- Count-Up Script -->
 <script>
   const counters = document.querySelectorAll('.counter');
@@ -317,9 +298,234 @@
     observer.observe(counter);
   });
 </script>
+<!-- reqruitment -->
+<section class="service-section py-5">
+  <div class="container text-center">
+    <!-- Judul -->
+    <h2 class="section-title mb-5 fw-bold text-white">
+      Menghadirkan solusi rekrutmen berbasis layanan digital<br>
+      yang memberdayakan bisnis dan talent di Indonesia
+    </h2>
 
+    <!-- Kartu Layanan -->
+    <div class="row g-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card p-4 h-100">
+          <img src="assets/img/awan.png" alt="Service 1" class="img-fluid mb-3 rounded">
+          <h5 class="fw-bold">Recruitment Assistant Service</h5>
+          <p>Rekrut dengan Bantuan Asisten Rekrutmen.</p>
+          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
+        </div>
+      </div>
 
+      <!-- Card 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card p-4 h-100">
+          <img src="assets/img/awan.png" alt="Service 2" class="img-fluid mb-3 rounded">
+          <h5 class="fw-bold">Recruitment Community Service</h5>
+          <p>Rekrut dan Komunikasi Langsung dengan Talent Dari Berbagai Bidang.</p>
+          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
+        </div>
+      </div>
 
+      <!-- Card 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card p-4 h-100">
+          <img src="assets/img/awan.png" alt="Service 3" class="img-fluid mb-3 rounded">
+          <h5 class="fw-bold">Recruitment Learning Service</h5>
+          <p>Belajar Rekrutmen dari Rekruter.</p>
+          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .service-section {
+  background: linear-gradient(to bottom right, #5DE0E6, #004AAD);
+  color: #fff;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  border-radius: 10px;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+</style>
+
+<!-- Benefit Section -->
+<!-- Benefit Section -->
+<section class="benefit-section">
+  <div class="container text-center">
+    <h2 class="benefit-title">Bagaimana <strong>KLIK Rekrut</strong> membantu perusahaan Anda?</h2>
+    
+    <div class="benefit-cards-wrapper">
+      <div class="benefit-cards">
+        
+        <div class="benefit-card">
+          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
+        </div>
+
+        <div class="benefit-card">
+          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
+        </div>
+
+        <div class="benefit-card">
+          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
+        </div>
+
+        <div class="benefit-card">
+          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
+        </div>
+
+      </div>
+    </div>
+      <div class="container text-center">
+    <h2 class="benefit-title"><strong>Biaya Rendah, Cocok Untuk Semua Bisnis, Mudah Digunakan</strong></h2>
+  </div>
+</section>
+<style>
+.benefit-section {
+  background-color: #F9F8FB;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.benefit-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.benefit-cards-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.benefit-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+}
+
+.benefit-card {
+  background-color: #cfd1d6;
+  border-radius: 20px;
+  padding: 20px 15px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  flex: 0 0 250px; /* Default desktop width */
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background-color: #bfc2c7;
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  width: 60px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .benefit-card {
+    flex: 0 0 80%; /* Full-width on mobile with padding */
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 220px;
+    font-size: 0.95rem;
+    padding: 40px 10px 15px;
+  }
+}
+</style>
+<!-- Trusted By Section -->
+<!-- Trusted By Section -->
+<section class="trusted-section">
+  <div class="container">
+    <p class="trusted-label mb-3">Telah dipercaya oleh</p>
+    <div class="trusted-logos-wrapper">
+      <img src="assets/img/hokkaido.jpg" alt="Hokkaido" class="trusted-logo" />
+      <img src="assets/img/irij.png" alt="Indonesia Research" class="trusted-logo" />
+      <img src="assets/img/sosialoka.png" alt="Sosialoka" class="trusted-logo" />
+      <img src="assets/img/nurama.png" alt="Nurama" class="trusted-logo" />
+    </div>
+  </div>
+</section>
+<style>
+.trusted-section {
+  background-color: #f9f8fb;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.trusted-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  width: 100%;
+}
+
+.trusted-logo {
+  max-height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.trusted-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .trusted-logo {
+    max-height: 28px;
+    margin: 0 8px;
+  }
+
+  .trusted-section .container {
+    gap: 16px;
+  }
+}
+
+</style>
 <!-- What Our Clients Say Section -->
 <section style="background-color: #000; color: #fff; padding: 60px 20px; text-align: center; font-family: 'Inter', sans-serif;">
   <div class="container" data-aos="fade-up">
