@@ -142,6 +142,10 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* font poppins */
+.counter {
+  font-family: 'Poppins', sans-serif !important;
+}
 .header {
   --background-color: rgba(255, 255, 255, 0); /* transparan */
   --default-color: #ffffff;
@@ -156,7 +160,7 @@ h6 {
 
 /* Full logo style */
 .logo-full {
-  max-height: 70px;  /* Bisa diubah jadi 56px kalau masih kecil */
+  max-height: 46px;  /* Bisa diubah jadi 56px kalau masih kecil */
   width: auto;
   object-fit: contain;
 }
@@ -437,68 +441,6 @@ h6 {
     border-radius: 50px;
     font-weight: 500;
   }
-}
-
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
-}
-
-.footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-.footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links {
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links a {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  line-height: 1;
-  margin: 0 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  text-decoration: none;
-}
-
-.footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
 }
 
 /*--------------------------------------------------------------

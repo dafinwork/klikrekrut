@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
 <header class="header fixed-top">
   <div class="container d-flex justify-content-between align-items-center py-2">
 <a href="#" class="logo d-flex align-items-center">
-  <img src="assets/img/logoklik.png" alt="Klikrekrut Logo" class="logo-full" />
+  <img src="assets/img/header.png" alt="Klikrekrut Logo" class="logo-full" />
 </a> <!-- di css namanya logo -->
 
     <!-- Mobile toggle button -->
@@ -61,7 +62,7 @@
             <li><a href="#">Partner with us</a></li>
           </ul>
         </li>
-        <li><a href="#" class="btn btn-outline-light rounded-pill px-3 py-1">Book Free Consultation</a></li>
+        <li><a href="#" class="btn btn-outline-light rounded-pill px-3 py-1">Get Consultation Free ➝</a></li>
       </ul>
     </nav>
   </div>
@@ -125,22 +126,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- Hero Section -->
-<section id="hero" class="hero section position-relative" style="background: linear-gradient(to right, #5DE0E6, #004AAD); padding: 100px 0 0 0; overflow: hidden;">
+<section id="hero" class="hero section position-relative">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 text-white" data-aos="fade-right">
-<h1 class="mb-4 hero-title" style="font-weight: 700;">
-  <span class="animated-word" style="--delay: 0.6s;">Membantu</span>
-  <span class="animated-word" style="--delay: 0.8s;">Anda</span><br>
-  <span class="animated-word" style="--delay: 1.2s;">Merekrut</span>
-  <span class="animated-word" style="--delay: 1.4s;">Tim Masa Depan</span>
-</h1>
-
+        <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
+          <span class="animated-word" style="--delay:0.6s;">Membantu</span>
+          <span class="animated-word" style="--delay:0.8s;">Anda</span><br>
+          <span class="animated-word" style="--delay:1.2s;">Merekrut</span>
+          <span class="animated-word" style="--delay:1.4s;">Tim Masa Depan</span>
+        </h1>
         <p class="mb-4">Satu platform untuk kemudahan rekrutmen – mulai dari mencari pelamar, menemukan kandidat hingga melatih tim rekruter.</p>
         <a href="#" class="btn btn-success rounded-pill px-4 py-2 pulse-button">Pesan Layanan</a>
       </div>
       <div class="col-lg-6 text-center" data-aos="fade-left">
-        <img src="assets/img/org1.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
+        <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
       </div>
     </div>
   </div>
@@ -230,41 +230,78 @@
     text-align: center;
   }
 }
+
+.hero {
+  background: 
+    linear-gradient(to right, #5DE0E6, #004AAD),
+    url('assets/img/ornament.png') no-repeat bottom center;
+  background-size: cover;
+  padding: 100px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Supaya ornament lebih transparan */
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/img/ornament.png') no-repeat bottom center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pastikan konten di atas ornament */
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
 </style>
-
 </section>
-<section style="background-color: #363636; color: #fff; padding: 30px 10px; text-align: center;">
+<!--angka-->
+<section style="background-color: #363636; color: #fff; padding: 40px 20px; text-align: center;">
   <div class="container" data-aos="fade-up">
-
-    <!-- Title -->
-    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 30px;">
+    <!-- Judul -->
+    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
       Empowering Indonesia’s Talent and Business Ecosystem
     </h2>
 
-    <!-- Statistik -->
+    <!-- Statistik horizontal -->
     <div class="row justify-content-center text-center g-4">
-
-      <!-- Stat 1 -->
-      <div class="col-12 col-md-4">
-        <h1 class="counter" data-target="7" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0</h1>
-        <p style="color: #e0e0e0; font-size: 0.85rem;">of successfully filled<br>our client needs</p>
+      
+      <!-- Item 1 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
+          key positions<br>successfully filled
+        </div>
       </div>
 
-      <!-- Stat 2 -->
-      <div class="col-12 col-md-4">
-        <h1 class="counter" data-target="14" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0</h1>
-        <p style="color: #e0e0e0; font-size: 0.85rem;">of talent elevate<br>their career</p>
+      <!-- Item 2 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
+          of talents elevate<br>their career
+        </div>
       </div>
 
-      <!-- Stat 3 -->
-      <div class="col-12 col-md-4">
-        <h1 class="counter" data-target="90" data-suffix="%" style="font-size: 2rem; font-weight: 700; color: #7ed797;">0%</h1>
-        <p style="color: #e0e0e0; font-size: 0.85rem;">of our client successfully<br>grows their business</p>
+      <!-- Item 3 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0%</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
+          of our client successfully<br>grows their business
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
 <!-- Count-Up Script -->
 <script>
   const counters = document.querySelectorAll('.counter');
@@ -378,8 +415,6 @@
   color: #555;
 }
 </style>
-
-<!-- Benefit Section -->
 <!-- Benefit Section -->
 <section class="benefit-section">
   <div class="container text-center">
@@ -434,6 +469,9 @@
   gap: 20px;
   flex-wrap: nowrap;
   padding-bottom: 10px;
+  margin: 0 auto; /* Centering */
+  max-width: 1080px; /* Centered container */
+  justify-content: center;
 }
 
 .benefit-card {
@@ -466,45 +504,68 @@
 }
 
 @media (max-width: 767px) {
+  .benefit-cards {
+    justify-content: flex-start; /* Scroll mulai dari kiri */
+    padding-left: 10px;
+  }
+
   .benefit-card {
-    flex: 0 0 80%; /* Full-width on mobile with padding */
-    margin-left: 10px;
+    flex: 0 0 80%;
     margin-right: 10px;
     height: 220px;
-    font-size: 0.95rem;
-    padding: 40px 10px 15px;
   }
 }
 </style>
-<!-- Trusted By Section -->
 <!-- Trusted By Section -->
 <section class="trusted-section">
   <div class="container">
     <p class="trusted-label mb-3">Telah dipercaya oleh</p>
     <div class="trusted-logos-wrapper">
-      <img src="assets/img/hokkaido.jpg" alt="Hokkaido" class="trusted-logo" />
-      <img src="assets/img/irij.png" alt="Indonesia Research" class="trusted-logo" />
-      <img src="assets/img/sosialoka.png" alt="Sosialoka" class="trusted-logo" />
-      <img src="assets/img/nurama.png" alt="Nurama" class="trusted-logo" />
+      <div class="trusted-logos-track">
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+        <!-- Duplikat untuk loop -->
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+      </div>
     </div>
   </div>
 </section>
+
 <style>
 .trusted-section {
-  background-color: #f9f8fb;
+  background-color: #e8f5fc;
   padding: 30px 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 .trusted-label {
   font-size: 1.2rem;
   font-weight: 600;
   color: #111;
+}
+
+.trusted-logos-wrapper {
+  overflow: hidden;
+  position: relative;
   width: 100%;
+  margin-top: 20px;
+}
+
+.trusted-logos-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollLeft 20s linear infinite;
+  width: max-content;
 }
 
 .trusted-logo {
-  max-height: 40px;
+  max-height: 200px;
   object-fit: contain;
   transition: transform 0.3s ease;
   flex: 0 0 auto;
@@ -514,144 +575,484 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 767px) {
-  .trusted-logo {
-    max-height: 28px;
-    margin: 0 8px;
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
   }
-
-  .trusted-section .container {
-    gap: 16px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
+/* Responsive */
+@media (max-width: 767px) {
+  .trusted-logos-track {
+    gap: 24px;
+    animation-duration: 25s;
+  }
+}
+  .trusted-logos-track {
+    gap: 24px;
+    animation-duration: 25s;
+  }
+}
 </style>
 <!-- What Our Clients Say Section -->
-<section style="background-color: #000; color: #fff; padding: 60px 20px; text-align: center; font-family: 'Inter', sans-serif;">
-  <div class="container" data-aos="fade-up">
+<section class="testimonial-section">
+  <div class="container">
     <!-- Title -->
-    <h2 style="font-weight: 700; font-size: 40px; margin-bottom: 40px;">What Our Clients Say</h2>
+    <h2 class="testimonial-title">What Our Clients Say</h2>
 
-    <!-- Testimonial Cards -->
-    <div class="row justify-content-center g-4">
-      
+    <!-- Cards -->
+    <div class="testimonial-cards">
       <!-- Card 1 -->
-      <div class="col-md-4 col-10">
-        <div style="
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(10px);
-          padding: 30px;
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-          transition: transform 0.3s ease;
-        " onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
-          <img src="assets/img/cat1.png" alt="Isla" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
-          <h4 style="font-weight: 600; font-size: 20px;">Isla</h4>
-          <p style="color: #ddd; font-size: 15px;">
-            Testimonials are short quotes from people who love your brand.
-            It's a great way to convince customers to try your services.
-          </p>
-        </div>
+      <div class="testimonial-card">
+        <img src="assets/img/cat1.png" alt="Isla">
+        <h4>Isla</h4>
+        <p>
+          Testimonials are short quotes from people who love your brand.
+          It's a great way to convince customers to try your services.
+        </p>
       </div>
-
       <!-- Card 2 -->
-      <div class="col-md-4 col-10">
-        <div style="
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(10px);
-          padding: 30px;
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-          transition: transform 0.3s ease;
-        " onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
-          <img src="assets/img/cat2.png" alt="Mason" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
-          <h4 style="font-weight: 600; font-size: 20px;">Mason</h4>
-          <p style="color: #ddd; font-size: 15px;">
-            Testimonials are short quotes from people who love your brand.
-            It's a great way to convince customers to try your services.
-          </p>
-        </div>
+      <div class="testimonial-card">
+        <img src="assets/img/cat2.png" alt="Mason">
+        <h4>Mason</h4>
+        <p>
+          Testimonials are short quotes from people who love your brand.
+          It's a great way to convince customers to try your services.
+        </p>
       </div>
-
       <!-- Card 3 -->
-      <div class="col-md-4 col-10">
-        <div style="
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(10px);
-          padding: 30px;
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-          transition: transform 0.3s ease;
-        " onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
-          <img src="assets/img/cat3.png" alt="Jonah" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
-          <h4 style="font-weight: 600; font-size: 20px;">Jonah</h4>
-          <p style="color: #ddd; font-size: 15px;">
-            Testimonials are short quotes from people who love your brand.
-            It's a great way to convince customers to try your services.
-          </p>
-        </div>
+      <div class="testimonial-card">
+        <img src="assets/img/cat3.png" alt="Jonah">
+        <h4>Jonah</h4>
+        <p>
+          Testimonials are short quotes from people who love your brand.
+          It's a great way to convince customers to try your services.
+        </p>
       </div>
-
     </div>
   </div>
 </section>
-    <!-- Footer -->
-    <footer style="background-color: #fff; color: #333; padding: 40px 20px; font-family: 'Inter', sans-serif; font-size: 14px;">
-      <div class="container">
-        <div class="row justify-content-between align-items-start flex-wrap">
 
-          <!-- Logo dan Deskripsi -->
-          <div class="col-md-3 col-12 mb-4">
-            <div style="font-size: 28px; font-weight: 700; font-family: 'Inter', sans-serif; margin-bottom: 10px;">
-              <span style="color: #2A5D9F;">klik</span><span style="color:rgb(0, 145, 255);">rekrut</span>
-            </div>
-            <p style="margin: 0; font-size: 12px; color: #666;">Recruitment & Job Offer Assistant</p>
-          </div>
+<style>
+/* Section Background */
+.testimonial-section {
+  background: #6abcff;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
 
-          <!-- KLIK REKRUT -->
-          <div class="col-md-2 col-6 mb-4">
-            <h6 style="font-weight: 700; font-size: 13px;">KLIK REKRUT</h6>
-            <ul style="list-style: none; padding-left: 0; margin: 0;">
-              <li><a href="find" style="text-decoration: none; color: #333;">Find Employee</a></li>
-              <li><a href="job" style="text-decoration: none; color: #333;">Find Job</a></li>
-              <li><a href="learning" style="text-decoration: none; color: #333;">E-Learning</a></li>
-              <li><a href="community" style="text-decoration: none; color: #333;">Community</a></li>
-            </ul>
-          </div>
+/* Title */
+.testimonial-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
 
-          <!-- LAYANAN -->
-          <div class="col-md-2 col-6 mb-4">
-            <h6 style="font-weight: 700; font-size: 13px;">LAYANAN</h6>
-            <ul style="list-style: none; padding-left: 0; margin: 0;">
-              <li><a href="find" style="text-decoration: none; color: #333;">Find Employee</a></li>
-              <li><a href="job" style="text-decoration: none; color: #333;">Find Job</a></li>
-              <li><a href="learning" style="text-decoration: none; color: #333;">E-Learning</a></li>
-              <li><a href="community" style="text-decoration: none; color: #333;">Community</a></li>
-            </ul>
-          </div>
-  
-          <!-- LAINNYA + Sosmed -->
-          <div class="col-md-3 col-12 mb-4">
-            <h6 style="font-weight: 700; font-size: 13px;">LAINNYA</h6>
-            <div style="margin-top: 10px;">
-              <a href="https://www.tiktok.com/@klikrekrut" style="margin-right: 10px;"><img src="assets/img/tt.png" alt="tiktok" style="width: 35px;"></a>
-              <a href="https://www.instagram.com/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/ig.png" alt="Instagram" style="width: 20px;"></a>
-              <a href="https://www.linkedin.com/company/klikrekrut/" style="margin-right: 10px;"><img src="assets/img/linkln.png" alt="LinkedIn" style="width: 20px;"></a>
-              <a href="#" style="margin-right: 10px;"><img src="assets/img/twt.png" alt="Twitter" style="width: 20px;"></a>
-              <a href="#"><img src="assets/img/yt.png" alt="YouTube" style="width: 20px;"></a>
-            </div>
-          </div>
-        </div>
+/* Cards Container */
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-        <hr style="border-top: 1px solid #999; margin: 20px 0;">
+/* Card */
+.testimonial-card {
+  position: relative; /* supaya ::before bisa absolute */
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* biar efek glossy ga keluar kotak */
+}
 
-        <p style="font-size: 12px; color: #666; margin: 0;">© KLIKREKRUT 2025 • All Right Reserved</p>
+/* Mengkilap efek */
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* Hover Animasi mengkilap geser */
+.testimonial-card:hover::before {
+  animation: shine 1s forwards;
+}
+
+/* Animasi */
+@keyframes shine {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Hover naik */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Name */
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  line-height: 1.5;
+}
+</style>
+<!-- siap untuk  -->
+ <section class="cta-section">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between">
+    
+    <!-- Text -->
+    <div class="cta-text">
+      <h2>Siap untuk meningkatkan<br>perjalanan pemasaran Anda?</h2>
+      <p>Jangan menunggu lebih lama lagi untuk mencapai potensi penuh Anda – klik tombol dan bersiaplah untuk tumbuh hari ini!</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">Buat Kampanye</a>
+        <a href="#" class="btn-secondary">Bahas Bersama Expert</a>
       </div>
-    </footer>
+    </div>
+    
+    <!-- Images -->
+    <div class="cta-images">
+      <div class="image-top">
+        <img src="assets/img/cta1.jpg" alt="Image 1">
+      </div>
+      <div class="image-bottom">
+        <img src="assets/img/cta2.jpg" alt="Image 2">
+      </div>
+    </div>
 
+  </div>
+</section>
+<style>
+  .cta-section {
+  background-color: #1e2a64;
+  padding: 60px 20px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cta-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: #fff; /* putih */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.cta-text p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+  background-color: #ff6b5b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #ff4b3b;
+}
+
+.cta-buttons .btn-secondary {
+  border: 1px solid #ff6b5b;
+  color: #ff6b5b;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: #ff6b5b;
+  color: #fff;
+}
+
+.cta-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 200px;
+  align-items: flex-end;
+}
+
+.cta-images img {
+  border-radius: 12px;
+  width: 220px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-images {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .cta-images img {
+    width: 45%;
+  }
+}
+
+
+  </style>
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <!-- Kiri: Logo + deskripsi -->
+      <div class="footer-about">
+        <img src="assets/img/footer.png" alt="Klik Rekrut Logo" class="footer-logo">
+        <p><strong>KLIK Rekrut</strong> adalah layanan online yang dirancang untuk mempermudah proses merekrut tim.</p>
+      </div>
+
+      <!-- Tengah 1: Kemitraan -->
+      <div class="footer-column">
+        <h6>KEMITRAAN</h6>
+        <ul>
+          <li><a href="#">Recruiter Partner</a></li>
+          <li><a href="#">Sales Partner</a></li>
+          <li><a href="#">Affiliate Partner</a></li>
+        </ul>
+      </div>
+
+      <!-- Tengah 2: Layanan -->
+      <div class="footer-column">
+        <h6>LAYANAN</h6>
+        <ul>
+          <li><a href="#">Asisten Rekrutmen</a></li>
+          <li><a href="#">Komunitas Rekrutmen</a></li>
+          <li><a href="#">Belajar Rekrutmen</a></li>
+        </ul>
+      </div>
+
+      <!-- Kanan: Sosial Media -->
+<div class="footer-column">
+  <h6>LAINNYA</h6>
+  <div class="social-icons">
+    <a href="https://www.tiktok.com/@klikrekrut" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/tiktok.png" alt="Tiktok">
+    </a>
+    <a href="https://www.instagram.com/klikrekrut/" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/company/klikrekrut/" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.youtube.com/@klikrekrut" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/youtube.png" alt="YouTube">
+    </a>
+  </div>
+</div>
+    <!-- Garis Pemisah -->
+    <hr class="footer-divider">
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© KLIKREKRUT 2025 • All Right Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background-color: #fff;
+  color: #333;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-about {
+  flex: 1 1 220px;
+  max-width: 250px;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.footer-column {
+  flex: 1 1 140px;
+  min-width: 140px;
+}
+
+.footer-column h6 {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Garis pemisah */
+.footer-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+}
+/* Copyright */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+/* --- Mobile Layout --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+  .footer-about {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-about p {
+    text-align: center;
+  }
+  .footer-column {
+    max-width: 100%;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+}.footer-bottom {
+  text-align: left;
+  font-size: 12px;
+  color: #666;
+}
+
+  </style>
   </main>
 
   <!-- Scroll Top -->
