@@ -36,7 +36,7 @@
 <header class="header fixed-top">
   <div class="container d-flex justify-content-between align-items-center py-2">
 <a href="#" class="logo d-flex align-items-center">
-  <img src="assets/img/header.png" alt="Klikrekrut Logo" class="logo-full" />
+  <img src="assets/img/header1.png" alt="Klikrekrut Logo" class="logo-full" />
 </a> <!-- di css namanya logo -->
 
     <!-- Mobile toggle button -->
@@ -46,7 +46,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li class="dropdown">
-          <a href="#">Services <i class="bi bi-chevron-down"></i></a>
+          <a href="#">Services <i class="bi bi-chevron-down toggle-icon"></i></a>
           <ul>
             <li><a href="#">Assistant</a></li>
             <li><a href="{{ url('community') }}">Community</a></li>
@@ -55,7 +55,7 @@
         </li>
         <li><a href="#">Free Resources</a></li>
         <li class="dropdown">
-          <a href="#">Company <i class="bi bi-chevron-down"></i></a>
+          <a href="#">Company <i class="bi bi-chevron-down toggle-icon"></i></a>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
@@ -68,40 +68,72 @@
   </div>
 </header>
 <script>
+  // Tambahkan/ambil class 'scrolled' saat scroll
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".mobile-nav-toggle");
     const navmenu = document.getElementById("navmenu");
     const dropdowns = document.querySelectorAll(".navmenu .dropdown");
 
+    // Toggle nav mobile
     toggle.addEventListener("click", () => {
       navmenu.classList.toggle("active");
       document.body.classList.toggle("mobile-nav-active");
     });
 
-    // Tutup dropdown saat klik dropdown lain
+    // Interaksi dropdown
     dropdowns.forEach(drop => {
       const link = drop.querySelector("a");
 
       link.addEventListener("click", (e) => {
         e.preventDefault();
 
-        // Tutup semua dulu
+        // Tutup semua dropdown lain
         dropdowns.forEach(d => {
           if (d !== drop) {
             d.classList.remove("open");
+            const submenu = d.querySelector("ul");
+            if (submenu) submenu.style.display = "none";
+
+            // Reset panah
+            const icon = d.querySelector(".toggle-icon");
+            if (icon) {
+              icon.classList.add("bi-chevron-down");
+              icon.classList.remove("bi-chevron-up");
+            }
           }
         });
 
-        // Toggle yang sekarang
+        // Toggle dropdown sekarang
         drop.classList.toggle("open");
+const submenu = drop.querySelector("ul");
+if (drop.classList.contains("open")) {
+  submenu.style.maxHeight = submenu.scrollHeight + "px";
+  submenu.style.opacity = "1";
+} else {
+  submenu.style.maxHeight = "0";
+  submenu.style.opacity = "0";
+}
 
-        // Toggle tampilan dropdownnya
-        const submenu = drop.querySelector("ul");
-        submenu.style.display = drop.classList.contains("open") ? "block" : "none";
+
+        // Toggle ikon panah
+        const icon = drop.querySelector(".toggle-icon");
+        if (icon) {
+          icon.classList.toggle("bi-chevron-down");
+          icon.classList.toggle("bi-chevron-up");
+        }
       });
     });
 
-    // Tutup nav saat klik luar
+    // Tutup nav dan dropdown saat klik luar
     document.addEventListener("click", function (e) {
       if (
         document.body.classList.contains("mobile-nav-active") &&
@@ -115,7 +147,13 @@
         dropdowns.forEach(d => {
           d.classList.remove("open");
           const submenu = d.querySelector("ul");
-          if (submenu) submenu.style.display = "none";
+
+          // Reset ikon panah
+          const icon = d.querySelector(".toggle-icon");
+          if (icon) {
+            icon.classList.add("bi-chevron-down");
+            icon.classList.remove("bi-chevron-up");
+          }
         });
       }
     });
@@ -276,7 +314,7 @@
       
       <!-- Item 1 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
         <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
           key positions<br>successfully filled
         </div>
@@ -284,7 +322,7 @@
 
       <!-- Item 2 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0</h1>
+        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
         <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
           of talents elevate<br>their career
         </div>
@@ -292,7 +330,7 @@
 
       <!-- Item 3 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed797;">0%</h1>
+        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0%</h1>
         <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
           of our client successfully<br>grows their business
         </div>
@@ -519,7 +557,7 @@
 <!-- Trusted By Section -->
 <section class="trusted-section">
   <div class="container">
-    <p class="trusted-label mb-3">Telah dipercaya oleh</p>
+    <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
     <div class="trusted-logos-wrapper">
       <div class="trusted-logos-track">
         <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />

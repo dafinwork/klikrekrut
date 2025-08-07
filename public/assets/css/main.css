@@ -152,11 +152,58 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
+  padding: 5px 0;
+  transition: all 0.3s ease;
   z-index: 997;
 }
+.header.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
 
+.header.scrolled .navmenu ul li a {
+  color: #004AAD; /* ubah sesuai warna teks kamu saat scroll */
+}
+
+.header.scrolled .navmenu ul li .btn {
+  border-color: #004AAD;
+  color: #004AAD;
+}
+.navmenu ul li a,
+.navmenu ul li .btn {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+/* Saat scroll di mobile */
+.header.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Pastikan warna teks juga berubah di mobile */
+.header.scrolled .navmenu ul li a {
+  color: #004AAD;
+}
+
+.header.scrolled .navmenu ul li .btn {
+  border-color: #004AAD;
+  color: #004AAD;
+}
+.header.scrolled .mobile-nav-toggle {
+  color: #004AAD;
+}
+.mobile-nav-toggle {
+  transition: color 0.3s ease;
+}
+/* Tombol saat header discroll */
+.header.scrolled .btn-outline-light {
+  color: #004AAD !important;
+  border-color: #004AAD !important;
+  background-color: #ffffff !important;
+}
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
 
 /* Full logo style */
 .logo-full {
@@ -346,9 +393,19 @@ h6 {
   display: block;
 }
 
-.navmenu ul li:hover ul {
-  display: flex;
+/* Matikan efek hover dropdown (desktop) */
+@media (min-width: 1200px) {
+  .navmenu ul li:hover ul {
+    display: none !important;
+  }
 }
+/* Buka dropdown saat ada class .open */
+.navmenu ul li.open > ul {
+  display: flex !important;
+  max-height: 300px; /* atau setinggi kontennya */
+  opacity: 1;
+}
+
 
 .navmenu ul li ul li a:hover {
   background: #f1f1f1;
@@ -417,8 +474,10 @@ h6 {
   }
 
   .navmenu ul li ul {
-    display: none;
-    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
   .navmenu ul li:hover ul,
