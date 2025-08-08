@@ -36,7 +36,7 @@
 <header class="header fixed-top">
   <div class="container d-flex justify-content-between align-items-center py-2">
 <a href="#" class="logo d-flex align-items-center">
-  <img src="assets/img/header1.png" alt="Klikrekrut Logo" class="logo-full" />
+  <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
 </a> <!-- di css namanya logo -->
 
     <!-- Mobile toggle button -->
@@ -62,22 +62,29 @@
             <li><a href="#">Partner with us</a></li>
           </ul>
         </li>
-        <li><a href="#" class="btn btn-outline-light rounded-pill px-3 py-1">Get Consultation Free ➝</a></li>
+        <li>
+  <a href="https://api.whatsapp.com/send?phone=6289678868752"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
+    Get Consultation Free ➝
+  </a>
+</li>
+
       </ul>
     </nav>
   </div>
 </header>
 <script>
   // Tambahkan/ambil class 'scrolled' saat scroll
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    if (window.scrollY > 10) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".mobile-nav-toggle");
     const navmenu = document.getElementById("navmenu");
@@ -122,8 +129,6 @@ if (drop.classList.contains("open")) {
   submenu.style.maxHeight = "0";
   submenu.style.opacity = "0";
 }
-
-
         // Toggle ikon panah
         const icon = drop.querySelector(".toggle-icon");
         if (icon) {
@@ -168,20 +173,33 @@ if (drop.classList.contains("open")) {
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 text-white" data-aos="fade-right">
-        <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
-          <span class="animated-word" style="--delay:0.6s;">Membantu</span>
-          <span class="animated-word" style="--delay:0.8s;">Anda</span><br>
-          <span class="animated-word" style="--delay:1.2s;">Merekrut</span>
-          <span class="animated-word" style="--delay:1.4s;">Tim Masa Depan</span>
-        </h1>
+<h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
+  <span id="typing-hero"></span>
+</h1>
         <p class="mb-4">Satu platform untuk kemudahan rekrutmen – mulai dari mencari pelamar, menemukan kandidat hingga melatih tim rekruter.</p>
-        <a href="#" class="btn btn-success rounded-pill px-4 py-2 pulse-button">Pesan Layanan</a>
+        <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+   class="btn btn-success rounded-pill px-4 py-2 pulse-button" target="_blank" rel="noopener noreferrer"> Pesan Layanan </a>
       </div>
       <div class="col-lg-6 text-center" data-aos="fade-left">
         <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
       </div>
     </div>
   </div>
+  <script>
+  const text = "Membantu Anda Merekrut Tim Masa Depan";
+  const el = document.getElementById("typing-hero");
+  let i = 0;
+
+  function typeText() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeText, 50); // kecepatan ketik
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeText);
+</script>
 <style>
 .hero-title {
   font-weight: 700; /* atau 800 kalau mau lebih tebal */
@@ -253,8 +271,6 @@ if (drop.classList.contains("open")) {
     padding-right: 1.5rem;
   }
 }
-
-
   .hero img {
     max-height: 300px !important;
     margin-top: 20px;
@@ -272,7 +288,7 @@ if (drop.classList.contains("open")) {
 .hero {
   background: 
     linear-gradient(to right, #5DE0E6, #004AAD),
-    url('assets/img/ornament.png') no-repeat bottom center;
+    url('assets/img/ornament1.png') no-repeat bottom center;
   background-size: cover;
   padding: 100px 0 0 0;
   overflow: hidden;
@@ -287,7 +303,7 @@ if (drop.classList.contains("open")) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('assets/img/ornament.png') no-repeat bottom center;
+  background: url('assets/img/ornament1.png') no-repeat bottom center;
   background-size: cover;
   opacity: 0.3;
   z-index: 0;
@@ -350,7 +366,7 @@ if (drop.classList.contains("open")) {
       const target = +counter.getAttribute('data-target');
       const count = +counter.innerText.replace(/\D/g, '');
       
-      const speed = 50; // Semakin besar, semakin lambat (default: 30)
+      const speed = 15; // Semakin besar, semakin lambat (default: 30)
       const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
 
       if (count < target) {
@@ -557,7 +573,6 @@ if (drop.classList.contains("open")) {
 <!-- Trusted By Section -->
 <section class="trusted-section">
   <div class="container">
-    <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
     <div class="trusted-logos-wrapper">
       <div class="trusted-logos-track">
         <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
@@ -570,6 +585,7 @@ if (drop.classList.contains("open")) {
         <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
         <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
       </div>
+      <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
     </div>
   </div>
 </section>
@@ -577,7 +593,7 @@ if (drop.classList.contains("open")) {
 <style>
 .trusted-section {
   background-color: #e8f5fc;
-  padding: 30px 20px;
+  padding: 10px;
   text-align: center;
   overflow: hidden;
 }
@@ -592,7 +608,7 @@ if (drop.classList.contains("open")) {
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .trusted-logos-track {
@@ -633,7 +649,6 @@ if (drop.classList.contains("open")) {
     gap: 24px;
     animation-duration: 25s;
   }
-}
 </style>
 <!-- What Our Clients Say Section -->
 <section class="testimonial-section">
@@ -701,7 +716,7 @@ if (drop.classList.contains("open")) {
 
 /* Card */
 .testimonial-card {
-  position: relative; /* supaya ::before bisa absolute */
+  position: relative;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -710,10 +725,10 @@ if (drop.classList.contains("open")) {
   width: 300px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  overflow: hidden; /* biar efek glossy ga keluar kotak */
+  overflow: hidden;
 }
 
-/* Mengkilap efek */
+/* Efek kilap otomatis */
 .testimonial-card::before {
   content: "";
   position: absolute;
@@ -728,22 +743,19 @@ if (drop.classList.contains("open")) {
   );
   transform: skewX(-20deg);
   pointer-events: none;
+  animation: shine 3s linear infinite;
 }
 
-/* Hover Animasi mengkilap geser */
-.testimonial-card:hover::before {
-  animation: shine 1s forwards;
-}
-
-/* Animasi */
+/* Animasi geser kilap */
 @keyframes shine {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 100%;
-  }
+  from { left: -50%; }
+  to { left: 100%; }
 }
+
+/* Delay tiap kartu biar gak barengan */
+.testimonial-card:nth-child(1)::before { animation-delay: 0s; }
+.testimonial-card:nth-child(2)::before { animation-delay: 1s; }
+.testimonial-card:nth-child(3)::before { animation-delay: 2s; }
 
 /* Hover naik */
 .testimonial-card:hover {
@@ -773,6 +785,7 @@ if (drop.classList.contains("open")) {
   line-height: 1.5;
 }
 </style>
+
 <!-- siap untuk  -->
  <section class="cta-section">
   <div class="container d-flex flex-wrap align-items-center justify-content-between">
@@ -908,50 +921,46 @@ if (drop.classList.contains("open")) {
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
+      
       <!-- Kiri: Logo + deskripsi -->
       <div class="footer-about">
-        <img src="assets/img/footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-        <p><strong>KLIK Rekrut</strong> adalah layanan online yang dirancang untuk mempermudah proses merekrut tim.</p>
+        <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
+        <p>Layanan online untuk mempermudah proses merekrut tim.</p>
       </div>
 
-      <!-- Tengah 1: Kemitraan -->
-      <div class="footer-column">
-        <h6>KEMITRAAN</h6>
-        <ul>
-          <li><a href="#">Recruiter Partner</a></li>
-          <li><a href="#">Sales Partner</a></li>
-          <li><a href="#">Affiliate Partner</a></li>
-        </ul>
-      </div>
-
-      <!-- Tengah 2: Layanan -->
-      <div class="footer-column">
-        <h6>LAYANAN</h6>
-        <ul>
-          <li><a href="#">Asisten Rekrutmen</a></li>
-          <li><a href="#">Komunitas Rekrutmen</a></li>
-          <li><a href="#">Belajar Rekrutmen</a></li>
-        </ul>
+      <!-- Tengah: Kemitraan + Layanan -->
+      <div class="footer-center">
+        <div class="footer-column">
+          <h6>KEMITRAAN</h6>
+          <ul>
+            <li><a href="#">Recruiter Partner</a></li>
+            <li><a href="#">Sales Partner</a></li>
+            <li><a href="#">Affiliate Partner</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>LAYANAN</h6>
+          <ul>
+            <li><a href="#">Asisten Rekrutmen</a></li>
+            <li><a href="#">Komunitas Rekrutmen</a></li>
+            <li><a href="#">Belajar Rekrutmen</a></li>
+          </ul>
+        </div>
       </div>
 
       <!-- Kanan: Sosial Media -->
-<div class="footer-column">
-  <h6>LAINNYA</h6>
-  <div class="social-icons">
-    <a href="https://www.tiktok.com/@klikrekrut" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/tiktok.png" alt="Tiktok">
-    </a>
-    <a href="https://www.instagram.com/klikrekrut/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/instagram.png" alt="Instagram">
-    </a>
-    <a href="https://www.linkedin.com/company/klikrekrut/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="https://www.youtube.com/@klikrekrut" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/youtube.png" alt="YouTube">
-    </a>
-  </div>
-</div>
+      <div class="footer-column footer-right">
+        <h6>LAINNYA</h6>
+        <div class="social-icons">
+          <a href="https://www.tiktok.com/@klikrekrut" target="_blank"><img src="assets/img/tiktok.png" alt="Tiktok"></a>
+          <a href="https://www.instagram.com/klikrekrut/" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/company/klikrekrut/" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://www.youtube.com/@klikrekrut" target="_blank"><img src="assets/img/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+
+    </div>
+
     <!-- Garis Pemisah -->
     <hr class="footer-divider">
 
@@ -964,9 +973,9 @@ if (drop.classList.contains("open")) {
 
 <style>
 .footer {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #333;
-  padding: 40px 20px;
+  padding: 30px 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
@@ -978,19 +987,17 @@ if (drop.classList.contains("open")) {
 
 .footer-top {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  align-items: flex-start;
 }
 
 .footer-about {
-  flex: 1 1 220px;
-  max-width: 250px;
+  max-width: 280px;
 }
 
 .footer-logo {
   max-width: 120px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-about p {
@@ -999,15 +1006,17 @@ if (drop.classList.contains("open")) {
   margin: 0;
 }
 
-.footer-column {
-  flex: 1 1 140px;
-  min-width: 140px;
+/* Tengah: Kemitraan + Layanan */
+.footer-center {
+  display: flex;
+  gap: 80px; /* jarak antar kemitraan dan layanan */
+  margin-left: 10px; /* jarak dari logo */
 }
 
 .footer-column h6 {
   font-weight: 700;
   font-size: 13px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-column ul {
@@ -1030,10 +1039,10 @@ if (drop.classList.contains("open")) {
   text-decoration: underline;
 }
 
+/* Sosial Media */
 .social-icons {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .social-icons img {
@@ -1052,46 +1061,31 @@ if (drop.classList.contains("open")) {
   width: 100%;
   border: none;
   border-top: 1px solid #ccc;
-  margin: 20px auto;
+  margin: 15px 0 5px;
 }
+
 /* Copyright */
 .footer-bottom {
   width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 12px;
-  color: #666;
-}
-/* --- Mobile Layout --- */
-@media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 20px;
-  }
-  .footer-about {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  .footer-about p {
-    text-align: center;
-  }
-  .footer-column {
-    max-width: 100%;
-  }
-  .social-icons {
-    justify-content: flex-start;
-  }
-}.footer-bottom {
   text-align: left;
   font-size: 12px;
   color: #666;
 }
 
-  </style>
-  </main>
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-center {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+  }
+}
+</style>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

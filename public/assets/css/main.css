@@ -204,12 +204,18 @@ h6 {
 .btn-outline-light {
   transition: all 0.3s ease;
 }
+.navmenu ul li .btn-outline-light:hover {
+  background-color: #ffffff !important; /* bg putih */
+  color: #004AAD !important;           /* font biru */
+  border-color: #ffffff !important;    /* border putih */
+}
 
 /* Full logo style */
 .logo-full {
   max-height: 46px;  /* Bisa diubah jadi 56px kalau masih kecil */
   width: auto;
   object-fit: contain;
+  transition: opacity 0.3s ease;
 }
 
 .logo {
@@ -217,6 +223,24 @@ h6 {
 }
 @media (max-width: 768px) {
   .logo-full {
+    max-height: 40px;
+  }
+}
+/* Logo default (putih) */
+.header .logo-full {
+  max-height: 46px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Logo saat scroll (biru) */
+.header.scrolled .logo-full {
+  content: url("Footer.png");
+}
+
+@media (max-width: 768px) {
+  .header .logo-full {
     max-height: 40px;
   }
 }
