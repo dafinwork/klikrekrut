@@ -317,78 +317,102 @@ if (drop.classList.contains("open")) {
 }
 </style>
 </section>
-<!--angka-->
-<section style="background-color: #363636; color: #fff; padding: 40px 20px; text-align: center;">
-  <div class="container" data-aos="fade-up">
-    <!-- Judul -->
-    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
-      Empowering Indonesia’s Talent and Business Ecosystem
-    </h2>
+<!-- Trusted By Section -->
+<section class="trusted-section">
+  <div class="container">
+    <div class="trusted-logos-wrapper">
+      <p class="trusted-label">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
+      <div class="trusted-logos-track">
+        <!-- Logo set pertama -->
+        <img src="assets/img/hokkaido3.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij3.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka3.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama3.png" alt="Nurama" class="trusted-logo" />
 
-    <!-- Statistik horizontal -->
-    <div class="row justify-content-center text-center g-4">
-      
-      <!-- Item 1 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
-          key positions<br>successfully filled
-        </div>
+        <!-- Logo set kedua (duplikat untuk loop mulus) -->
+        <img src="assets/img/hokkaido3.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij3.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka3.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama3.png" alt="Nurama" class="trusted-logo" />
       </div>
-
-      <!-- Item 2 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
-          of talents elevate<br>their career
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0%</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #e0e0e0;">
-          of our client successfully<br>grows their business
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- Count-Up Script -->
-<script>
-  const counters = document.querySelectorAll('.counter');
+<style>
+.trusted-section {
+  background-color: #e8f5fc;
+  padding: 0; /* hilangin padding biar pas */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const suffix = counter.getAttribute('data-suffix') || '';
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText.replace(/\D/g, '');
-      
-      const speed = 15; // Semakin besar, semakin lambat (default: 30)
-      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
+.trusted-logos-wrapper {
+  width: 1085px;       /* lebar sesuai permintaan */
+  height: 204.47px;    /* tinggi sesuai permintaan */
+  overflow: hidden;    /* potong hanya area luar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-      if (count < target) {
-        counter.innerText = `${count + increment}${suffix}`;
-        setTimeout(updateCount, speed);
-      } else {
-        counter.innerText = `${target}${suffix}`;
-      }
-    };
+.trusted-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          updateCount();
-          observer.unobserve(counter);
-        }
-      });
-    }, { threshold: 0.9 });
+.trusted-logos-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
 
-    observer.observe(counter);
-  });
-</script>
+.trusted-logo {
+  height: 140px; /* scale otomatis sesuai tinggi */
+  object-fit: contain;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.trusted-logo:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+/* Mobile */
+@media (max-width: 767px) {
+  .trusted-label {
+    font-size: 0.9rem; /* lebih kecil dari 1.1rem */
+    margin-bottom: 4px;
+  }
+
+  .trusted-logos-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .trusted-logo {
+    height: 110px; /* kecilkan logo */
+    max-height: 110px;
+  }
+}
+
+</style>
 <!-- reqruitment -->
 <section class="service-section py-5">
   <div class="container text-center">
@@ -570,86 +594,80 @@ if (drop.classList.contains("open")) {
   }
 }
 </style>
-<!-- Trusted By Section -->
-<section class="trusted-section">
-  <div class="container">
-    <div class="trusted-logos-wrapper">
-      <div class="trusted-logos-track">
-        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
-        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
-        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
-        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
-        <!-- Duplikat untuk loop -->
-        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
-        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
-        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
-        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+
+<!--angka-->
+<section style="background-color: #e7f4fc; color: #fff; padding: 40px 20px; text-align: center;">
+  <div class="container" data-aos="fade-up">
+    <!-- Judul -->
+    <h2 style="font-weight: 700; font-size: 1.4rem; color: #635d5e; margin-bottom: 40px;">
+      Empowering Indonesia’s Talent and Business Ecosystem
+    </h2>
+
+    <!-- Statistik horizontal -->
+    <div class="row justify-content-center text-center g-4">
+      
+      <!-- Item 1 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+          key positions<br>successfully filled
+        </div>
       </div>
-      <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
+
+      <!-- Item 2 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+          of talents elevate<br>their career
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0%</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+          of our client successfully<br>grows their business
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<style>
-.trusted-section {
-  background-color: #e8f5fc;
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
-}
+<!-- Count-Up Script -->
+<script>
+  const counters = document.querySelectorAll('.counter');
 
-.trusted-label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #111;
-}
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const suffix = counter.getAttribute('data-suffix') || '';
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText.replace(/\D/g, '');
+      
+      const speed = 12; // Semakin besar, semakin lambat (default: 30)
+      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
 
-.trusted-logos-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-}
+      if (count < target) {
+        counter.innerText = `${count + increment}${suffix}`;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = `${target}${suffix}`;
+      }
+    };
 
-.trusted-logos-track {
-  display: flex;
-  gap: 40px;
-  animation: scrollLeft 20s linear infinite;
-  width: max-content;
-}
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateCount();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.9 });
 
-.trusted-logo {
-  max-height: 200px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
+    observer.observe(counter);
+  });
+</script>
 
-.trusted-logo:hover {
-  transform: scale(1.05);
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive */
-@media (max-width: 767px) {
-  .trusted-logos-track {
-    gap: 24px;
-    animation-duration: 25s;
-  }
-}
-  .trusted-logos-track {
-    gap: 24px;
-    animation-duration: 25s;
-  }
-</style>
 <!-- What Our Clients Say Section -->
 <section class="testimonial-section">
   <div class="container">
@@ -661,10 +679,10 @@ if (drop.classList.contains("open")) {
       <!-- Card 1 -->
       <div class="testimonial-card">
         <img src="assets/img/cat1.png" alt="Isla">
-        <h4>Isla</h4>
+        <h4>Arneta A.</h4>
+        <small class="testimonial-company">Indonesia Research Institute Japan Jakarta</small>
         <p>
-          Testimonials are short quotes from people who love your brand.
-          It's a great way to convince customers to try your services.
+Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisien dalam merekrut karyawan, karena kami hanya perlu menunggu kandidat yang telah diseleksi, tanpa harus terlibat dalam setiap tahap proses rekrutmen.”
         </p>
       </div>
       <!-- Card 2 -->
@@ -786,137 +804,86 @@ if (drop.classList.contains("open")) {
 }
 </style>
 
-<!-- siap untuk  -->
- <section class="cta-section">
-  <div class="container d-flex flex-wrap align-items-center justify-content-between">
-    
-    <!-- Text -->
-    <div class="cta-text">
-      <h2>Siap untuk meningkatkan<br>perjalanan pemasaran Anda?</h2>
-      <p>Jangan menunggu lebih lama lagi untuk mencapai potensi penuh Anda – klik tombol dan bersiaplah untuk tumbuh hari ini!</p>
-      <div class="cta-buttons">
-        <a href="#" class="btn-primary">Buat Kampanye</a>
-        <a href="#" class="btn-secondary">Bahas Bersama Expert</a>
+<!-- CTA Section -->
+<section class="cta-section position-relative">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Teks -->
+      <div class="col-lg-6 text-white">
+        <h2 class="mb-4" style="font-weight:700; color:white;">
+          Siap untuk merekrut kandidat terbaik untuk bergabung jadi tim Anda?
+        </h2>
+        <p class="mb-4">
+          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap! 
+          Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
+        </p>
+        <a href="#" class="btn btn-success rounded-pill px-4 py-2">Hubungi Kami</a>
+        <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2">Explore Layanan →</a>
       </div>
-    </div>
-    
-    <!-- Images -->
-    <div class="cta-images">
-      <div class="image-top">
-        <img src="assets/img/cta1.jpg" alt="Image 1">
-      </div>
-      <div class="image-bottom">
-        <img src="assets/img/cta2.jpg" alt="Image 2">
-      </div>
-    </div>
 
+      <!-- Foto Orang -->
+      <div class="col-lg-6 text-center">
+        <img src="assets/img/cta.png" class="img-fluid" style="max-height: 500px;" alt="Tim Rekrut">
+      </div>
+
+    </div>
   </div>
 </section>
+
 <style>
-  .cta-section {
-  background-color: #1e2a64;
-  padding: 60px 20px;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
+.cta-section {
+  background: 
+    linear-gradient(to right, #5DE0E6, #004AAD),
+    url('assets/img/ornamencta.png') no-repeat right center;
+  background-size: cover;
+  padding: 100px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Overlay ornament transparan */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%; /* Lebih lebar biar nutup setengah kanan */
+  height: 100%;
+  background: url('assets/img/ornamencta.png') no-repeat center right;
+  background-size: 150%; /* Perbesar ornament */
+  opacity: 0.4; /* Biar lebih kelihatan */
+  z-index: 0;
+  pointer-events: none;
 }
 
 .cta-section .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  position: relative;
+  z-index: 1; /* konten di atas ornament */
 }
 
-.cta-text {
-  flex: 1 1 300px;
-  max-width: 500px;
-}
-
-.cta-text h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  color: #fff; /* putih */
-  font-family: 'Poppins', sans-serif;
-}
-
-
-.cta-text p {
-  font-size: 1rem;
-  margin-bottom: 25px;
-  color: #ddd;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.cta-buttons .btn-primary {
-  background-color: #ff6b5b;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-.cta-buttons .btn-primary:hover {
-  background-color: #ff4b3b;
-}
-
-.cta-buttons .btn-secondary {
-  border: 1px solid #ff6b5b;
-  color: #ff6b5b;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s, color 0.3s;
-}
-
-.cta-buttons .btn-secondary:hover {
-  background-color: #ff6b5b;
-  color: #fff;
-}
-
-.cta-images {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1 1 200px;
-  align-items: flex-end;
-}
-
-.cta-images img {
-  border-radius: 12px;
-  width: 220px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-/* Responsive */
+/* Responsif Mobile */
 @media (max-width: 768px) {
-  .cta-section .container {
-    flex-direction: column;
-    align-items: center;
+  .cta-section {
+    text-align: center;
+    background: linear-gradient(to bottom, #5DE0E6, #004AAD);
   }
 
-  .cta-images {
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
+  .cta-section::before {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+    background-size: cover;
   }
 
-  .cta-images img {
-    width: 45%;
+  .cta-section img {
+    max-height: 300px !important;
+    margin-top: 20px;
   }
 }
+</style>
 
-
-  </style>
 <!-- footer -->
 <footer class="footer">
   <div class="container">
