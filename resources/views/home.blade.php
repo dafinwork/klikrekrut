@@ -342,20 +342,19 @@ if (drop.classList.contains("open")) {
 <style>
 .trusted-section {
   background-color: #e8f5fc;
-  padding: 0; /* hilangin padding biar pas */
+  padding: 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .trusted-logos-wrapper {
-  width: 1085px;       /* lebar sesuai permintaan */
-  height: 204.47px;    /* tinggi sesuai permintaan */
-  overflow: hidden;    /* potong hanya area luar */
+  width: 1085px;
+  height: 204.47px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* 🔹 ini yang bikin center di halaman */
 }
 
 .trusted-label {
@@ -364,6 +363,7 @@ if (drop.classList.contains("open")) {
   font-weight: 600;
   color: #111;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .trusted-logos-track {
@@ -374,7 +374,7 @@ if (drop.classList.contains("open")) {
 }
 
 .trusted-logo {
-  height: 140px; /* scale otomatis sesuai tinggi */
+  height: 140px;
   object-fit: contain;
   flex: 0 0 auto;
   transition: transform 0.3s ease;
@@ -394,10 +394,9 @@ if (drop.classList.contains("open")) {
 }
 
 /* Mobile */
-/* Mobile */
 @media (max-width: 767px) {
   .trusted-label {
-    font-size: 0.9rem; /* lebih kecil dari 1.1rem */
+    font-size: 0.9rem;
     margin-bottom: 4px;
   }
 
@@ -407,7 +406,7 @@ if (drop.classList.contains("open")) {
   }
 
   .trusted-logo {
-    height: 110px; /* kecilkan logo */
+    height: 110px;
     max-height: 110px;
   }
 }
