@@ -321,7 +321,10 @@ if (drop.classList.contains("open")) {
 <section class="trusted-section">
   <div class="container">
     <div class="trusted-logos-wrapper">
-      <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
+      <p class="trusted-label mb-3">
+  Telah dipercaya membantu <br>
+  rekrutmen berbagai perusahaan di Indonesia
+</p>
       <div class="trusted-logos-track">
         <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
         <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
@@ -349,9 +352,10 @@ if (drop.classList.contains("open")) {
 <style>
 .trusted-section {
   background-color: #e8f5fc;
-  padding: 10px;
+  padding: 40px;
   text-align: center;
   overflow: hidden;
+  padding: 40px 40px 15px 40px; /* atas 40px, kanan 40px, bawah 15px, kiri 40px */
 }
 
 .trusted-label {
@@ -359,7 +363,7 @@ if (drop.classList.contains("open")) {
   font-size: 1rem;
   font-weight: 700; /* 🔹 BOLD */
   color: #414c58;   /* 🔹 Warna sesuai permintaan */
-  margin: 0 0 4px 0; /* 🔹 jarak bawah kecil */
+  margin: 0 0 0px 0; /* 🔹 jarak bawah kecil */
   text-align: center;
 }
 
