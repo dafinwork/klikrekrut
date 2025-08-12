@@ -380,7 +380,7 @@ if (drop.classList.contains("open")) {
 }
 
 .trusted-logo {
-  max-height: 10px;
+  max-height: 140px;
   object-fit: contain;
   transition: transform 0.3s ease;
   flex: 0 0 auto;
