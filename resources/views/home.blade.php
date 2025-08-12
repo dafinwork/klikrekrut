@@ -321,63 +321,69 @@ if (drop.classList.contains("open")) {
 <section class="trusted-section">
   <div class="container">
     <div class="trusted-logos-wrapper">
-      <p class="trusted-label">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
+      <p class="trusted-label mb-3">Telah dipercaya membantu rekrutmen berbagai perusahaan di Indonesia</p>
       <div class="trusted-logos-track">
-        <!-- Logo set pertama -->
-        <img src="assets/img/hokkaido3.png" alt="Hokkaido" class="trusted-logo" />
-        <img src="assets/img/irij3.png" alt="Indonesia Research" class="trusted-logo" />
-        <img src="assets/img/sosialoka3.png" alt="Sosialoka" class="trusted-logo" />
-        <img src="assets/img/nurama3.png" alt="Nurama" class="trusted-logo" />
-
-        <!-- Logo set kedua (duplikat untuk loop mulus) -->
-        <img src="assets/img/hokkaido3.png" alt="Hokkaido" class="trusted-logo" />
-        <img src="assets/img/irij3.png" alt="Indonesia Research" class="trusted-logo" />
-        <img src="assets/img/sosialoka3.png" alt="Sosialoka" class="trusted-logo" />
-        <img src="assets/img/nurama3.png" alt="Nurama" class="trusted-logo" />
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+        <!-- Duplikat untuk loop -->
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+                <!-- Duplikat untuk loop -->
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
+                <!-- Duplikat untuk loop -->
+        <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
+        <img src="assets/img/irij2.png" alt="Indonesia Research" class="trusted-logo" />
+        <img src="assets/img/sosialoka2.png" alt="Sosialoka" class="trusted-logo" />
+        <img src="assets/img/nurama2.png" alt="Nurama" class="trusted-logo" />
       </div>
     </div>
   </div>
 </section>
-
 <style>
 .trusted-section {
   background-color: #e8f5fc;
-  padding: 0;
+  padding: 10px;
   text-align: center;
-}
-
-.trusted-logos-wrapper {
-  width: 1085px;
-  height: 204.47px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; /* 🔹 ini yang bikin center di halaman */
 }
 
 .trusted-label {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 700; /* 🔹 BOLD */
+  color: #414c58;   /* 🔹 Warna sesuai permintaan */
+  margin: 0 0 4px 0; /* 🔹 jarak bawah kecil */
   text-align: center;
+}
+
+
+.trusted-logos-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0;
 }
 
 .trusted-logos-track {
   display: flex;
-  gap: 30px;
-  width: max-content;
+  align-items: center; /* 🔹 logo sejajar vertikal */
+  gap: 20px; /* 🔹 jarak antar logo lebih rapat */
   animation: scrollLeft 20s linear infinite;
+  width: max-content;
 }
 
 .trusted-logo {
-  height: 140px;
+  max-height: 10px;
   object-fit: contain;
-  flex: 0 0 auto;
   transition: transform 0.3s ease;
+  flex: 0 0 auto;
 }
 
 .trusted-logo:hover {
@@ -386,7 +392,7 @@ if (drop.classList.contains("open")) {
 
 @keyframes scrollLeft {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
@@ -395,16 +401,17 @@ if (drop.classList.contains("open")) {
 
 /* Mobile */
 @media (max-width: 767px) {
+  .trusted-section {
+    padding-top: 15px;
+  }
   .trusted-label {
     font-size: 0.9rem;
     margin-bottom: 4px;
   }
-
   .trusted-logos-wrapper {
     width: 100%;
     height: auto;
   }
-
   .trusted-logo {
     height: 110px;
     max-height: 110px;

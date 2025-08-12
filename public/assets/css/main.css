@@ -204,10 +204,11 @@ h6 {
 .btn-outline-light {
   transition: all 0.3s ease;
 }
-.navmenu ul li .btn-outline-light:hover {
-  background-color: #ffffff !important; /* bg putih */
-  color: #004AAD !important;           /* font biru */
-  border-color: #ffffff !important;    /* border putih */
+/* ✅ Saat header discroll dan tombol di-hover, tetap biru */
+.header.scrolled .btn-outline-light:hover {
+  background-color: #004AAD !important; /* tetap biru */
+  color: #fff !important;               /* teks putih */
+  border-color: #004AAD !important;      /* border biru */
 }
 
 /* Full logo style */
@@ -390,6 +391,12 @@ h6 {
   border: 2px solid white;
   color: white;
 }
+.navmenu ul li .btn-outline-light:hover {
+  background-color: #ffffff !important; /* bg putih */
+  color: #004AAD !important;           /* font biru */
+  border-color: #ffffff !important;    /* border putih */
+}
+
 
 /* ========================
    Dropdown - Desktop
@@ -1433,88 +1440,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-.trusted-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
 
-.trusted-title {
-  text-align: center;
-  color: #000000;
-  font-size: 1.5rem;
-  margin-bottom: 60px;
-}
-
-/* GANTI flex jadi grid */
-.trusted-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-/* Card tiap perusahaan */
-.trusted-item {
-  display: flex;
-  gap: 20px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  align-items: flex-start;
-  animation: slide-up 0.8s ease forwards;
-  opacity: 0;
-}
-
-.trusted-item:nth-child(1) { animation-delay: 0.2s; }
-.trusted-item:nth-child(2) { animation-delay: 0.4s; }
-.trusted-item:nth-child(3) { animation-delay: 0.6s; }
-.trusted-item:nth-child(4) { animation-delay: 0.8s; }
-
-.trusted-item img {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.trusted-text h4 {
-  color: #000;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.trusted-text p {
-  font-size: 0.95rem;
-  color: #444;
-  margin: 0;
-  line-height: 1.5;
-}
-
-@keyframes slide-up {
-  0% { transform: translateY(40px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@media (max-width: 768px) {
-  .trusted-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .trusted-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .trusted-text {
-    align-items: center;
-  }
-
-  .trusted-item img {
-    margin-bottom: 12px;
-  }
-}
 
 .card {
   width: 100%;
