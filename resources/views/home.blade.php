@@ -322,8 +322,7 @@ if (drop.classList.contains("open")) {
   <div class="container">
     <div class="trusted-logos-wrapper">
       <p class="trusted-label mb-3">
-  Telah dipercaya membantu <br>
-  rekrutmen berbagai perusahaan di Indonesia
+  Telah dipercaya oleh berbagai perusahaan di Indonesia
 </p>
       <div class="trusted-logos-track">
         <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
@@ -361,12 +360,11 @@ if (drop.classList.contains("open")) {
 .trusted-label {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  font-weight: 700; /* 🔹 BOLD */
-  color: #414c58;   /* 🔹 Warna sesuai permintaan */
-  margin: 0 0 0px 0; /* 🔹 jarak bawah kecil */
-  text-align: center;
-}
-
+  font-weight: 700;
+  color: #414c58;
+  margin: 0;
+  white-space: nowrap; /* desktop: paksa satu baris */
+} 
 
 .trusted-logos-wrapper {
   overflow: hidden;
@@ -409,8 +407,8 @@ if (drop.classList.contains("open")) {
     padding-top: 15px;
   }
   .trusted-label {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    white-space: normal; /* mobile: izinkan teks turun */
+    text-align: center;   /* pastikan rapi di tengah */
   }
   .trusted-logos-wrapper {
     width: 100%;
