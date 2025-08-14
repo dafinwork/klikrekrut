@@ -220,7 +220,8 @@
 <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
   <span id="typing-hero"></span>
 </h1>
-        <p class="mb-4">Satu platform untuk kemudahan rekrutmen – mulai dari mencari pelamar, menemukan kandidat hingga melatih tim rekruter.</p>
+        <p class="mb-4">Satu platform untuk kemudahan rekrutmen - mulai dari<br>
+pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
         <a href="https://api.whatsapp.com/send?phone=6289678868752" 
    class="btn btn-success rounded-pill px-4 py-2 pulse-button" target="_blank" rel="noopener noreferrer"> Pesan Layanan </a>
       </div>
@@ -366,7 +367,7 @@
   <div class="container">
     <div class="trusted-logos-wrapper">
       <p class="trusted-label mb-3">
-  Telah dipercaya oleh berbagai perusahaan di Indonesia
+  Telah dipercaya oleh perusahaan dari berbagai Industri
 </p>
       <div class="trusted-logos-track">
         <img src="assets/img/hokkaido2.png" alt="Hokkaido" class="trusted-logo" />
@@ -469,7 +470,7 @@
 <section class="services-section">
   <div class="container">
     <h2 class="section-title">
-      <span class="title-number">3</span> Layanan Utama Kami Dirancang Untuk <br>
+      Layanan Utama Kami Dirancang Untuk <br>
       Membuat Rekrutmen Anda Lebih Efisien
     </h2>
 
@@ -479,7 +480,7 @@
       <div class="service-item">
         <img src="assets/img/awan.png" alt="Recruitment Assistant" class="service-img">
         <h3>Recruitment Assistant</h3>
-        <p>
+        <p class="service-desc">
           Mitra rekruter kami dari berbagai industri siap bantu carikan Anda kandidat terbaik.
           Hemat resource, minim risiko, bebas pusing.
         </p>
@@ -490,7 +491,7 @@
       <div class="service-item">
         <img src="assets/img/awan.png" alt="Recruitment Community" class="service-img">
         <h3>Recruitment Community</h3>
-        <p>
+        <p class="service-desc">
           Tanpa repot sourcing, dapatkan pelamar dengan mudah, cepat, dan tepat lewat komunitas talent kami dari berbagai bidang.
         </p>
         <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
@@ -500,7 +501,7 @@
       <div class="service-item">
         <img src="assets/img/awan.png" alt="Recruitment Learning" class="service-img">
         <h3>Recruitment Learning</h3>
-        <p>
+        <p class="service-desc">
           Materi pembelajaran rekrutmen dari para praktisi terbaik. Ubah tim Anda jadi pemburu talenta kelas dunia.
         </p>
         <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
@@ -509,75 +510,93 @@
     </div>
   </div>
 </section>
-
 <style>
-/* Import font Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .services-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #363636; /* 🔹 Semua teks default warna ini */
 }
 
 .section-title {
-  font-weight: 800; /* 🔹 Bold */
-  margin-bottom: 50px;
-  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  font-size: 32px;
   line-height: 1.3;
-  color: #3c678b; /* 🔹 Warna sesuai permintaan */
+  color: #3c678b;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .title-number {
-  margin-right: 8px;
-  line-height: 1.3;
+  margin-right: 10px;
+  line-height: 1;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 420px;
 }
 
 .service-item h3 {
-  font-weight: 700; /* Bold */
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  color: #3c678b; /* Warna sesuai permintaan */
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #000;
 }
 
 .service-img {
-  max-width: 250px;
+  max-width: 180px;
   height: auto;
   margin: 0 auto 25px;
   display: block;
 }
 
-.service-item p {
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+.service-desc {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto 10px;
+  width: 100%;
+  height: 4.5em; /* 3 baris */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
 }
 
 .btn-outline {
+  margin-top: 15px;
   display: inline-block;
-  padding: 10px 25px;
+  padding: 10px 28px;
   border: 2px solid #363636;
   border-radius: 50px;
   text-decoration: none;
   color: #363636;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
+  align-self: center; /* biar tetap di tengah horizontal */
 }
 
 .btn-outline:hover {
@@ -585,57 +604,63 @@
   color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-    display: block;
-    text-align: center;
+    gap: 35px;
+    max-width: 550px;
   }
   
-  .title-number {
-    margin-right: 0;
-    display: inline-block;
+  .service-item {
+    min-height: 380px;
+    padding: 35px 25px;
+  }
+  
+  .service-desc {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-desc {
+    font-size: 0.85rem;
+    height: auto;
+    min-height: 4.5em;
+  }
+  
+  .service-item {
+    min-height: 350px;
   }
 }
 </style>
+<!-- Import Font Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!--angka-->
-<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center;">
-  <div class="container" data-aos="fade-up">
-    <!-- Judul -->
-    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
-      Empowering Indonesia’s Talent and Business Ecosystem
-    </h2>
+<!-- angka -->
+<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center; height: 204.47px; min-width: 1331px; font-family: 'Poppins', sans-serif;">
+  <div class="container" data-aos="fade-up" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+    <div class="row justify-content-center text-center g-4" style="width: 100%;">
 
-    <!-- Statistik horizontal -->
-    <div class="row justify-content-center text-center g-4">
-      
       <!-- Item 1 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+        <h1 class="counter mb-0" data-target="7">0</h1>
+        <div class="text-start stat-text">
           key positions<br>successfully filled
         </div>
       </div>
 
       <!-- Item 2 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+        <h1 class="counter mb-0" data-target="14">0</h1>
+        <div class="text-start stat-text">
           of talents elevate<br>their career
         </div>
       </div>
 
       <!-- Item 3 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #fff;">0%</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+        <h1 class="counter mb-0" data-target="90" data-suffix="%">0%</h1>
+        <div class="text-start stat-text">
           of our client successfully<br>grows their business
         </div>
       </div>
@@ -644,222 +669,205 @@
   </div>
 </section>
 
-<!-- Count-Up Script -->
-<script>
-  const counters = document.querySelectorAll('.counter');
-
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const suffix = counter.getAttribute('data-suffix') || '';
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText.replace(/\D/g, '');
-      
-      const speed = 12; // Semakin besar, semakin lambat (default: 30)
-      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
-
-      if (count < target) {
-        counter.innerText = `${count + increment}${suffix}`;
-        setTimeout(updateCount, speed);
-      } else {
-        counter.innerText = `${target}${suffix}`;
-      }
-    };
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          updateCount();
-          observer.unobserve(counter);
-        }
-      });
-    }, { threshold: 0.9 });
-
-    observer.observe(counter);
-  });
-</script>
-<!-- reqruitment -->
-<section class="service-section py-5">
-  <div class="container text-center">
-    <!-- Judul -->
-    <h2 class="section-title mb-5 fw-bold text-white">
-      Menghadirkan solusi rekrutmen berbasis layanan digital<br>
-      yang memberdayakan bisnis dan talent di Indonesia
-    </h2>
-
-    <!-- Kartu Layanan -->
-    <div class="row g-4 justify-content-center">
-      <!-- Card 1 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card p-4 h-100">
-          <img src="assets/img/awan.png" alt="Service 1" class="img-fluid mb-3 rounded">
-          <h5 class="fw-bold">Recruitment Assistant Service</h5>
-          <p>Rekrut dengan Bantuan Asisten Rekrutmen.</p>
-          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card p-4 h-100">
-          <img src="assets/img/awan.png" alt="Service 2" class="img-fluid mb-3 rounded">
-          <h5 class="fw-bold">Recruitment Community Service</h5>
-          <p>Rekrut dan Komunikasi Langsung dengan Talent Dari Berbagai Bidang.</p>
-          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card p-4 h-100">
-          <img src="assets/img/awan.png" alt="Service 3" class="img-fluid mb-3 rounded">
-          <h5 class="fw-bold">Recruitment Learning Service</h5>
-          <p>Belajar Rekrutmen dari Rekruter.</p>
-          <a href="#" class="btn btn-danger rounded-pill px-4">Read More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <style>
-  .service-section {
-  background: linear-gradient(to bottom right, #5DE0E6, #004AAD);
+.counter {
+  font-size: 69px;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 10px;
   color: #fff;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  line-height: 1.6;
+.stat-text {
+  font-size: 12.8px;
+  color: #fff;
+  text-align: left;
 }
 
-.service-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.service-card img {
-  border-radius: 10px;
-  height: auto;
-  max-height: 160px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: #555;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  section {
+    height: auto !important;
+    min-width: auto !important;
+  }
+  .counter {
+    font-size: 40px;
+  }
+  .stat-text {
+    font-size: 14px;
+  }
+  .row.g-4 {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .col-12 {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 </style>
-<!-- Benefit Section -->
-<section class="benefit-section">
-  <div class="container text-center">
-    <h2 class="benefit-title">Bagaimana <strong>KLIK Rekrut</strong> membantu perusahaan Anda?</h2>
-    
-    <div class="benefit-cards-wrapper">
-      <div class="benefit-cards">
-        
-        <div class="benefit-card">
-          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
-        </div>
 
-        <div class="benefit-card">
-          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
-        </div>
+<!-- Count-Up Script -->
+<script>
+document.querySelectorAll('.counter').forEach(counter => {
+  const suffix = counter.getAttribute('data-suffix') || '';
+  const target = +counter.getAttribute('data-target');
+  const speed = 12;
+  const increment = Math.ceil(target / 100);
 
-        <div class="benefit-card">
-          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
-        </div>
+  const updateCount = () => {
+    const current = parseInt(counter.innerText.replace(/\D/g, ''), 10) || 0;
+    if (current < target) {
+      counter.innerText = `${current + increment}${suffix}`;
+      setTimeout(updateCount, speed);
+    } else {
+      counter.innerText = `${target}${suffix}`;
+    }
+  };
 
-        <div class="benefit-card">
-          <img src="assets/img/awan.png" alt="Awan" class="card-icon">
-        </div>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        updateCount();
+        observer.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.9 });
 
+  observer.observe(counter);
+});
+</script>
+
+<!-- Client & Talent Section -->
+<section class="client-section">
+  <div class="container">
+    <h2 class="client-title">Empowering Indonesia’s Talent and Business Ecosystem</h2>  
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab active" data-target="clients">Clients</button>
+      <button class="tab" data-target="talents">Talents</button>
+    </div>
+
+    <!-- Clients Content -->
+    <div class="tab-content active" id="clients">
+      <div class="card">
+        <h3>IRIJ Jakarta</h3>
+        <p class="role">Market Research Consultant</p>
+        <p>Pelayanan Klik Rekrut luar biasa. Sepanjang kerja sama dengan berbagai headhunter...</p>
+      </div>
+      <div class="card">
+        <h3>Sosialoka</h3>
+        <p class="role">Digital Agency</p>
+        <p>Klik Rekrut selalu tanggap dan mudah diajak komunikasi. Proses singkat dan efisien...</p>
+      </div>
+      <div class="card">
+        <h3>Nurama.clo</h3>
+        <p class="role">Fashion Modest Brand</p>
+        <p>Klik Rekrut adalah mitra headhunter yang bisa diandalkan...</p>
       </div>
     </div>
-      <div class="container text-center">
-    <h2 class="benefit-title"><strong>Biaya Rendah, Cocok Untuk Semua Bisnis, Mudah Digunakan</strong></h2>
+
+    <!-- Talents Content -->
+    <div class="tab-content" id="talents">
+      <div class="card">
+        <h3>Agustina Gita</h3>
+        <p class="role">Jr. Finance & Accounting</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+      </div>
+      <div class="card">
+        <h3>Muh. Akbar</h3>
+        <p class="role">Business Development</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+      </div>
+      <div class="card">
+        <h3>Ical</h3>
+        <p class="role">Video Grapher & Editor</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+      </div>
+    </div>
   </div>
 </section>
+
 <style>
-.benefit-section {
-  background-color: #F9F8FB;
-  padding: 60px 20px;
-  overflow: hidden;
-}
-
-.benefit-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #111;
-}
-
-.benefit-cards-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.benefit-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
-  padding-bottom: 10px;
-  margin: 0 auto; /* Centering */
-  max-width: 1080px; /* Centered container */
-  justify-content: center;
-}
-
-.benefit-card {
-  background-color: #cfd1d6;
-  border-radius: 20px;
-  padding: 20px 15px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  font-weight: 700;
-  font-size: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-  position: relative;
-  flex: 0 0 250px; /* Default desktop width */
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  background-color: #bfc2c7;
-}
-
-.card-icon {
-  position: absolute;
-  top: 20px;
-  width: 60px;
-  height: auto;
-}
-
-@media (max-width: 767px) {
-  .benefit-cards {
-    justify-content: flex-start; /* Scroll mulai dari kiri */
-    padding-left: 10px;
+  .client-section {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 40px 0;
   }
-
-  .benefit-card {
-    flex: 0 0 80%;
-    margin-right: 10px;
-    height: 220px;
+  .client-title {
+    font-size: 29.5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #3c678b;
   }
-}
+  .client-subtitle {
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .tab {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #ccc;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .tab.active {
+    background: linear-gradient(90deg, #5DE0E6, #004AAD);
+  }
+  .tab-content {
+    display: none;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tab-content.active {
+    display: flex;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  .card h3 {
+    margin: 0 0 5px;
+  }
+  .card .role {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 </style>
 
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
 
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
+
+<!-- bagian client -->
 
 <!-- What Our Clients Say Section -->
 <section class="testimonial-section">
@@ -1005,7 +1013,7 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
       <!-- Teks -->
       <div class="col-lg-6 text-white">
         <h2 class="mb-4" style="font-weight:700; color:white;">
-          Siap untuk merekrut kandidat terbaik untuk bergabung jadi tim Anda?
+          Siap merekrut kandidat terbaik untuk bergabung jadi tim Anda?
         </h2>
         <p class="mb-4">
           Jangan biarkan momentum bisnis Anda hilang karena tim belum siap! 
