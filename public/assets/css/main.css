@@ -456,30 +456,33 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    position: relative;
+    z-index: 10001;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
   }
 
   #navmenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 280px;
     background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 12px 12px;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
+    overflow-y: auto;
     z-index: 9999;
+    display: flex;
     flex-direction: column;
-    padding: 0 20px;
   }
 
   #navmenu.active {
-    max-height: 600px;
-    opacity: 1;
-    padding: 20px;
-    overflow-y: auto;
+    transform: translateX(0);
   }
 
   .navmenu ul {
@@ -504,6 +507,7 @@ h6 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
+  /* Dropdown animasi buka */
   .navmenu ul li ul {
     max-height: 0;
     overflow: hidden;
@@ -511,14 +515,9 @@ h6 {
     transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
-  .navmenu ul li:hover ul,
-  .navmenu ul li:focus-within ul {
-    display: block;
-  }
-
-  .navmenu ul li ul li a {
-    font-size: 0.9rem;
-    color: #555;
+  .navmenu ul li.open > ul {
+    max-height: 300px;
+    opacity: 1;
   }
 
   .navmenu ul li .btn {
@@ -531,7 +530,34 @@ h6 {
     border-radius: 50px;
     font-weight: 500;
   }
+
+  /* Overlay background */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
+/* Warna tombol X saat menu aktif di mobile */
+@media (max-width: 991px) {
+  body.mobile-nav-active .mobile-nav-toggle {
+    color: #000 !important; /* selalu hitam saat menu terbuka */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Preloader

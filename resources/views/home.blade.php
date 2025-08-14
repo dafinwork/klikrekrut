@@ -32,17 +32,22 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- hero section -->
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Header -->
 <header class="header fixed-top">
   <div class="container d-flex justify-content-between align-items-center py-2">
-<a href="#" class="logo d-flex align-items-center">
-  <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
-</a> <!-- di css namanya logo -->
 
-    <!-- Mobile toggle button -->
+    <!-- Logo -->
+    <a href="#" class="logo d-flex align-items-center">
+      <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
+    </a>
+
+    <!-- Mobile Toggle -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- Navigation Menu -->
+    <!-- Nav Menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
         <li class="dropdown">
@@ -63,37 +68,66 @@
           </ul>
         </li>
         <li>
-  <a href="https://api.whatsapp.com/send?phone=6289678868752"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
-    Get Consultation Free ➝
-  </a>
-</li>
-
+          <a href="https://api.whatsapp.com/send?phone=6289678868752"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
+            Get Consultation Free ➝
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
+
+<!-- Overlay -->
+<div class="mobile-nav-overlay"></div>
 <script>
-  // Tambahkan/ambil class 'scrolled' saat scroll
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
-  if (window.scrollY > 10) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
   document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
     const toggle = document.querySelector(".mobile-nav-toggle");
     const navmenu = document.getElementById("navmenu");
     const dropdowns = document.querySelectorAll(".navmenu .dropdown");
+
+    // Ubah ikon burger jadi X saat menu aktif
+    function updateToggleIcon() {
+      if (navmenu.classList.contains("active")) {
+        toggle.classList.remove("bi-list");
+        toggle.classList.add("bi-x");
+        toggle.style.color = "#000"; // selalu hitam saat menu terbuka
+      } else {
+        toggle.classList.remove("bi-x");
+        toggle.classList.add("bi-list");
+
+        // Warna kembali sesuai kondisi scroll
+        if (window.scrollY > 10) {
+          toggle.style.color = "#004AAD"; // biru saat scroll
+        } else {
+          toggle.style.color = "#fff"; // putih sebelum scroll
+        }
+      }
+    }
+
+    // Scroll behavior
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+        if (!navmenu.classList.contains("active")) {
+          toggle.style.color = "#004AAD";
+        }
+      } else {
+        header.classList.remove("scrolled");
+        if (!navmenu.classList.contains("active")) {
+          toggle.style.color = "#fff";
+        }
+      }
+    });
 
     // Toggle nav mobile
     toggle.addEventListener("click", () => {
       navmenu.classList.toggle("active");
       document.body.classList.toggle("mobile-nav-active");
+      updateToggleIcon();
     });
 
     // Interaksi dropdown
@@ -108,9 +142,11 @@ window.addEventListener("scroll", function () {
           if (d !== drop) {
             d.classList.remove("open");
             const submenu = d.querySelector("ul");
-            if (submenu) submenu.style.display = "none";
+            if (submenu) {
+              submenu.style.maxHeight = "0";
+              submenu.style.opacity = "0";
+            }
 
-            // Reset panah
             const icon = d.querySelector(".toggle-icon");
             if (icon) {
               icon.classList.add("bi-chevron-down");
@@ -121,15 +157,15 @@ window.addEventListener("scroll", function () {
 
         // Toggle dropdown sekarang
         drop.classList.toggle("open");
-const submenu = drop.querySelector("ul");
-if (drop.classList.contains("open")) {
-  submenu.style.maxHeight = submenu.scrollHeight + "px";
-  submenu.style.opacity = "1";
-} else {
-  submenu.style.maxHeight = "0";
-  submenu.style.opacity = "0";
-}
-        // Toggle ikon panah
+        const submenu = drop.querySelector("ul");
+        if (drop.classList.contains("open")) {
+          submenu.style.maxHeight = submenu.scrollHeight + "px";
+          submenu.style.opacity = "1";
+        } else {
+          submenu.style.maxHeight = "0";
+          submenu.style.opacity = "0";
+        }
+
         const icon = drop.querySelector(".toggle-icon");
         if (icon) {
           icon.classList.toggle("bi-chevron-down");
@@ -138,7 +174,7 @@ if (drop.classList.contains("open")) {
       });
     });
 
-    // Tutup nav dan dropdown saat klik luar
+    // Tutup nav saat klik di luar
     document.addEventListener("click", function (e) {
       if (
         document.body.classList.contains("mobile-nav-active") &&
@@ -147,13 +183,16 @@ if (drop.classList.contains("open")) {
       ) {
         navmenu.classList.remove("active");
         document.body.classList.remove("mobile-nav-active");
+        updateToggleIcon();
 
-        // Tutup semua dropdown
         dropdowns.forEach(d => {
           d.classList.remove("open");
           const submenu = d.querySelector("ul");
+          if (submenu) {
+            submenu.style.maxHeight = "0";
+            submenu.style.opacity = "0";
+          }
 
-          // Reset ikon panah
           const icon = d.querySelector(".toggle-icon");
           if (icon) {
             icon.classList.add("bi-chevron-down");
@@ -162,8 +201,13 @@ if (drop.classList.contains("open")) {
         });
       }
     });
+
+    // Set ikon awal sesuai posisi scroll
+    updateToggleIcon();
   });
 </script>
+
+
 <main class="main">
 <!-- Tambahkan di layout atau halaman -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -421,6 +465,145 @@ if (drop.classList.contains("open")) {
 }
 
 </style>
+<!-- layanan utama -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-number">3</span> Layanan Utama Kami Dirancang Untuk <br>
+      Membuat Rekrutmen Anda Lebih Efisien
+    </h2>
+
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-item">
+        <img src="assets/img/awan.png" alt="Recruitment Assistant" class="service-img">
+        <h3>Recruitment Assistant</h3>
+        <p>
+          Mitra rekruter kami dari berbagai industri siap bantu carikan Anda kandidat terbaik.
+          Hemat resource, minim risiko, bebas pusing.
+        </p>
+        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-item">
+        <img src="assets/img/awan.png" alt="Recruitment Community" class="service-img">
+        <h3>Recruitment Community</h3>
+        <p>
+          Tanpa repot sourcing, dapatkan pelamar dengan mudah, cepat, dan tepat lewat komunitas talent kami dari berbagai bidang.
+        </p>
+        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-item">
+        <img src="assets/img/awan.png" alt="Recruitment Learning" class="service-img">
+        <h3>Recruitment Learning</h3>
+        <p>
+          Materi pembelajaran rekrutmen dari para praktisi terbaik. Ubah tim Anda jadi pemburu talenta kelas dunia.
+        </p>
+        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.services-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #363636; /* 🔹 Semua teks default warna ini */
+}
+
+.section-title {
+  font-weight: 800; /* 🔹 Bold */
+  margin-bottom: 50px;
+  font-size: 2rem;
+  line-height: 1.3;
+  color: #3c678b; /* 🔹 Warna sesuai permintaan */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-number {
+  margin-right: 8px;
+  line-height: 1.3;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.service-item h3 {
+  font-weight: 700; /* Bold */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #3c678b; /* Warna sesuai permintaan */
+}
+
+.service-img {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto 25px;
+  display: block;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #363636;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #363636;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #363636;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .title-number {
+    margin-right: 0;
+    display: inline-block;
+  }
+}
+</style>
 <!-- reqruitment -->
 <section class="service-section py-5">
   <div class="container text-center">
@@ -604,10 +787,10 @@ if (drop.classList.contains("open")) {
 </style>
 
 <!--angka-->
-<section style="background-color: #e7f4fc; color: #fff; padding: 40px 20px; text-align: center;">
+<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center;">
   <div class="container" data-aos="fade-up">
     <!-- Judul -->
-    <h2 style="font-weight: 700; font-size: 1.4rem; color: #635d5e; margin-bottom: 40px;">
+    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
       Empowering Indonesia’s Talent and Business Ecosystem
     </h2>
 
@@ -616,24 +799,24 @@ if (drop.classList.contains("open")) {
       
       <!-- Item 1 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
           key positions<br>successfully filled
         </div>
       </div>
 
       <!-- Item 2 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
           of talents elevate<br>their career
         </div>
       </div>
 
       <!-- Item 3 -->
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #7ed957;">0%</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #635d5e;">
+        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #fff;">0%</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
           of our client successfully<br>grows their business
         </div>
       </div>
@@ -826,7 +1009,7 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
           Jangan biarkan momentum bisnis Anda hilang karena tim belum siap! 
           Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
         </p>
-        <a href="#" class="btn btn-success rounded-pill px-4 py-2">Hubungi Kami</a>
+        <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-success rounded-pill px-4 py-2">Hubungi Kami</a>
         <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2">Explore Layanan →</a>
       </div>
 
