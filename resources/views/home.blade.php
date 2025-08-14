@@ -604,6 +604,79 @@
   }
 }
 </style>
+
+<!--angka-->
+<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center;">
+  <div class="container" data-aos="fade-up">
+    <!-- Judul -->
+    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
+      Empowering Indonesia’s Talent and Business Ecosystem
+    </h2>
+
+    <!-- Statistik horizontal -->
+    <div class="row justify-content-center text-center g-4">
+      
+      <!-- Item 1 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+          key positions<br>successfully filled
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+          of talents elevate<br>their career
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
+        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #fff;">0%</h1>
+        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
+          of our client successfully<br>grows their business
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Count-Up Script -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const suffix = counter.getAttribute('data-suffix') || '';
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText.replace(/\D/g, '');
+      
+      const speed = 12; // Semakin besar, semakin lambat (default: 30)
+      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
+
+      if (count < target) {
+        counter.innerText = `${count + increment}${suffix}`;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = `${target}${suffix}`;
+      }
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateCount();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.9 });
+
+    observer.observe(counter);
+  });
+</script>
 <!-- reqruitment -->
 <section class="service-section py-5">
   <div class="container text-center">
@@ -786,78 +859,7 @@
 }
 </style>
 
-<!--angka-->
-<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center;">
-  <div class="container" data-aos="fade-up">
-    <!-- Judul -->
-    <h2 style="font-weight: 700; font-size: 1.4rem; color: #fff; margin-bottom: 40px;">
-      Empowering Indonesia’s Talent and Business Ecosystem
-    </h2>
 
-    <!-- Statistik horizontal -->
-    <div class="row justify-content-center text-center g-4">
-      
-      <!-- Item 1 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="7" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
-          key positions<br>successfully filled
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="14" style="font-size: 3rem; font-weight: 700; color: #fff;">0</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
-          of talents elevate<br>their career
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-3">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%" style="font-size: 3rem; font-weight: 700; color: #fff;">0%</h1>
-        <div class="text-start" style="font-size: 0.85rem; color: #fff;">
-          of our client successfully<br>grows their business
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Count-Up Script -->
-<script>
-  const counters = document.querySelectorAll('.counter');
-
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const suffix = counter.getAttribute('data-suffix') || '';
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText.replace(/\D/g, '');
-      
-      const speed = 12; // Semakin besar, semakin lambat (default: 30)
-      const increment = Math.ceil(target / 100); // Semakin besar pembagi, semakin lambat naiknya
-
-      if (count < target) {
-        counter.innerText = `${count + increment}${suffix}`;
-        setTimeout(updateCount, speed);
-      } else {
-        counter.innerText = `${target}${suffix}`;
-      }
-    };
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          updateCount();
-          observer.unobserve(counter);
-        }
-      });
-    }, { threshold: 0.9 });
-
-    observer.observe(counter);
-  });
-</script>
 
 <!-- What Our Clients Say Section -->
 <section class="testimonial-section">
