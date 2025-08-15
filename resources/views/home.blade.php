@@ -205,6 +205,25 @@
     // Set ikon awal sesuai posisi scroll
     updateToggleIcon();
   });
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('.navmenu');
+    const overlay = document.querySelector('#nav-overlay');
+
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+      toggle.classList.toggle('bi-x');
+      toggle.classList.toggle('bi-list');
+    });
+
+    overlay.addEventListener('click', function () {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+      toggle.classList.add('bi-list');
+      toggle.classList.remove('bi-x');
+    });
+  });
 </script>
 
 
@@ -470,15 +489,14 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
 <section class="services-section">
   <div class="container">
     <h2 class="section-title">
-      Layanan Utama Kami Dirancang Untuk <br>
-      Membuat Rekrutmen Anda Lebih Efisien
+      3 Layanan Utama Kami Dirancang Untuk Membuat Rekrutmen Anda Lebih Efisien
     </h2>
 
-    <div class="services-grid">
+    <div class="services-row">
 
-      <!-- Card 1 -->
+      <!-- Item 1 -->
       <div class="service-item">
-        <img src="assets/img/awan.png" alt="Recruitment Assistant" class="service-img">
+        <img src="assets/img/assis.png" alt="Recruitment Assistant" class="service-img">
         <h3>Recruitment Assistant</h3>
         <p class="service-desc">
           Mitra rekruter kami dari berbagai industri siap bantu carikan Anda kandidat terbaik.
@@ -487,9 +505,9 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
         <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Item 2 -->
       <div class="service-item">
-        <img src="assets/img/awan.png" alt="Recruitment Community" class="service-img">
+        <img src="assets/img/comu.png" alt="Recruitment Community" class="service-img">
         <h3>Recruitment Community</h3>
         <p class="service-desc">
           Tanpa repot sourcing, dapatkan pelamar dengan mudah, cepat, dan tepat lewat komunitas talent kami dari berbagai bidang.
@@ -497,9 +515,9 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
         <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Item 3 -->
       <div class="service-item">
-        <img src="assets/img/awan.png" alt="Recruitment Learning" class="service-img">
+        <img src="assets/img/elearn.png" alt="Recruitment Learning" class="service-img">
         <h3>Recruitment Learning</h3>
         <p class="service-desc">
           Materi pembelajaran rekrutmen dari para praktisi terbaik. Ubah tim Anda jadi pemburu talenta kelas dunia.
@@ -510,93 +528,68 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
     </div>
   </div>
 </section>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .services-section {
   padding: 80px 20px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
 }
 
 .section-title {
   font-weight: 800;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-size: 32px;
   line-height: 1.3;
   color: #3c678b;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
+  text-align: center;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.title-number {
-  margin-right: 10px;
-  line-height: 1;
-}
-
-.services-grid {
+.services-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .service-item {
-  padding: 40px 30px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 420px;
+  text-align: center;
+}
+
+.service-img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .service-item h3 {
   font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+  font-size: 1.6rem; /* ubah jadi lebih besar */
+  margin-bottom: 15px;
   color: #000;
 }
 
-.service-img {
-  max-width: 180px;
-  height: auto;
-  margin: 0 auto 25px;
-  display: block;
-}
-
 .service-desc {
-  font-size: 0.78rem;
-  line-height: 1.5;
-  text-align: center;
-  margin: 0 auto 10px;
-  width: 100%;
-  height: 4.5em; /* 3 baris */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 5px;
+  font-size: 1.05rem; /* ubah jadi 1.05rem atau lebih */
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .btn-outline {
-  margin-top: 15px;
   display: inline-block;
-  padding: 10px 28px;
+  padding: 12px 28px; /* sedikit diperlebar */
   border: 2px solid #363636;
   border-radius: 50px;
   text-decoration: none;
   color: #363636;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1rem; /* perbesar ukuran teks tombol */
   transition: all 0.3s ease;
-  align-self: center; /* biar tetap di tengah horizontal */
 }
 
 .btn-outline:hover {
@@ -604,35 +597,13 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
   color: #fff;
 }
 
-@media (max-width: 991px) {
-  .services-grid {
+@media (max-width: 768px) {
+  .services-row {
     grid-template-columns: 1fr;
-    gap: 35px;
-    max-width: 550px;
-  }
-  
-  .service-item {
-    min-height: 380px;
-    padding: 35px 25px;
-  }
-  
-  .service-desc {
-    font-size: 0.82rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .service-desc {
-    font-size: 0.85rem;
-    height: auto;
-    min-height: 4.5em;
-  }
-  
-  .service-item {
-    min-height: 350px;
   }
 }
 </style>
+
 <!-- Import Font Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -738,11 +709,10 @@ document.querySelectorAll('.counter').forEach(counter => {
   observer.observe(counter);
 });
 </script>
-
 <!-- Client & Talent Section -->
 <section class="client-section">
   <div class="container">
-    <h2 class="client-title">Empowering Indonesia’s Talent and Business Ecosystem</h2>  
+    <h2 class="client-title">Empowering Indonesia's Talent and Business Ecosystem</h2>  
 
     <!-- Tab Buttons -->
     <div class="tab-buttons">
@@ -752,258 +722,426 @@ document.querySelectorAll('.counter').forEach(counter => {
 
     <!-- Clients Content -->
     <div class="tab-content active" id="clients">
-      <div class="card">
-        <h3>IRIJ Jakarta</h3>
-        <p class="role">Market Research Consultant</p>
-        <p>Pelayanan Klik Rekrut luar biasa. Sepanjang kerja sama dengan berbagai headhunter...</p>
+      <div class="carousel-container">
+        <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+        
+        <div class="carousel-track">
+          <!-- Client Group 1 (visible by default) -->
+          <div class="carousel-slide active">
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/irij2.png" alt="IRIJ Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>IRIJ Jakarta</h3>
+                  <p class="role">Market Research Consultant</p>
+                </div>
+              </div>
+              <p class="card-description">Pelayanan Klik Rekrut luar biasa. Sepanjang kerja sama dengan berbagai headhunter, mereka adalah yang paling cepat merespons dan konsisten mengirimkan kandidat berkualitas tinggi</p>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/sosialoka2.png" alt="Sosialoka Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>Sosialoka</h3>
+                  <p class="role">Digital Agency</p>
+                </div>
+              </div>
+              <p class="card-description">Klik Rekrut selalu tanggap dan mudah diajak komunikasi. Prosesnya singkat, efisien, dan tanpa langkah-langkah yang bikin ribet. Kandidat yang diberikan selalu sesuai kebutuhan, dan hasil kerjanya memuaskan.</p>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/nurama2.png" alt="Nurama.clo Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>Nurama.clo</h3>
+                  <p class="role">Fashion Modest Brand</p>
+                </div>
+              </div>
+              <p class="card-description">Klik Rekrut adalah mitra headhunter yang bisa diandalkan. Kurang dari seminggu sejak kerja sama dimulai, kami sudah menemukan kandidat yang tepat untuk posisi yang dibutuhkan.</p>
+            </div>
+          </div>
+          
+          <!-- Client Group 2 -->
+          <div class="carousel-slide">
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/client4.png" alt="Client 4 Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>Client 4</h3>
+                  <p class="role">Industry Type</p>
+                </div>
+              </div>
+              <p class="card-description">Testimonial from Client 4 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/client5.png" alt="Client 5 Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>Client 5</h3>
+                  <p class="role">Industry Type</p>
+                </div>
+              </div>
+              <p class="card-description">Testimonial from Client 5 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/img/client6.png" alt="Client 6 Logo" class="card-logo">
+                <div class="card-titles">
+                  <h3>Client 6</h3>
+                  <p class="role">Industry Type</p>
+                </div>
+              </div>
+              <p class="card-description">Testimonial from Client 6 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-button next" aria-label="Next">&#10095;</button>
       </div>
-      <div class="card">
-        <h3>Sosialoka</h3>
-        <p class="role">Digital Agency</p>
-        <p>Klik Rekrut selalu tanggap dan mudah diajak komunikasi. Proses singkat dan efisien...</p>
-      </div>
-      <div class="card">
-        <h3>Nurama.clo</h3>
-        <p class="role">Fashion Modest Brand</p>
-        <p>Klik Rekrut adalah mitra headhunter yang bisa diandalkan...</p>
+      
+      <div class="carousel-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
       </div>
     </div>
 
-    <!-- Talents Content -->
-    <div class="tab-content" id="talents">
-      <div class="card">
-        <h3>Agustina Gita</h3>
-        <p class="role">Jr. Finance & Accounting</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+<!-- Talents Content -->
+<div class="tab-content" id="talents">
+  <div class="carousel-container" data-carousel="talents">
+    <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+
+    <div class="carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Agustina Gita" class="card-logo">
+            <div class="card-titles">
+              <h3>Agustina Gita</h3>
+              <p class="role">Jr. Finance & Accounting</p>
+            </div>
+          </div>
+          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Muh. Akbar" class="card-logo">
+            <div class="card-titles">
+              <h3>Muh. Akbar</h3>
+              <p class="role">Business Development</p>
+            </div>
+          </div>
+          <p class="card-description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Ical" class="card-logo">
+            <div class="card-titles">
+              <h3>Ical</h3>
+              <p class="role">Video Grapher & Editor</p>
+            </div>
+          </div>
+          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Muh. Akbar</h3>
-        <p class="role">Business Development</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-      </div>
-      <div class="card">
-        <h3>Ical</h3>
-        <p class="role">Video Grapher & Editor</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+
+      <!-- Slide 2 (contoh isi tambahan) -->
+      <div class="carousel-slide">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Talent 4" class="card-logo">
+            <div class="card-titles">
+              <h3>Talent 4</h3>
+              <p class="role">Role 4</p>
+            </div>
+          </div>
+          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Talent 5" class="card-logo">
+            <div class="card-titles">
+              <h3>Talent 5</h3>
+              <p class="role">Role 5</p>
+            </div>
+          </div>
+          <p class="card-description">Deskripsi singkat talent 5.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <img src="assets/img/cat1.png" alt="Talent 6" class="card-logo">
+            <div class="card-titles">
+              <h3>Talent 6</h3>
+              <p class="role">Role 6</p>
+            </div>
+          </div>
+          <p class="card-description">Deskripsi singkat talent 6.</p>
+        </div>
       </div>
     </div>
+
+    <button class="carousel-button next" aria-label="Next">&#10095;</button>
   </div>
-</section>
 
+  <div class="carousel-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+  </div>
+</div>
+</div>
 <style>
-  .client-section {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding: 40px 0;
-  }
+.client-section {
+  padding-top: 40px;
+  padding-bottom: 0; /* biar gak nambah jarak bawah */
+  margin-bottom: 0;  /* gak dorong footer */
+  background: white;
+}
+.client-section .client-title,
+.client-section .tab-buttons,
+.client-section .tab-content {
+  text-align: center;
+}
+
   .client-title {
     font-size: 29.5px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 30px; /* sebelumnya 10px */
+    margin-top: 20px; /* kalau mau jarak atas lebih longgar */
     color: #3c678b;
-  }
-  .client-subtitle {
-    color: #ccc;
-    margin-bottom: 30px;
   }
   .tab-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* sebelumnya 30px */
+    margin-top: 50px; /* jarak dari judul */
+    flex-wrap: wrap;
   }
   .tab {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background: #ccc;
-    color: #fff;
+    background: #f0f0f0;
+    color: #333;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.3s;
+    transition: all 0.3s;
   }
   .tab.active {
     background: linear-gradient(90deg, #5DE0E6, #004AAD);
+    color: white;
   }
   .tab-content {
     display: none;
-    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch;
   }
   .tab-content.active {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  
+  /* Carousel Styles */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .carousel-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  .carousel-slide {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+  }
+  .carousel-slide.active {
+    display: flex;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.1);
+    color: #3c678b;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+  }
+  .carousel-button:hover {
+    background: rgba(0,0,0,0.2);
+  }
+  .prev {
+    left: -50px;
+  }
+  .next {
+    right: -50px;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 60px; /* tambahin jarak ekstra di bawah dots */
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .dot.active {
+    background: #3c678b;
+  }
+  
+  /* Card Styles */
   .card {
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 20px;
-    max-width: 300px;
+    width: 300px;
     text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: transparent;
+    border-bottom: none;
+    min-height: 50px;
+  }
+  .card-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 12px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-titles {
+    flex: 1;
+    background: transparent;
   }
   .card h3 {
-    margin: 0 0 5px;
+    margin: 0 0 3px;
+    font-size: 18px;
+    color: #635d5e;
+    font-weight: bold;
+    background: transparent;
   }
   .card .role {
-    color: gray;
-    font-size: 14px;
-    margin-bottom: 10px;
+    color: #635d5e;
+    font-size: 10px;
+    margin: 0;
+    background: transparent;
+    font-weight: bold;
   }
+  .card-description {
+    margin-top: auto;
+    color: #444;
+    line-height: 1.5;
+    font-size: 14px;
+    text-align: left;
+  }
+
+@media (max-width: 768px) {
+  .carousel-slide.active {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-button {
+    display: block; /* tampilkan lagi */
+    top: auto;      /* biar nggak ketumpuk */
+    bottom: -50px;  /* posisinya di bawah carousel */
+    transform: none;
+  }
+  .prev {
+    left: 30%;
+  }
+  .next {
+    right: 30%;
+  }
+}
 </style>
 
+
 <script>
+  // Tab switching (tetap)
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.tab-content');
-
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       contents.forEach(c => c.classList.remove('active'));
-
       tab.classList.add('active');
       document.getElementById(tab.dataset.target).classList.add('active');
     });
   });
+
+  // Carousel reusable untuk Clients & Talents
+  function initCarousel(scopeEl) {
+    const container = scopeEl.querySelector('.carousel-container');
+    if (!container) return;
+
+    const slides = container.querySelectorAll('.carousel-slide');
+    const dots = scopeEl.querySelectorAll('.carousel-dots .dot');
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    let current = [...slides].findIndex(s => s.classList.contains('active'));
+    if (current < 0) current = 0;
+
+    function show(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[i].classList.add('active');
+      if (dots[i]) dots[i].classList.add('active');
+      current = i;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      show((current - 1 + slides.length) % slides.length);
+    });
+    nextBtn.addEventListener('click', () => {
+      show((current + 1) % slides.length);
+    });
+    dots.forEach(d => {
+      d.addEventListener('click', () => show(parseInt(d.dataset.slide, 10)));
+    });
+  }
+
+  // Inisialisasi untuk setiap tab-content yang punya carousel
+  document.querySelectorAll('.tab-content').forEach(initCarousel);
 </script>
-
-<!-- bagian client -->
-
-<!-- What Our Clients Say Section -->
-<section class="testimonial-section">
-  <div class="container">
-    <!-- Title -->
-    <h2 class="testimonial-title">What Our Clients Say</h2>
-
-    <!-- Cards -->
-    <div class="testimonial-cards">
-      <!-- Card 1 -->
-      <div class="testimonial-card">
-        <img src="assets/img/cat1.png" alt="Isla">
-        <h4>Arneta A.</h4>
-        <small class="testimonial-company">Indonesia Research Institute Japan Jakarta</small>
-        <p>
-Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisien dalam merekrut karyawan, karena kami hanya perlu menunggu kandidat yang telah diseleksi, tanpa harus terlibat dalam setiap tahap proses rekrutmen.”
-        </p>
-      </div>
-      <!-- Card 2 -->
-      <div class="testimonial-card">
-        <img src="assets/img/cat2.png" alt="Mason">
-        <h4>Mason</h4>
-        <p>
-          Testimonials are short quotes from people who love your brand.
-          It's a great way to convince customers to try your services.
-        </p>
-      </div>
-      <!-- Card 3 -->
-      <div class="testimonial-card">
-        <img src="assets/img/cat3.png" alt="Jonah">
-        <h4>Jonah</h4>
-        <p>
-          Testimonials are short quotes from people who love your brand.
-          It's a great way to convince customers to try your services.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* Section Background */
-.testimonial-section {
-  background: #6abcff;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Title */
-.testimonial-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-/* Cards Container */
-.testimonial-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Card */
-.testimonial-card {
-  position: relative;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 30px 20px;
-  width: 300px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-}
-
-/* Efek kilap otomatis */
-.testimonial-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  transform: skewX(-20deg);
-  pointer-events: none;
-  animation: shine 3s linear infinite;
-}
-
-/* Animasi geser kilap */
-@keyframes shine {
-  from { left: -50%; }
-  to { left: 100%; }
-}
-
-/* Delay tiap kartu biar gak barengan */
-.testimonial-card:nth-child(1)::before { animation-delay: 0s; }
-.testimonial-card:nth-child(2)::before { animation-delay: 1s; }
-.testimonial-card:nth-child(3)::before { animation-delay: 2s; }
-
-/* Hover naik */
-.testimonial-card:hover {
-  transform: translateY(-6px);
-}
-
-/* Image */
-.testimonial-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-/* Name */
-.testimonial-card h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-/* Description */
-.testimonial-card p {
-  font-size: 0.95rem;
-  color: #f1f1f1;
-  line-height: 1.5;
-}
-</style>
 
 <!-- CTA Section -->
 <section class="cta-section position-relative">
@@ -1038,7 +1176,7 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
     linear-gradient(to right, #5DE0E6, #004AAD),
     url('assets/img/ornamencta.png') no-repeat right center;
   background-size: cover;
-  padding: 100px 0;
+  padding: 80px 0 60px; /* Atas 80px, kanan/kiri 0, bawah 60px */
   overflow: hidden;
   position: relative;
 }
@@ -1084,7 +1222,6 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
   }
 }
 </style>
-
 <!-- footer -->
 <footer class="footer">
   <div class="container">
@@ -1144,6 +1281,7 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
   background-color: #f9f9f9;
   color: #333;
   padding: 30px 20px;
+  margin-top: 0; /* reset jarak atas footer */
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
@@ -1253,8 +1391,6 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
   }
 }
 </style>
-
-
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -1278,44 +1414,4 @@ Kami sangat terbantu dengan layanan asisten rekrutmen membantu saya lebih efisie
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-  const text = "#LebihUnggulLayanannya";
-  const typingElement = document.getElementById("typing-text");
-  let index = 0;
-
-  function type() {
-    if (index < text.length) {
-      typingElement.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(type, 100); // semakin besar = semakin lambat
-    }
-  }
-
-  // Jalankan animasi saat halaman dimuat
-  window.addEventListener("DOMContentLoaded", type);
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector('.mobile-nav-toggle');
-    const nav = document.querySelector('.navmenu');
-    const overlay = document.querySelector('#nav-overlay');
-
-    toggle.addEventListener('click', function () {
-      nav.classList.toggle('active');
-      overlay.classList.toggle('active');
-      toggle.classList.toggle('bi-x');
-      toggle.classList.toggle('bi-list');
-    });
-
-    overlay.addEventListener('click', function () {
-      nav.classList.remove('active');
-      overlay.classList.remove('active');
-      toggle.classList.add('bi-list');
-      toggle.classList.remove('bi-x');
-    });
-  });
-
-  
-</script>
 @endsection
