@@ -21,3 +21,6 @@ Route::get('/learning', function () {
 Route::get('/community', function () {
     return view('community');
 });
+Route::get('/apply', function () {
+    return view('apply');
+});

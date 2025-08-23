@@ -47,38 +47,25 @@
     <!-- Mobile Toggle -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- Nav Menu -->
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li class="dropdown">
-          <a href="#">Services <i class="bi bi-chevron-down toggle-icon"></i></a>
-          <ul>
-            <li><a href="#">Assistant</a></li>
-            <li><a href="{{ url('community') }}">Community</a></li>
-            <li><a href="{{ url('learning') }}">E-learning</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Free Resources</a></li>
-        <li class="dropdown">
-          <a href="#">Company <i class="bi bi-chevron-down toggle-icon"></i></a>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Partner with us</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=6289678868752"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
-            Get Consultation Free ➝
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<!-- Nav Menu -->
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="#">Services</a></li>
+    <li><a href="{{ url('learning') }}">E-learning</a></li>
+    <li><a href="{{ url('apply') }}">Apply as partner</a></li>
+    <li>
+      <a href="https://api.whatsapp.com/send?phone=6289678868752"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
+        Join to Talent Community ➝
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
 </header>
+
 
 <!-- Overlay -->
 <div class="mobile-nav-overlay"></div>
@@ -239,10 +226,9 @@
 <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
   <span id="typing-hero"></span>
 </h1>
-        <p class="mb-4">Satu platform untuk kemudahan rekrutmen - mulai dari<br>
-pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
+        <p class="mb-4">Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen minim pusing, minim risiko dan minim resouce.</p>
         <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="btn btn-success rounded-pill px-4 py-2 pulse-button" target="_blank" rel="noopener noreferrer"> Pesan Layanan </a>
+   class="btn btn-success rounded-pill px-4 py-2 pulse-button" target="_blank" rel="noopener noreferrer"> Baca Lebih Lanjut ↘</a>
       </div>
       <div class="col-lg-6 text-center" data-aos="fade-left">
         <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
@@ -250,9 +236,9 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
     </div>
   </div>
   <script>
-  const text = "Membantu Anda Merekrut Tim Masa Depan";
-  const el = document.getElementById("typing-hero");
-  let i = 0;
+const text = "Membantu Anda\nMerekrut Tim Masa Depan";
+const el = document.getElementById("typing-hero");
+let i = 0;
 
   function typeText() {
     if (i < text.length) {
@@ -265,6 +251,9 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
   window.addEventListener("DOMContentLoaded", typeText);
 </script>
 <style>
+  #typing-hero {
+  white-space: pre-line;
+}
 .hero-title {
   font-weight: 700; /* atau 800 kalau mau lebih tebal */
 }
@@ -289,11 +278,14 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
   }
 }
 
-.pulse-button {
-  animation: pulse 1.4s ease-in-out infinite;
-  transform-origin: center;
-  width: auto;
-  display: inline-block;
+a.pulse-button {
+  background-color: #7ed957 !important;
+  border-color: #7ed957 !important;
+  color: white !important;
+}
+a.pulse-button:hover {
+  background-color: #6cc44a !important; /* sedikit lebih gelap */
+  border-color: #6cc44a !important;
 }
 
 /* Batasi lebar di mobile */
@@ -483,161 +475,240 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
     max-height: 110px;
   }
 }
-
 </style>
-<!-- layanan utama -->
-<section class="services-section">
-  <div class="container">
-    <h2 class="section-title">
-      3 Layanan Utama Kami Dirancang Untuk Membuat Rekrutmen Anda Lebih Efisien
-    </h2>
+    <!-- layanan utama -->
+    <section class="services-section">
+        <div class="container">
+            <p class="section-subtitle">LAYANAN REKRUTMEN KAMI</p>
+            <h2 class="section-title">
+                Bantu Rekrut Kandidat, Bikin Bisnis Melesat
+            </h2>
 
-    <div class="services-row">
-
-      <!-- Item 1 -->
-      <div class="service-item">
-        <img src="assets/img/assis.png" alt="Recruitment Assistant" class="service-img">
-        <h3>Recruitment Assistant</h3>
-        <p class="service-desc">
-          Mitra rekruter kami dari berbagai industri siap bantu carikan Anda kandidat terbaik.
-          Hemat resource, minim risiko, bebas pusing.
-        </p>
-        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="service-item">
-        <img src="assets/img/comu.png" alt="Recruitment Community" class="service-img">
-        <h3>Recruitment Community</h3>
-        <p class="service-desc">
-          Tanpa repot sourcing, dapatkan pelamar dengan mudah, cepat, dan tepat lewat komunitas talent kami dari berbagai bidang.
-        </p>
-        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="service-item">
-        <img src="assets/img/elearn.png" alt="Recruitment Learning" class="service-img">
-        <h3>Recruitment Learning</h3>
-        <p class="service-desc">
-          Materi pembelajaran rekrutmen dari para praktisi terbaik. Ubah tim Anda jadi pemburu talenta kelas dunia.
-        </p>
-        <a href="#" class="btn-outline">Baca Lebih Lanjut</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+            <!-- Baris 1 -->
+            <div class="service-row">
+                <div class="service-img">
+                    <img src="assets/img/comu.png" alt="Talent Sourcing">
+                </div>
+                <div class="service-content">
+                    <h3>Talent Sourcing</h3>
+                    <p>Dapatkan kandidat dengan mudah, cepat, tanpa repot sourcing lewat komunitas talent kami dari berbagai bidang.</p>
+                    <ul>
+                        <li>Supports Entry & Mid Levels</li>
+                        <li>Talent Pool</li>
+                        <li>Sourcing Support</li>
+                    </ul>
+                    <a href="#" class="btn-service">Pesan Layanan →</a>
+                </div>
+            </div>
+            <!-- Baris 2 -->
+            <div class="service-row reverse">
+                <div class="service-content">
+                    <h3>Recruitment Assistant</h3>
+                    <p>Dapatkan referensi kandidat terbaik dari para mitra rekruter kami yang berpengalaman di berbagai industri.</p>
+                    <ul>
+                        <li>Supports All Hiring Levels</li>
+                        <li>End-to-end Recruitment</li>
+                        <li>Talent Personalization</li>
+                        <li>Approach Passive Candidate</li>
+                        <li>Talent Replacement Guarantee</li>
+                    </ul>
+                    <a href="#" class="btn-service">Pesan Layanan →</a>
+                </div>
+                <div class="service-img">
+                    <img src="assets/img/assis.png" alt="Recruitment Assistant">
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
 .services-section {
-  padding: 80px 20px;
-  font-family: 'Poppins';
+    padding: 40px 0 20px; /* atas 80px, bawah 40px */
+    width: 100%; /* Pastikan full lebar layar */
+    max-width: none; /* Hilangkan batasan 1200px */
+    margin: 0;
+}
+.services-section .container {
+    width: 90%; /* Konten tetap rapi */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #2e6bbc;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .section-title {
-  font-weight: 800;
-  margin-bottom: 50px;
-  font-size: 32px;
-  line-height: 1.3;
-  color: #3c678b;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #3c678b;
+    text-align: center;
 }
 
-.services-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 50px;
+    background: none; /* hilangkan box background */
+    padding: 0; /* hilangkan padding seperti card */
+    border-radius: 0; /* hilangkan efek kartu */
+    box-shadow: none; /* hilangkan shadow */
 }
 
-.service-item {
-  text-align: center;
+.service-row.reverse {
+    flex-direction: row-reverse;
 }
 
 .service-img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
+    flex: 1;
+    text-align: center;
 }
 
-.service-item h3 {
-  font-weight: 700;
-  font-size: 1.6rem; /* ubah jadi lebih besar */
-  margin-bottom: 15px;
-  color: #000;
+.service-img img {
+    max-width: 100%;
+    height: auto;
 }
 
-.service-desc {
-  font-size: 1.05rem; /* ubah jadi 1.05rem atau lebih */
-  line-height: 1.6;
-  margin-bottom: 15px;
+
+.service-content {
+    flex: 1;
+    text-align: left;
 }
 
-.btn-outline {
-  display: inline-block;
-  padding: 12px 28px; /* sedikit diperlebar */
-  border: 2px solid #363636;
-  border-radius: 50px;
-  text-decoration: none;
-  color: #363636;
-  font-weight: 600;
-  font-size: 1rem; /* perbesar ukuran teks tombol */
-  transition: all 0.3s ease;
+.service-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
 }
 
-.btn-outline:hover {
-  background-color: #363636;
-  color: #fff;
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
 }
 
-@media (max-width: 768px) {
-  .services-row {
-    grid-template-columns: 1fr;
-  }
+.service-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
 }
-</style>
+
+.service-content ul li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.service-content ul li::before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.btn-service {
+    display: inline-block;
+    background: linear-gradient(135deg, #5DE0E6, #004AAD);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-service:hover {
+    background: linear-gradient(135deg, #4BC9D1, #003388);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+}
+
+
+@media (max-width: 992px) {
+    .service-row {
+        flex-direction: column; /* Gambar di atas, teks di bawah */
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .service-row.reverse {
+        flex-direction: column; /* Hilangkan efek reverse di mobile */
+    }
+    .service-content {
+        text-align: center;
+    }
+    .service-img {
+        order: -1; /* Pastikan gambar tetap di atas */
+    }
+}
+
+    </style>
 
 <!-- Import Font Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- angka -->
-<section style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center; height: 204.47px; min-width: 1331px; font-family: 'Poppins', sans-serif;">
-  <div class="container" data-aos="fade-up" style="height: 100%; display: flex; align-items: center; justify-content: center;">
-    <div class="row justify-content-center text-center g-4" style="width: 100%;">
+<section class="stats-section">
+  <section class="stats-inner" style="background: linear-gradient(135deg, #5DE0E6, #004AAD); color: #fff; padding: 40px 20px; text-align: center; height: 204.47px; width: 100%; margin: 0 auto; border-radius: 9999px; font-family: 'Poppins', sans-serif;">
+    <div class="container" data-aos="fade-up" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+      <div class="row justify-content-center text-center g-4" style="width: 100%;">
 
-      <!-- Item 1 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
-        <h1 class="counter mb-0" data-target="7">0</h1>
-        <div class="text-start stat-text">
-          key positions<br>successfully filled
+        <!-- Item 1 -->
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+          <h1 class="counter mb-0" data-target="7">0</h1>
+          <div class="text-start stat-text">
+            key positions<br>successfully filled
+          </div>
         </div>
-      </div>
 
-      <!-- Item 2 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
-        <h1 class="counter mb-0" data-target="14">0</h1>
-        <div class="text-start stat-text">
-          of talents elevate<br>their career
+        <!-- Item 2 -->
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+          <h1 class="counter mb-0" data-target="14">0</h1>
+          <div class="text-start stat-text">
+            of talents elevate<br>their career
+          </div>
         </div>
-      </div>
 
-      <!-- Item 3 -->
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
-        <h1 class="counter mb-0" data-target="90" data-suffix="%">0%</h1>
-        <div class="text-start stat-text">
-          of our client successfully<br>grows their business
+        <!-- Item 3 -->
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
+          <h1 class="counter mb-0" data-target="90" data-suffix="%">0%</h1>
+          <div class="text-start stat-text">
+            of our client successfully<br>grows their business
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <style>
@@ -655,23 +726,25 @@ pencarian kandidat, promosi lowongan, hingga melatih tim rekruter.</p>
   text-align: left;
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments - hanya untuk section ini */
 @media (max-width: 768px) {
-  section {
+  .stats-section .stats-inner {
     height: auto !important;
     min-width: auto !important;
+    border-radius: 0 !important; /* Jadi kotak */
+    padding: 20px !important;
   }
-  .counter {
+  .stats-section .counter {
     font-size: 40px;
   }
-  .stat-text {
+  .stats-section .stat-text {
     font-size: 14px;
   }
-  .row.g-4 {
+  .stats-section .row.g-4 {
     flex-direction: column !important;
     gap: 20px;
   }
-  .col-12 {
+  .stats-section .col-12 {
     display: flex;
     justify-content: flex-start;
     text-align: left;
@@ -730,7 +803,7 @@ document.querySelectorAll('.counter').forEach(counter => {
           <div class="carousel-slide active">
             <div class="card">
               <div class="card-header">
-                <img src="assets/img/irij2.png" alt="IRIJ Logo" class="card-logo">
+                <img src="assets/img/irij3.png" alt="IRIJ Logo" class="card-logo">
                 <div class="card-titles">
                   <h3>IRIJ Jakarta</h3>
                   <p class="role">Market Research Consultant</p>
@@ -741,7 +814,7 @@ document.querySelectorAll('.counter').forEach(counter => {
             
             <div class="card">
               <div class="card-header">
-                <img src="assets/img/sosialoka2.png" alt="Sosialoka Logo" class="card-logo">
+                <img src="assets/img/sosialoka3.png" alt="Sosialoka Logo" class="card-logo">
                 <div class="card-titles">
                   <h3>Sosialoka</h3>
                   <p class="role">Digital Agency</p>
@@ -752,13 +825,13 @@ document.querySelectorAll('.counter').forEach(counter => {
             
             <div class="card">
               <div class="card-header">
-                <img src="assets/img/nurama2.png" alt="Nurama.clo Logo" class="card-logo">
+                <img src="assets/img/nurama3.png" alt="Nurama.clo Logo" class="card-logo">
                 <div class="card-titles">
                   <h3>Nurama.clo</h3>
                   <p class="role">Fashion Modest Brand</p>
                 </div>
               </div>
-              <p class="card-description">Klik Rekrut adalah mitra headhunter yang bisa diandalkan. Kurang dari seminggu sejak kerja sama dimulai, kami sudah menemukan kandidat yang tepat untuk posisi yang dibutuhkan.</p>
+              <p class="card-description nurama-desc">KLIK Rekrut membantu kami di Nurama menemukan karyawan yang tepat dengan cepat. Prosesnya mudah, pelayanannya maksimal, dan benar-benar disesuaikan dengan kebutuhan kami. Sangat membantu perkembangan perusahaan kami. Terima kasih KLIK Rekrut</p>
             </div>
           </div>
           
@@ -824,18 +897,20 @@ document.querySelectorAll('.counter').forEach(counter => {
               <p class="role">Jr. Finance & Accounting</p>
             </div>
           </div>
-          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p class="card-description gita-desc">KlikRekrut jadi pintu pertama perjalanan karierku. Dari intern 6 bulan di konsultan, sekarang sudah 2 tahun aku berkembang sebagai karyawan tetap. Smooth process, impactful result!
+Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi karyawan tetap sampai sekarang udah 2 tahun lebih. Prosesnya gampang banget dan beneran ngebuka jalan karierku!
+</p>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Muh. Akbar" class="card-logo">
+            <img src="assets/img/fadhia.jpg" alt="fadhiah" class="card-logo">
             <div class="card-titles">
-              <h3>Muh. Akbar</h3>
-              <p class="role">Business Development</p>
+              <h3>Fadhia Raudhah</h3>
+              <p class="role">E commerce specialist</p>
             </div>
           </div>
-          <p class="card-description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+          <p class="card-description fadhia-desc">Kalo dari aku ngerasanya puas banget kak dari layanan Jasa Klik Career ini. Rekruternya komunikatif, prosesnya diupdate secara berkala, berjalan cepat dan profesional. Sangat terbantu dari membuat CV yang proper,Mini Test dan dibantu mengenal lebih dalam mengenai jobdesk pekerjaan dan budaya perusahaan tempat saya melamar. mulai dari awal melamar sampai penawaran kerja tetap diarahkan dengan baik.</p>
         </div>
 
         <div class="card">
@@ -898,7 +973,7 @@ document.querySelectorAll('.counter').forEach(counter => {
 </div>
 <style>
 .client-section {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 0; /* biar gak nambah jarak bawah */
   margin-bottom: 0;  /* gak dorong footer */
   background: white;
@@ -961,7 +1036,7 @@ document.querySelectorAll('.counter').forEach(counter => {
   }
   .carousel-track {
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
   }
   .carousel-slide {
@@ -1073,7 +1148,15 @@ document.querySelectorAll('.counter').forEach(counter => {
     font-size: 14px;
     text-align: left;
   }
-
+  .nurama-desc {
+  font-size: 12px; /* Atur sesuai keinginan */
+}
+.gita-desc {
+  font-size: 11px; /* Atur sesuai keinginan */
+}
+.fadhia-desc {
+  font-size: 11px; /* Atur sesuai keinginan */
+}
 @media (max-width: 768px) {
   .carousel-slide.active {
     flex-direction: column;
@@ -1093,8 +1176,6 @@ document.querySelectorAll('.counter').forEach(counter => {
   }
 }
 </style>
-
-
 <script>
   // Tab switching (tetap)
   const tabs = document.querySelectorAll('.tab');

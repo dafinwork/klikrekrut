@@ -1,0 +1,516 @@
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+/* font poppins */
+.counter {
+  font-family: 'Poppins', sans-serif !important;
+}
+.header {
+  --background-color: rgba(255, 255, 255, 0); /* transparan */
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  z-index: 997;
+}
+.header.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled .navmenu ul li a {
+  color: #004AAD; /* ubah sesuai warna teks kamu saat scroll */
+}
+
+.header.scrolled .navmenu ul li .btn {
+  border-color: #004AAD;
+  color: #004AAD;
+}
+.navmenu ul li a,
+.navmenu ul li .btn {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+/* Saat scroll di mobile */
+.header.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Pastikan warna teks juga berubah di mobile */
+.header.scrolled .navmenu ul li a {
+  color: #004AAD;
+}
+
+.header.scrolled .navmenu ul li .btn {
+  border-color: #004AAD;
+  color: #004AAD;
+}
+.header.scrolled .mobile-nav-toggle {
+  color: #004AAD;
+}
+.mobile-nav-toggle {
+  transition: color 0.3s ease;
+}
+/* Tombol saat header discroll */
+.header.scrolled .btn-outline-light {
+  color: #004AAD !important;
+  border-color: #004AAD !important;
+  background-color: #ffffff !important;
+}
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
+/* ✅ Saat header discroll dan tombol di-hover, tetap biru */
+.header.scrolled .btn-outline-light:hover {
+  background-color: #004AAD !important; /* tetap biru */
+  color: #fff !important;               /* teks putih */
+  border-color: #004AAD !important;      /* border biru */
+}
+
+/* Full logo style */
+.logo-full {
+  max-height: 46px;  /* Bisa diubah jadi 56px kalau masih kecil */
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.logo {
+  padding-left: 16px; /* Biar nggak mepet kiri */
+}
+@media (max-width: 768px) {
+  .logo-full {
+    max-height: 40px;
+  }
+}
+/* Logo default (putih) */
+.header .logo-full {
+  max-height: 46px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Logo saat scroll (biru) */
+.header.scrolled .logo-full {
+  content: url("Footer.png");
+}
+
+@media (max-width: 768px) {
+  .header .logo-full {
+    max-height: 40px;
+  }
+}
+
+
+/* Saat discroll tetap biru tapi sedikit transparan */
+.scrolled .header {
+  --background-color: rgba(0, 74, 173, 0.95);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Navmenu - Desktop */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
+
+/* ========================
+   Navmenu - Desktop
+======================== */
+.navmenu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navmenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navmenu ul li .btn {
+  border: 2px solid white;
+  color: white;
+}
+.navmenu ul li .btn-outline-light:hover {
+  background-color: #ffffff !important; /* bg putih */
+  color: #004AAD !important;           /* font biru */
+  border-color: #ffffff !important;    /* border putih */
+}
+
+
+/* ========================
+   Dropdown - Desktop
+======================== */
+.navmenu ul li {
+  position: relative;
+}
+
+.navmenu ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+.navmenu ul li ul li a {
+  padding: 10px 15px;
+  color: #004AAD;
+  display: block;
+}
+
+/* Matikan efek hover dropdown (desktop) */
+@media (min-width: 1200px) {
+  .navmenu ul li:hover ul {
+    display: none !important;
+  }
+}
+/* Buka dropdown saat ada class .open */
+.navmenu ul li.open > ul {
+  display: flex !important;
+  max-height: 300px; /* atau setinggi kontennya */
+  opacity: 1;
+}
+
+
+.navmenu ul li ul li a:hover {
+  background: #f1f1f1;
+}
+
+/* ========================
+   Mobile Nav (Responsive) - Card Style
+======================== */
+  .mobile-nav-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+  }
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 10001;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  #navmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 280px;
+    background-color: #ffffff;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
+    overflow-y: auto;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navmenu.active {
+    transform: translateX(0);
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navmenu ul li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navmenu ul li a {
+    display: block;
+    width: 100%;
+    color: #004AAD;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Dropdown animasi buka */
+  .navmenu ul li ul {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .navmenu ul li.open > ul {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .navmenu ul li .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: #004AAD;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+  }
+
+  /* Overlay background */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* Warna tombol X saat menu aktif di mobile */
+@media (max-width: 991px) {
+  body.mobile-nav-active .mobile-nav-toggle {
+    color: #000 !important; /* selalu hitam saat menu terbuka */
+  }
+}
+/* ==========================
+   GLOBAL FONT SETUP
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================
+   PARTNER JOIN SECTION
+=========================== */
+.partner-section {
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title-partner {
+  color: #004AAD;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.title-partner .highlight {
+  color: #5DE0E6;
+}
+
+.partner-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.partner-card h4 {
+  color: #004AAD;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.partner-card .description {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.partner-card .sub-description {
+  font-size: 13px;
+  color: #555;
+}
+
+.btn-apply {
+  background: linear-gradient(to right, #5DE0E6, #004AAD);
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-apply:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* WhatsApp Button */
+.wa-btn {
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+}
+
+.wa-btn i {
+  font-size: 18px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .title-partner {
+    font-size: 22px;
+  }
+  .partner-card {
+    padding: 20px;
+  }
+  .btn-apply {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+}
