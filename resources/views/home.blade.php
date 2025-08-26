@@ -40,7 +40,7 @@
   <div class="container d-flex justify-content-between align-items-center py-2">
 
     <!-- Logo -->
-    <a href="#" class="logo d-flex align-items-center">
+    <a href="home" class="logo d-flex align-items-center">
       <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
     </a>
 
@@ -51,15 +51,16 @@
 <nav id="navmenu" class="navmenu">
   <ul>
     <li><a href="#">Services</a></li>
-    <li><a href="{{ url('learning') }}">E-learning</a></li>
+    <li><a href="{{ url('elearn') }}">E-learning</a></li>
     <li><a href="{{ url('apply') }}">Apply as partner</a></li>
     <li>
-      <a href="https://api.whatsapp.com/send?phone=6289678868752"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
-        Join to Talent Community ➝
-      </a>
+<a href="https://api.whatsapp.com/send?phone=6289678868752"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+    Join to Talent Community ➝
+</a>
+
     </li>
   </ul>
 </nav>
@@ -222,14 +223,21 @@
 <section id="hero" class="hero section position-relative">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 text-white" data-aos="fade-right">
-<h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
-  <span id="typing-hero"></span>
-</h1>
-        <p class="mb-4">Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen minim pusing, minim risiko dan minim resouce.</p>
-        <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="btn btn-success rounded-pill px-4 py-2 pulse-button" target="_blank" rel="noopener noreferrer"> Baca Lebih Lanjut ↘</a>
-      </div>
+<div class="col-lg-6 text-white" data-aos="fade-right">
+  <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
+    <span id="typing-hero"></span>
+  </h1>
+  <p class="mb-4">
+    Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen minim pusing, minim risiko dan minim resouce.
+  </p>
+  <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+     class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah" 
+     target="_blank" rel="noopener noreferrer">
+     Baca Lebih Lanjut
+     <img src="assets/img/panah.png" alt="Panah" class="icon-panah">
+  </a>
+</div>
+
       <div class="col-lg-6 text-center" data-aos="fade-left">
         <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
       </div>
@@ -251,6 +259,27 @@ let i = 0;
   window.addEventListener("DOMContentLoaded", typeText);
 </script>
 <style>
+  /* Tombol dengan ikon panah */
+.tombol-panah {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* jarak teks & ikon */
+  transition: all 0.3s ease;
+}
+
+/* Ukuran ikon panah */
+.icon-panah {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efek animasi ikon panah saat hover */
+.tombol-panah:hover .icon-panah {
+  transform: translateX(4px); /* ikon geser dikit ke kanan */
+}
+
   #typing-hero {
   white-space: pre-line;
 }
@@ -476,203 +505,215 @@ a.pulse-button:hover {
   }
 }
 </style>
-    <!-- layanan utama -->
-    <section class="services-section">
-        <div class="container">
-            <p class="section-subtitle">LAYANAN REKRUTMEN KAMI</p>
-            <h2 class="section-title">
-                Bantu Rekrut Kandidat, Bikin Bisnis Melesat
-            </h2>
+<!-- layanan utama -->
+<section class="services-section">
+    <div class="container">
+        <p class="section-subtitle">LAYANAN REKRUTMEN KAMI</p>
+        <h2 class="section-title">
+            Bantu Rekrut Kandidat, Bikin Bisnis Melesat
+        </h2>
 
-            <!-- Baris 1 -->
-            <div class="service-row">
-                <div class="service-img">
-                    <img src="assets/img/comu.png" alt="Talent Sourcing">
-                </div>
-                <div class="service-content">
-                    <h3>Talent Sourcing</h3>
-                    <p>Dapatkan kandidat dengan mudah, cepat, tanpa repot sourcing lewat komunitas talent kami dari berbagai bidang.</p>
-                    <ul>
-                        <li>Supports Entry & Mid Levels</li>
-                        <li>Talent Pool</li>
-                        <li>Sourcing Support</li>
-                    </ul>
-                    <a href="#" class="btn-service">Pesan Layanan →</a>
-                </div>
+        <!-- Baris 1 -->
+        <div class="service-row">
+            <div class="service-img">
+                <img src="assets/img/comu.png" alt="Talent Sourcing">
             </div>
-            <!-- Baris 2 -->
-            <div class="service-row reverse">
-                <div class="service-content">
-                    <h3>Recruitment Assistant</h3>
-                    <p>Dapatkan referensi kandidat terbaik dari para mitra rekruter kami yang berpengalaman di berbagai industri.</p>
-                    <ul>
-                        <li>Supports All Hiring Levels</li>
-                        <li>End-to-end Recruitment</li>
-                        <li>Talent Personalization</li>
-                        <li>Approach Passive Candidate</li>
-                        <li>Talent Replacement Guarantee</li>
-                    </ul>
-                    <a href="#" class="btn-service">Pesan Layanan →</a>
-                </div>
-                <div class="service-img">
-                    <img src="assets/img/assis.png" alt="Recruitment Assistant">
-                </div>
+            <div class="service-content">
+                <h3>Talent Sourcing</h3>
+                <p>Dapatkan kandidat dengan mudah, cepat, tanpa repot sourcing lewat komunitas talent kami dari berbagai bidang.</p>
+                <ul>
+                    <li>Supports Entry & Mid Levels</li>
+                    <li>Talent Pool</li>
+                    <li>Sourcing Support</li>
+                </ul>
+                <a href="#" class="btn-service">Pesan Layanan →</a>
             </div>
         </div>
-    </section>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-.services-section {
-    padding: 40px 0 20px; /* atas 80px, bawah 40px */
-    width: 100%; /* Pastikan full lebar layar */
-    max-width: none; /* Hilangkan batasan 1200px */
-    margin: 0;
-}
-.services-section .container {
-    width: 90%; /* Konten tetap rapi */
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.section-subtitle {
-    text-align: center;
-    color: #2e6bbc;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
+        <!-- Baris 2 -->
+        <div class="service-row reverse">
+            <div class="service-content">
+                <h3>Recruitment Assistant</h3>
+                <p>Dapatkan referensi kandidat terbaik dari para mitra rekruter kami yang berpengalaman di berbagai industri.</p>
+                <ul>
+                    <li>Supports All Hiring Levels</li>
+                    <li>End-to-end Recruitment</li>
+                    <li>Talent Personalization</li>
+                    <li>Approach Passive Candidate</li>
+                    <li>Talent Replacement Guarantee</li>
+                </ul>
+                <a href="#" class="btn-service">Pesan Layanan →</a>
+            </div>
+            <div class="service-img">
+                <img src="assets/img/asistant.png" alt="Recruitment Assistant">
+            </div>
+        </div>
+    </div>
+</section>
 
-.section-title {
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 32px;
-    line-height: 1.3;
-    color: #3c678b;
-    text-align: center;
-}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-.service-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 50px;
-    background: none; /* hilangkan box background */
-    padding: 0; /* hilangkan padding seperti card */
-    border-radius: 0; /* hilangkan efek kartu */
-    box-shadow: none; /* hilangkan shadow */
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.service-row.reverse {
-    flex-direction: row-reverse;
-}
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
 
-.service-img {
-    flex: 1;
-    text-align: center;
-}
+    .services-section {
+        padding: 40px 0 20px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .services-section .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: #2e6bbc;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-size: 32px;
+        line-height: 1.3;
+        color: #3c678b;
+        text-align: center;
+    }
+
+    .service-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 50px;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .service-row.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .service-img {
+        flex: 1;
+        text-align: center;
+    }
 
 .service-img img {
-    max-width: 100%;
+    max-width: 450px; /* gambar lebih besar */
+    width: 100%;
     height: auto;
 }
 
-
-.service-content {
-    flex: 1;
-    text-align: left;
-}
-
-.service-content h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 15px;
-}
-
-.service-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.service-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 25px 0;
-}
-
-.service-content ul li {
-    padding-left: 28px;
-    position: relative;
-    margin-bottom: 10px;
-    color: #444;
-}
-
-.service-content ul li::before {
-    content: "✓";
-    color: #28a745;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-.btn-service {
-    display: inline-block;
-    background: linear-gradient(135deg, #5DE0E6, #004AAD);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.btn-service:hover {
-    background: linear-gradient(135deg, #4BC9D1, #003388);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
-}
-
-
-@media (max-width: 992px) {
-    .service-row {
-        flex-direction: column; /* Gambar di atas, teks di bawah */
-        text-align: center;
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-    .service-row.reverse {
-        flex-direction: column; /* Hilangkan efek reverse di mobile */
-    }
     .service-content {
-        text-align: center;
+        flex: 1;
+        text-align: left;
     }
-    .service-img {
-        order: -1; /* Pastikan gambar tetap di atas */
-    }
-}
 
-    </style>
+    .service-content h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .service-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .service-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 25px 0;
+    }
+
+    .service-content ul li {
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 12px;
+        color: #444;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Ganti icon panah → jadi icon centang */
+    .service-content ul li::before {
+        content: "";
+        background-image: url('assets/img/check.png');
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn-service {
+        display: inline-block;
+        background: linear-gradient(135deg, #5DE0E6, #004AAD);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .btn-service:hover {
+        background: linear-gradient(135deg, #4BC9D1, #003388);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+    }
+
+    @media (max-width: 992px) {
+        .service-row {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-row.reverse {
+            flex-direction: column;
+        }
+
+        .service-content {
+            text-align: center;
+        }
+
+        .service-img {
+            order: -1;
+        }
+    }
+</style>
+
 
 <!-- Import Font Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -904,7 +945,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
 
         <div class="card">
           <div class="card-header">
-            <img src="assets/img/fadhia.jpg" alt="fadhiah" class="card-logo">
+            <img src="assets/img/fadhia1.jpg" alt="fadhiah" class="card-logo">
             <div class="card-titles">
               <h3>Fadhia Raudhah</h3>
               <p class="role">E commerce specialist</p>
@@ -1094,6 +1135,20 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   }
   
   /* Card Styles */
+  /* Gambar Talent Dibikin Bulat */
+#talents .card-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover; /* supaya wajah tidak gepeng */
+    margin-right: 12px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* bikin bulat */
+    border: 2px solid #e0e0e0; /* opsional: kasih border tipis biar rapi */
+}
+
   .card {
     background: #fff;
     border: 1px solid #e0e0e0;
@@ -1229,17 +1284,18 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   <div class="container">
     <div class="row align-items-center">
       
-      <!-- Teks -->
-      <div class="col-lg-6 text-white">
-        <h2 class="mb-4" style="font-weight:700; color:white;">
-          Siap merekrut kandidat terbaik untuk bergabung jadi tim Anda?
-        </h2>
+<!-- Teks -->
+<div class="col-lg-6 text-white">
+  <h2 class="mb-4" style="font-weight:700; color:white;">
+    Siap merekrut kandidat<br>
+    terbaik untuk bergabung<br>
+    jadi tim Anda?
+</h2>
         <p class="mb-4">
-          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap! 
+          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>
           Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
         </p>
-        <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-success rounded-pill px-4 py-2">Hubungi Kami</a>
-        <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2">Explore Layanan →</a>
+        <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-success rounded-pill px-4 py-2"style="background-color: #7ed957; border-color: #7ed957; color: white;">Book a Special Offer ➝</a>
       </div>
 
       <!-- Foto Orang -->
@@ -1309,34 +1365,42 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
     <div class="footer-top">
       
       <!-- Kiri: Logo + deskripsi -->
-      <div class="footer-about">
-        <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-        <p>Layanan online untuk mempermudah proses merekrut tim.</p>
-      </div>
+<div class="footer-about">
+  <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+</div>
 
-      <!-- Tengah: Kemitraan + Layanan -->
+      <!-- Tengah: Menu Footer Baru -->
       <div class="footer-center">
-        <div class="footer-column">
-          <h6>KEMITRAAN</h6>
-          <ul>
-            <li><a href="#">Recruiter Partner</a></li>
-            <li><a href="#">Sales Partner</a></li>
-            <li><a href="#">Affiliate Partner</a></li>
-          </ul>
-        </div>
+        <!-- Layanan -->
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="#">Asisten Rekrutmen</a></li>
-            <li><a href="#">Komunitas Rekrutmen</a></li>
-            <li><a href="#">Belajar Rekrutmen</a></li>
+            <li><a href="#">Cari Pelamar</a></li>
+            <li><a href="#">Cari Asisten</a></li>
+          </ul>
+        </div>
+        <!-- Komunitas -->
+        <div class="footer-column">
+          <h6>KOMUNITAS</h6>
+          <ul>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Cara Gabung</a></li>
+          </ul>
+        </div>
+        <!-- Bantuan -->
+        <div class="footer-column">
+          <h6>BANTUAN</h6>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kemitraan</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Kanan: Sosial Media -->
       <div class="footer-column footer-right">
-        <h6>LAINNYA</h6>
+        <h6>SOCIAL MEDIA</h6>
         <div class="social-icons">
           <a href="https://www.tiktok.com/@klikrekrut" target="_blank"><img src="assets/img/tiktok.png" alt="Tiktok"></a>
           <a href="https://www.instagram.com/klikrekrut/" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
@@ -1362,7 +1426,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   background-color: #f9f9f9;
   color: #333;
   padding: 30px 20px;
-  margin-top: 0; /* reset jarak atas footer */
+  margin-top: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
@@ -1378,6 +1442,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   align-items: flex-start;
 }
 
+/* Kiri: Logo + Deskripsi */
 .footer-about {
   max-width: 280px;
 }
@@ -1388,16 +1453,16 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
 }
 
 .footer-about p {
-  font-size: 13px;
+  font-size: 11px;
   color: #555;
   margin: 0;
 }
 
-/* Tengah: Kemitraan + Layanan */
+/* Tengah: Menu Footer */
 .footer-center {
   display: flex;
-  gap: 80px; /* jarak antar kemitraan dan layanan */
-  margin-left: 10px; /* jarak dari logo */
+  gap: 80px; /* jarak antar kolom menu */
+  margin-left: 10px;
 }
 
 .footer-column h6 {
@@ -1420,6 +1485,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   text-decoration: none;
   color: #333;
   font-size: 13px;
+  transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
@@ -1465,6 +1531,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
     flex-direction: column;
     gap: 20px;
   }
+
   .footer-center {
     flex-direction: column;
     gap: 15px;
@@ -1472,6 +1539,8 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   }
 }
 </style>
+
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

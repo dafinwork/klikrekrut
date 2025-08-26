@@ -17,6 +17,15 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Terapkan Poppins untuk semua elemen */
+  * {
+    font-family: 'Poppins', sans-serif !important;
+  }
+</style>
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,387 +49,301 @@
   <div class="container d-flex justify-content-between align-items-center py-2">
 
     <!-- Logo -->
-    <a href="#" class="logo d-flex align-items-center">
-      <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
+    <a href="home" class="logo d-flex align-items-center">
+      <img src="assets/img/footer.png" alt="Klikrekrut Logo" class="logo-full" />
     </a>
 
     <!-- Mobile Toggle -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-<!-- Nav Menu -->
-<nav id="navmenu" class="navmenu">
-  <ul>
-    <li><a href="#">Services</a></li>
-    <li><a href="{{ url('learning') }}">E-learning</a></li>
-    <li><a href="{{ url('apply') }}">Apply as partner</a></li>
-    <li>
-      <a href="https://api.whatsapp.com/send?phone=6289678868752"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn btn-outline-light wa-btn rounded-pill px-3 py-1">
-        Join to Talent Community ➝
-      </a>
-    </li>
-  </ul>
-</nav>
-</div>
+    <!-- Nav Menu -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="{{ url('elearn') }}">E-learning</a></li>
+        <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=6289678868752"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+            Join to Talent Community ➝
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-
-<!-- Overlay -->
+<!-- Overlay untuk mobile -->
 <div class="mobile-nav-overlay"></div>
 <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".header");
     const toggle = document.querySelector(".mobile-nav-toggle");
     const navmenu = document.getElementById("navmenu");
-    const dropdowns = document.querySelectorAll(".navmenu .dropdown");
+    const overlay = document.querySelector(".mobile-nav-overlay");
 
-    // Ubah ikon burger jadi X saat menu aktif
-    function updateToggleIcon() {
-      if (navmenu.classList.contains("active")) {
-        toggle.classList.remove("bi-list");
-        toggle.classList.add("bi-x");
-        toggle.style.color = "#000"; // selalu hitam saat menu terbuka
-      } else {
-        toggle.classList.remove("bi-x");
-        toggle.classList.add("bi-list");
-
-        // Warna kembali sesuai kondisi scroll
-        if (window.scrollY > 10) {
-          toggle.style.color = "#004AAD"; // biru saat scroll
-        } else {
-          toggle.style.color = "#fff"; // putih sebelum scroll
-        }
-      }
-    }
-
-    // Scroll behavior
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 10) {
-        header.classList.add("scrolled");
-        if (!navmenu.classList.contains("active")) {
-          toggle.style.color = "#004AAD";
-        }
-      } else {
-        header.classList.remove("scrolled");
-        if (!navmenu.classList.contains("active")) {
-          toggle.style.color = "#fff";
-        }
-      }
-    });
-
-    // Toggle nav mobile
     toggle.addEventListener("click", () => {
       navmenu.classList.toggle("active");
-      document.body.classList.toggle("mobile-nav-active");
-      updateToggleIcon();
+      overlay.classList.toggle("active");
+
+      // Ganti ikon burger ↔ X
+      toggle.classList.toggle("bi-list");
+      toggle.classList.toggle("bi-x");
     });
 
-    // Interaksi dropdown
-    dropdowns.forEach(drop => {
-      const link = drop.querySelector("a");
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        // Tutup semua dropdown lain
-        dropdowns.forEach(d => {
-          if (d !== drop) {
-            d.classList.remove("open");
-            const submenu = d.querySelector("ul");
-            if (submenu) {
-              submenu.style.maxHeight = "0";
-              submenu.style.opacity = "0";
-            }
-
-            const icon = d.querySelector(".toggle-icon");
-            if (icon) {
-              icon.classList.add("bi-chevron-down");
-              icon.classList.remove("bi-chevron-up");
-            }
-          }
-        });
-
-        // Toggle dropdown sekarang
-        drop.classList.toggle("open");
-        const submenu = drop.querySelector("ul");
-        if (drop.classList.contains("open")) {
-          submenu.style.maxHeight = submenu.scrollHeight + "px";
-          submenu.style.opacity = "1";
-        } else {
-          submenu.style.maxHeight = "0";
-          submenu.style.opacity = "0";
-        }
-
-        const icon = drop.querySelector(".toggle-icon");
-        if (icon) {
-          icon.classList.toggle("bi-chevron-down");
-          icon.classList.toggle("bi-chevron-up");
-        }
-      });
-    });
-
-    // Tutup nav saat klik di luar
-    document.addEventListener("click", function (e) {
-      if (
-        document.body.classList.contains("mobile-nav-active") &&
-        !e.target.closest("#navmenu") &&
-        !e.target.closest(".mobile-nav-toggle")
-      ) {
-        navmenu.classList.remove("active");
-        document.body.classList.remove("mobile-nav-active");
-        updateToggleIcon();
-
-        dropdowns.forEach(d => {
-          d.classList.remove("open");
-          const submenu = d.querySelector("ul");
-          if (submenu) {
-            submenu.style.maxHeight = "0";
-            submenu.style.opacity = "0";
-          }
-
-          const icon = d.querySelector(".toggle-icon");
-          if (icon) {
-            icon.classList.add("bi-chevron-down");
-            icon.classList.remove("bi-chevron-up");
-          }
-        });
-      }
-    });
-
-    // Set ikon awal sesuai posisi scroll
-    updateToggleIcon();
-  });
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector('.mobile-nav-toggle');
-    const nav = document.querySelector('.navmenu');
-    const overlay = document.querySelector('#nav-overlay');
-
-    toggle.addEventListener('click', function () {
-      nav.classList.toggle('active');
-      overlay.classList.toggle('active');
-      toggle.classList.toggle('bi-x');
-      toggle.classList.toggle('bi-list');
-    });
-
-    overlay.addEventListener('click', function () {
-      nav.classList.remove('active');
-      overlay.classList.remove('active');
-      toggle.classList.add('bi-list');
-      toggle.classList.remove('bi-x');
+    overlay.addEventListener("click", () => {
+      navmenu.classList.remove("active");
+      overlay.classList.remove("active");
+      toggle.classList.add("bi-list");
+      toggle.classList.remove("bi-x");
     });
   });
 </script>
+</script>
+
+
 <main class="main">
-<!-- ==========================
-     PARTNER JOIN SECTION
-=========================== -->
-<section id="partner-join" class="partner-section py-5">
-  <div class="container text-center">
 
-    <!-- Title -->
-    <h2 class="fw-bold mb-5 title-partner">
-      Ready to join as a <span class="highlight">KLIK Rekrut</span> Partner?
-    </h2>
+<!-- ==================== HERO PARTNER SECTION ==================== -->
+<section class="hero-partner" style="background-image: url('assets/img/partnerbg.jpg');">
+  <div class="container hero-content" data-aos="fade-up">
 
-    <!-- Cards Wrapper -->
-    <div class="row g-4 justify-content-center">
+    <!-- Judul -->
+    <h1 class="hero-title">
+      Ready to join as a <br>
+      KLIK Rekrut Partner?
+    </h1>
 
-      <!-- Card 1: Recruiter -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Recruiter</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas memproses permintaan talent dari klien lewat sistem manajemen rekrutmen kami.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk menempatkan SDM terbaik di tempat yang tepat.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
+<!-- Partner Cards -->
+<div class="partner-cards">
 
-      <!-- Card 2: Sales -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Sales</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas mencari perusahaan yang lagi butuh kandidat terbaik.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami memberikan akses SDM terampil buat bisnis di Indonesia.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Affiliate -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Affiliate</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas merekomendasikan pembelajaran rekrutmen kami ke recruiter dan jobseeker.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari kerja dan karyawan.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- WhatsApp CTA -->
-    <div class="text-center mt-5">
-      <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-         target="_blank"
-         class="btn btn-success px-4 py-2 rounded-pill d-inline-flex align-items-center wa-btn">
-        <i class="bi bi-whatsapp me-2"></i>
-        Punya pertanyaan seputar kemitraan?
-      </a>
-    </div>
-
+  <!-- Recruiter -->
+  <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="card-title">Recruiter</h3>
+    <div class="card-divider"></div>
+    <p class="card-desc">
+      <strong>Kamu bertugas memproses permintaan talent dari klien lewat sistem manajemen rekrutmen kami.</strong><br><br>
+      Kamu akan ikut mendukung misi kami untuk menempatkan SDM terbaik di tempat yang tepat.
+    </p>
+    <a href="#" class="btn-apply">Apply here →</a>
   </div>
-</section>
-<!-- ==========================
-     PARTNER JOIN SECTION
-=========================== -->
-<section id="partner-join" class="partner-section py-5">
-  <div class="container text-center">
 
-    <!-- Title -->
-    <h2 class="fw-bold mb-5 title-partner">
-      Ready to join as a <span class="highlight">KLIK Rekrut</span> Partner?
-    </h2>
-
-    <!-- Cards Wrapper -->
-    <div class="row g-4 justify-content-center">
-
-      <!-- Card 1: Recruiter -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Recruiter</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas memproses permintaan talent dari klien lewat sistem manajemen rekrutmen kami.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk menempatkan SDM terbaik di tempat yang tepat.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-
-      <!-- Card 2: Sales -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Sales</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas mencari perusahaan yang lagi butuh kandidat terbaik.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami memberikan akses SDM terampil buat bisnis di Indonesia.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Affiliate -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Affiliate</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas merekomendasikan pembelajaran rekrutmen kami ke recruiter dan jobseeker.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari kerja dan karyawan.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- WhatsApp CTA -->
-    <div class="text-center mt-5">
-      <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-         target="_blank"
-         class="btn btn-success px-4 py-2 rounded-pill d-inline-flex align-items-center wa-btn">
-        <i class="bi bi-whatsapp me-2"></i>
-        Punya pertanyaan seputar kemitraan?
-      </a>
-    </div>
-
+  <!-- Sales -->
+  <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="card-title">Sales</h3>
+    <div class="card-divider"></div>
+    <p class="card-desc">
+      <strong>Kamu bertugas mencari perusahaan yang lagi butuh kandidat terbaik.</strong><br><br>
+      Kamu akan ikut mendukung misi kami memberikan akses SDM terampil buat bisnis di Indonesia.
+    </p>
+    <a href="#" class="btn-apply">Apply here →</a>
   </div>
-</section>
-<!-- ==========================
-     PARTNER JOIN SECTION
-=========================== -->
-<section id="partner-join" class="partner-section py-5">
-  <div class="container text-center">
 
-    <!-- Title -->
-    <h2 class="fw-bold mb-5 title-partner">
-      Ready to join as a <span class="highlight">KLIK Rekrut</span> Partner?
-    </h2>
-
-    <!-- Cards Wrapper -->
-    <div class="row g-4 justify-content-center">
-
-      <!-- Card 1: Recruiter -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Recruiter</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas memproses permintaan talent dari klien lewat sistem manajemen rekrutmen kami.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk menempatkan SDM terbaik di tempat yang tepat.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-
-      <!-- Card 2: Sales -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Sales</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas mencari perusahaan yang lagi butuh kandidat terbaik.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami memberikan akses SDM terampil buat bisnis di Indonesia.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Affiliate -->
-      <div class="col-lg-4 col-md-6">
-        <div class="partner-card h-100 p-4 shadow-sm rounded-4">
-          <h4 class="fw-bold mb-3">Affiliate</h4>
-          <p class="fw-semibold description">
-            Kamu bertugas merekomendasikan pembelajaran rekrutmen kami ke recruiter dan jobseeker.
-          </p>
-          <p class="sub-description">
-            Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari kerja dan karyawan.
-          </p>
-          <a href="{{ url('apply') }}" class="btn btn-apply mt-3">Apply here ➝</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- WhatsApp CTA -->
-    <div class="text-center mt-5">
-      <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-         target="_blank"
-         class="btn btn-success px-4 py-2 rounded-pill d-inline-flex align-items-center wa-btn">
-        <i class="bi bi-whatsapp me-2"></i>
-        Punya pertanyaan seputar kemitraan?
-      </a>
-    </div>
-
+  <!-- Affiliate -->
+  <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
+    <h3 class="card-title">Affiliate</h3>
+    <div class="card-divider"></div>
+    <p class="card-desc">
+      <strong>Kamu bertugas merekomendasikan pembelajaran rekrutmen kami ke recruiter dan jobseeker.</strong><br><br>
+      Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari kerja dan karyawan.
+    </p>
+    <a href="#" class="btn-apply">Apply here →</a>
   </div>
+
+</div>
+<!-- Tombol WhatsApp -->
+<div class="whatsapp-button" data-aos="fade-up" data-aos-delay="400">
+  <a href="https://wa.me/6281234567890" target="_blank">
+    <img src="assets/img/wa.png" alt="WhatsApp">
+    Punya pertanyaan seputar kemitraan?
+  </a>
+</div>
 </section>
 
+<!-- ==================== CSS HERO PARTNER ==================== -->
+<style>
+/* Hero Wrapper */
+.hero-partner {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 56px); /* 100% tinggi layar dikurangi tinggi header */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px 40px; /* spasi dalam hero */
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .hero-partner {
+    min-height: calc(100vh - 50px); /* sesuaikan tinggi header di mobile */
+    padding: 80px 15px 30px;
+  }
+}
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin-top: 100px; /* Geser sedikit ke bawah supaya tidak menempel header */
+}
+
+/* Judul Utama */
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 1000;
+    margin-bottom: 30px;
+    line-height: 1.3;
+
+    /* Warna isi teks */
+    -webkit-text-fill-color: #2e6bbc;
+
+    /* Warna kerangka putih */
+    -webkit-text-stroke: 2px #ffffff;
+
+    /* Sedikit bayangan supaya makin jelas */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+}
+
+
+.hero-title span {
+  color: #5DE0E6;
+}
+
+/* Partner Cards */
+/* Container Cards */
+/* Partner Cards Container */
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Partner Card */
+.partner-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  /* Border tipis di dalam */
+  border: 1.5px solid #ddd;
+
+  /* Outline hitam */
+  outline: 2px solid #000;
+
+  /* Supaya tombol Apply rata di bawah */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  outline: 2px solid #000;
+}
+
+/* Judul */
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1c64f2;
+  margin-bottom: 12px;
+}
+
+/* Divider */
+.card-divider {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Deskripsi */
+.card-desc {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: center; /* Supaya teks lebih rapi */
+}
+
+/* Tombol Apply */
+.btn-apply {
+  display: inline-block;
+  background: linear-gradient(90deg, #5DE0E6, #004AAD);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  /* Supaya semua tombol ukurannya sama dan sejajar */
+  align-self: center;
+  min-width: 140px;
+  text-align: center;
+}
+
+.btn-apply:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+/* Tombol WhatsApp */
+.whatsapp-button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.whatsapp-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button a:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+.whatsapp-button img {
+  width: 28px;
+  height: 28px;
+}
+
+</style>
 <!-- footer -->
 <footer class="footer">
   <div class="container">
