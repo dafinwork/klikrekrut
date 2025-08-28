@@ -40,7 +40,7 @@
   <div class="container d-flex justify-content-between align-items-center py-2">
 
     <!-- Logo -->
-    <a href="home" class="logo d-flex align-items-center">
+    <a href="/" class="logo d-flex align-items-center">
       <img src="assets/img/Header.png" alt="Klikrekrut Logo" class="logo-full" />
     </a>
 
@@ -259,32 +259,63 @@ let i = 0;
   window.addEventListener("DOMContentLoaded", typeText);
 </script>
 <style>
-  /* Tombol dengan ikon panah */
+/* Tombol dengan ikon panah */
+/* Tombol dengan ikon panah */
 .tombol-panah {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* jarak teks & ikon */
+  display: inline-flex;          /* Biar teks & panah sejajar */
+  align-items: center;           /* Rata tengah vertikal */
+  justify-content: center;       /* Rata tengah horizontal */
+  gap: 8px;                      /* Jarak teks & ikon */
+  padding: 10px 22px;            /* Biar tombol rapi */
+  background-color: #7ed957;
+  border-radius: 50px;           /* Biar tombol bulat */
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1;                /* Biar panah sejajar dengan teks */
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 /* Ukuran ikon panah */
 .icon-panah {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
   object-fit: contain;
+  vertical-align: middle;
   transition: transform 0.3s ease;
 }
 
-/* Efek animasi ikon panah saat hover */
+/* Efek animasi hover */
 .tombol-panah:hover .icon-panah {
-  transform: translateX(4px); /* ikon geser dikit ke kanan */
+  transform: translateX(4px);
 }
 
-  #typing-hero {
+/* Pastikan di mobile tampilannya sama persis */
+@media (max-width: 768px) {
+  .tombol-panah {
+    padding: 10px 22px;  /* Sama persis dengan desktop */
+    gap: 8px;            /* Sama dengan desktop */
+    font-size: 16px;     /* Sama dengan desktop */
+    line-height: 1;      /* Supaya panah nggak turun */
+  }
+
+.icon-panah {
+    width: 24px;       /* 🔹 Perbesar ukuran lebar ikon */
+    height: 24px;      /* 🔹 Perbesar ukuran tinggi ikon */
+    position: relative;
+    top: -11px;         /* 🔹 Tetap naikkan posisinya */
+}
+}
+/* ==================== HERO SECTION ==================== */
+#typing-hero {
   white-space: pre-line;
 }
+
 .hero-title {
-  font-weight: 700; /* atau 800 kalau mau lebih tebal */
+  font-weight: 700;
 }
 
 .hero-title .animated-word {
@@ -293,7 +324,7 @@ let i = 0;
   transform: translateY(20px);
   animation: slideUp 0.3s ease-out forwards;
   animation-delay: var(--delay);
-  animation-fill-mode: both; /* ✅ ini penting biar animasi awal tetap muncul */
+  animation-fill-mode: both;
 }
 
 @keyframes slideUp {
@@ -312,8 +343,9 @@ a.pulse-button {
   border-color: #7ed957 !important;
   color: white !important;
 }
+
 a.pulse-button:hover {
-  background-color: #6cc44a !important; /* sedikit lebih gelap */
+  background-color: #6cc44a !important;
   border-color: #6cc44a !important;
 }
 
@@ -331,31 +363,36 @@ a.pulse-button:hover {
   50% { transform: scale(1.07); }
   100% { transform: scale(1); }
 }
+
 .hero img {
   clip-path: ellipse(60% 90% at 50% 50%);
 }
+
+/* ==================== RESPONSIF HERO ==================== */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 1.8rem !important;
     text-align: center;
   }
 
-.hero .btn {
-  display: inline-block;
-  margin: 0 auto;
-  width: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-@media (max-width: 576px) {
   .hero .btn {
-    display: inline-block !important;
-    width: auto !important;
-    margin: 0 auto !important;
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-}
+
+  @media (max-width: 576px) {
+    .hero .btn {
+      display: inline-block !important;
+      width: auto !important;
+      margin: 0 auto !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
   .hero img {
     max-height: 300px !important;
     margin-top: 20px;
@@ -370,8 +407,9 @@ a.pulse-button:hover {
   }
 }
 
+/* ==================== BACKGROUND HERO ==================== */
 .hero {
-  background: 
+  background:
     linear-gradient(to right, #5DE0E6, #004AAD),
     url('assets/img/ornament1.png') no-repeat bottom center;
   background-size: cover;
@@ -400,6 +438,7 @@ a.pulse-button:hover {
   position: relative;
   z-index: 1;
 }
+
 </style>
 </section>
 <!-- Trusted By Section -->
@@ -850,7 +889,7 @@ document.querySelectorAll('.counter').forEach(counter => {
                   <p class="role">Market Research Consultant</p>
                 </div>
               </div>
-              <p class="card-description">Pelayanan Klik Rekrut luar biasa. Sepanjang kerja sama dengan berbagai headhunter, mereka adalah yang paling cepat merespons dan konsisten mengirimkan kandidat berkualitas tinggi</p>
+              <p class="description-irij">Proses rekrutmen berjalan sangat cepat dan efisien, tidak lama dari kami submit kriteria tenaga kerja yang dibutuhkan, Klik Rekrut langsung memberikan beberapa kandidat yang potensial.  Sudah 2 tahun sejak kandidat yang direferensikan bergabung. Sekarang menjadi salah satu staf yang memiliki kompetensi yang bagus. Bekerja dengan cepat dan cermat.</p>
             </div>
             
             <div class="card">
@@ -872,7 +911,7 @@ document.querySelectorAll('.counter').forEach(counter => {
                   <p class="role">Fashion Modest Brand</p>
                 </div>
               </div>
-              <p class="card-description nurama-desc">KLIK Rekrut membantu kami di Nurama menemukan karyawan yang tepat dengan cepat. Prosesnya mudah, pelayanannya maksimal, dan benar-benar disesuaikan dengan kebutuhan kami. Sangat membantu perkembangan perusahaan kami. Terima kasih KLIK Rekrut</p>
+              <p class="card-description nurama-desc">KLIK Rekrut membantu kami di Nurama menemukan karyawan yang tepat dengan cepat. Prosesnya pun mudah, pelayanannya maksimal, dan benar-benar disesuaikan dengan kebutuhan perusahaan. Sangat membantu perkembangan perusahaan kami.</p>
             </div>
           </div>
           
@@ -938,9 +977,7 @@ document.querySelectorAll('.counter').forEach(counter => {
               <p class="role">Jr. Finance & Accounting</p>
             </div>
           </div>
-          <p class="card-description gita-desc">KlikRekrut jadi pintu pertama perjalanan karierku. Dari intern 6 bulan di konsultan, sekarang sudah 2 tahun aku berkembang sebagai karyawan tetap. Smooth process, impactful result!
-Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi karyawan tetap sampai sekarang udah 2 tahun lebih. Prosesnya gampang banget dan beneran ngebuka jalan karierku!
-</p>
+          <p class="card-description gita-desc">KlikRekrut jadi pintu pertama perjalanan karierku. Dari intern 6 bulan di konsultan, sekarang sudah 2 tahun aku berkembang sebagai karyawan tetap. Smooth process, impactful result! Prosesnya gampang banget dan beneran ngebuka jalan karierku!</p>
         </div>
 
         <div class="card">
@@ -951,7 +988,7 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
               <p class="role">E commerce specialist</p>
             </div>
           </div>
-          <p class="card-description fadhia-desc">Kalo dari aku ngerasanya puas banget kak dari layanan Jasa Klik Career ini. Rekruternya komunikatif, prosesnya diupdate secara berkala, berjalan cepat dan profesional. Sangat terbantu dari membuat CV yang proper,Mini Test dan dibantu mengenal lebih dalam mengenai jobdesk pekerjaan dan budaya perusahaan tempat saya melamar. mulai dari awal melamar sampai penawaran kerja tetap diarahkan dengan baik.</p>
+          <p class="card-description fadhia-desc">Puas banget dari layanannya. Rekruternya komunikatif, prosesnya diupdate secara berkala, berjalan cepat dan profesional. Sangat terbantu dari membuat CV yang proper, dan dibantu mengenal lebih dalam mengenai jobdesk pekerjaan dan budaya perusahaan tempat saya melamar. Mulai dari awal melamar sampai penawaran kerja tetap diarahkan dengan baik</p>
         </div>
 
         <div class="card">
@@ -1207,9 +1244,12 @@ Thanks to KlikRekrut, aku mulai dari intern 6 bulan di konsultan dan lanjut jadi
   font-size: 12px; /* Atur sesuai keinginan */
 }
 .gita-desc {
-  font-size: 11px; /* Atur sesuai keinginan */
+  font-size: 12px; /* Atur sesuai keinginan */
 }
 .fadhia-desc {
+  font-size: 11px; /* Atur sesuai keinginan */
+}
+.description-irij{
   font-size: 11px; /* Atur sesuai keinginan */
 }
 @media (max-width: 768px) {

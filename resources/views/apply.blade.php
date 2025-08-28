@@ -49,7 +49,7 @@
   <div class="container d-flex justify-content-between align-items-center py-2">
 
     <!-- Logo -->
-    <a href="home" class="logo d-flex align-items-center">
+    <a href="/" class="logo d-flex align-items-center">
       <img src="assets/img/footer.png" alt="Klikrekrut Logo" class="logo-full" />
     </a>
 
