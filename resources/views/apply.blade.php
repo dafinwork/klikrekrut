@@ -59,16 +59,14 @@
     <!-- Nav Menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#">Services</a></li>
+        <li><a href="/">Services</a></li>
         <li><a href="{{ url('elearn') }}">E-learning</a></li>
         <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
         <li>
-          <a href="https://api.whatsapp.com/send?phone=6289678868752"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
-            Join to Talent Community ➝
-          </a>
+<a href="{{ url('community1') }}"
+   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+    Join to Talent Community ➝
+</a>
         </li>
       </ul>
     </nav>
@@ -350,34 +348,42 @@
     <div class="footer-top">
       
       <!-- Kiri: Logo + deskripsi -->
-      <div class="footer-about">
-        <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-        <p>Layanan online untuk mempermudah proses merekrut tim.</p>
-      </div>
+<div class="footer-about">
+  <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+</div>
 
-      <!-- Tengah: Kemitraan + Layanan -->
+      <!-- Tengah: Menu Footer Baru -->
       <div class="footer-center">
-        <div class="footer-column">
-          <h6>KEMITRAAN</h6>
-          <ul>
-            <li><a href="#">Recruiter Partner</a></li>
-            <li><a href="#">Sales Partner</a></li>
-            <li><a href="#">Affiliate Partner</a></li>
-          </ul>
-        </div>
+        <!-- Layanan -->
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="#">Asisten Rekrutmen</a></li>
-            <li><a href="#">Komunitas Rekrutmen</a></li>
-            <li><a href="#">Belajar Rekrutmen</a></li>
+            <li><a href="#">Cari Pelamar</a></li>
+            <li><a href="#">Cari Asisten</a></li>
+          </ul>
+        </div>
+        <!-- Komunitas -->
+        <div class="footer-column">
+          <h6>KOMUNITAS</h6>
+          <ul>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Cara Gabung</a></li>
+          </ul>
+        </div>
+        <!-- Bantuan -->
+        <div class="footer-column">
+          <h6>BANTUAN</h6>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kemitraan</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Kanan: Sosial Media -->
       <div class="footer-column footer-right">
-        <h6>LAINNYA</h6>
+        <h6>SOCIAL MEDIA</h6>
         <div class="social-icons">
           <a href="https://www.tiktok.com/@klikrekrut" target="_blank"><img src="assets/img/tiktok.png" alt="Tiktok"></a>
           <a href="https://www.instagram.com/klikrekrut/" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
@@ -403,7 +409,7 @@
   background-color: #f9f9f9;
   color: #333;
   padding: 30px 20px;
-  margin-top: 0; /* reset jarak atas footer */
+  margin-top: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
@@ -419,6 +425,7 @@
   align-items: flex-start;
 }
 
+/* Kiri: Logo + Deskripsi */
 .footer-about {
   max-width: 280px;
 }
@@ -429,16 +436,16 @@
 }
 
 .footer-about p {
-  font-size: 13px;
+  font-size: 11px;
   color: #555;
   margin: 0;
 }
 
-/* Tengah: Kemitraan + Layanan */
+/* Tengah: Menu Footer */
 .footer-center {
   display: flex;
-  gap: 80px; /* jarak antar kemitraan dan layanan */
-  margin-left: 10px; /* jarak dari logo */
+  gap: 80px; /* jarak antar kolom menu */
+  margin-left: 10px;
 }
 
 .footer-column h6 {
@@ -461,6 +468,7 @@
   text-decoration: none;
   color: #333;
   font-size: 13px;
+  transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
@@ -506,6 +514,7 @@
     flex-direction: column;
     gap: 20px;
   }
+
   .footer-center {
     flex-direction: column;
     gap: 15px;
@@ -513,6 +522,8 @@
   }
 }
 </style>
+
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

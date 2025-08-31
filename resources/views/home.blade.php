@@ -50,16 +50,15 @@
 <!-- Nav Menu -->
 <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="#">Services</a></li>
+    <li><a href="/">Services</a></li>
     <li><a href="{{ url('elearn') }}">E-learning</a></li>
     <li><a href="{{ url('apply') }}">Apply as partner</a></li>
     <li>
-<a href="https://api.whatsapp.com/send?phone=6289678868752"
-   target="_blank"
-   rel="noopener noreferrer"
+<a href="{{ url('community1') }}"
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
+
 
     </li>
   </ul>
@@ -234,7 +233,7 @@
      class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah" 
      target="_blank" rel="noopener noreferrer">
      Baca Lebih Lanjut
-     <img src="assets/img/panah.png" alt="Panah" class="icon-panah">
+     <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
   </a>
 </div>
 
@@ -280,8 +279,8 @@ let i = 0;
 
 /* Ukuran ikon panah */
 .icon-panah {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   object-fit: contain;
   vertical-align: middle;
@@ -296,15 +295,15 @@ let i = 0;
 /* Pastikan di mobile tampilannya sama persis */
 @media (max-width: 768px) {
   .tombol-panah {
-    padding: 10px 22px;  /* Sama persis dengan desktop */
+    padding: 12px 12px;  /* Sama persis dengan desktop */
     gap: 8px;            /* Sama dengan desktop */
     font-size: 16px;     /* Sama dengan desktop */
     line-height: 1;      /* Supaya panah nggak turun */
   }
 
 .icon-panah {
-    width: 24px;       /* 🔹 Perbesar ukuran lebar ikon */
-    height: 24px;      /* 🔹 Perbesar ukuran tinggi ikon */
+    width: 12px;       /* 🔹 Perbesar ukuran lebar ikon */
+    height: 12px;      /* 🔹 Perbesar ukuran tinggi ikon */
     position: relative;
     top: -11px;         /* 🔹 Tetap naikkan posisinya */
 }
@@ -659,11 +658,11 @@ a.pulse-button:hover {
         text-align: center;
     }
 
-.service-img img {
-    max-width: 450px; /* gambar lebih besar */
-    width: 100%;
-    height: auto;
-}
+    .service-img img {
+        max-width: 450px; /* gambar lebih besar */
+        width: 100%;
+        height: auto;
+    }
 
     .service-content {
         flex: 1;
@@ -750,9 +749,19 @@ a.pulse-button:hover {
         .service-img {
             order: -1;
         }
-    }
-</style>
 
+        /* PERUBAHAN UNTUK MOBILE */
+        .service-content ul {
+            text-align: left; /* Pusatkan list di mobile */
+            display: inline-block;
+        }
+
+        .service-content ul li {
+            padding-left: 28px; /* Mengurangi padding untuk mendekatkan ikon */
+        }
+    }
+    
+</style>
 
 <!-- Import Font Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -1186,21 +1195,23 @@ document.querySelectorAll('.counter').forEach(counter => {
     border: 2px solid #e0e0e0; /* opsional: kasih border tipis biar rapi */
 }
 
-  .card {
+.card {
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 20px;
-    width: 300px;
+    padding: 20px; /* lebih lega */
+    width: 320px; /* sebelumnya 300px → diperbesar */
+    min-height: 320px; /* biar semua kartu punya tinggi seragam */
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-  }
+    justify-content: flex-start;
+}
   .card-header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     background: transparent;
     border-bottom: none;
     min-height: 50px;
@@ -1234,42 +1245,64 @@ document.querySelectorAll('.counter').forEach(counter => {
     font-weight: bold;
   }
   .card-description {
-    margin-top: auto;
+    margin-top: 0;
     color: #444;
     line-height: 1.5;
     font-size: 14px;
     text-align: left;
+    flex-shrink: 0;
   }
+  
   .nurama-desc {
-  font-size: 12px; /* Atur sesuai keinginan */
+  font-size: 13px; /* Atur sesuai keinginan */
 }
 .gita-desc {
-  font-size: 12px; /* Atur sesuai keinginan */
+  font-size: 13px; /* Atur sesuai keinginan */
 }
 .fadhia-desc {
-  font-size: 11px; /* Atur sesuai keinginan */
+  font-size: 13px; /* Atur sesuai keinginan */
 }
 .description-irij{
-  font-size: 11px; /* Atur sesuai keinginan */
+  font-size: 13px; /* Atur sesuai keinginan */
 }
+/* Mobile view: kartu numpuk ke bawah */
 @media (max-width: 768px) {
-  .carousel-slide.active {
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-button {
-    display: block; /* tampilkan lagi */
-    top: auto;      /* biar nggak ketumpuk */
-    bottom: -50px;  /* posisinya di bawah carousel */
-    transform: none;
-  }
-  .prev {
-    left: 30%;
-  }
-  .next {
-    right: 30%;
-  }
+    /* Atur container agar susunan jadi vertikal */
+    .carousel-slide.active {
+        flex-direction: column; /* KARTU NUMPUK KEBAWAH */
+        align-items: center;    /* Tengahin kartunya */
+        gap: 20px;              /* Jarak antar kartu */
+    }
+
+    /* Samakan tinggi kartu */
+    .card {
+        width: 90%;
+        max-width: 360px;
+        min-height: 320px; /* Semua kartu sama tinggi biar sejajar */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Biar title & deskripsi nempel ke atas */
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    /* Pastikan title nggak ketiban deskripsi */
+    .card-title {
+        margin-bottom: 8px;
+    }
+
+    /* Deskripsi tetap nempel ke atas, meskipun lebih pendek dari kartu lain */
+    .card-description {
+        margin-top: 0;
+        flex-grow: 0;
+    }
 }
+.carousel-button { 
+  display: block; /* tampilkan lagi */ 
+  top: auto; /* biar nggak ketumpuk */ 
+  bottom: -50px; /* posisinya di bawah carousel */
+   transform: none; } .prev { left: 30%; } .next { right: 30%; }
+
 </style>
 <script>
   // Tab switching (tetap)
@@ -1332,8 +1365,7 @@ document.querySelectorAll('.counter').forEach(counter => {
     jadi tim Anda?
 </h2>
         <p class="mb-4">
-          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>
-          Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
+          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
         </p>
         <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-success rounded-pill px-4 py-2"style="background-color: #7ed957; border-color: #7ed957; color: white;">Book a Special Offer ➝</a>
       </div>
@@ -1348,6 +1380,10 @@ document.querySelectorAll('.counter').forEach(counter => {
 </section>
 
 <style>
+  .cta-section p.mb-4 {
+  font-size: 14px; /* 🔹 Ubah sesuai keinginan */
+  line-height: 1.6; /* 🔹 Biar lebih rapi dibaca */
+}
 .cta-section {
   background: 
     linear-gradient(to right, #5DE0E6, #004AAD),

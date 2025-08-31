@@ -59,16 +59,14 @@
     <!-- Nav Menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#">Services</a></li>
+        <li><a href="/">Services</a></li>
         <li><a href="{{ url('elearn') }}">E-learning</a></li>
         <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
         <li>
-          <a href="https://api.whatsapp.com/send?phone=6289678868752"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
-            Join to Talent Community ➝
-          </a>
+<a href="{{ url('community1') }}"
+   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+    Join to Talent Community ➝
+</a>
         </li>
       </ul>
     </nav>
@@ -108,70 +106,72 @@
 <!-- Tambahkan di layout atau halaman -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-<!-- Hero Section -->
-<section id="hero" class="hero-section d-flex align-items-center">
-    <div class="container text-center">
+<!-- HERO SECTION -->
+<section id="hero" class="hero-section">
+    <div class="container text-center hero-content">
         <!-- Judul -->
         <h1 class="hero-title">
-            <span>Platform Belajar Rekrutmen: <br>
-            Satu Skill untuk Pekerja dan Perekrut</span>
+            Platform Belajar Rekrutmen: <br>
+            Satu Skill untuk Pekerja dan Perekrut
         </h1>
 
         <!-- Tombol -->
         <a href="#materi" class="btn-hero">
             Jelajahi Materi
-            <img src="assets/img/panah.png" alt="Panah" class="btn-icon">
+            <img src="assets/img/panahputih.png" alt="Panah" class="btn-icon">
         </a>
+    </div>
 
-        <!-- Fitur -->
-        <div class="hero-features">
-            <div class="feature-item">
-                <img src="assets/img/award.png" alt="Exclusive" class="feature-icon">
-                <h5>Exclusive Platform</h5>
-                <p>Kami pionir e-learning untuk pembelajaran rekrutmen</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/img/mic.png" alt="Speakers" class="feature-icon">
-                <h5>Top Speakers</h5>
-                <p>Dibuat oleh Profesional, Praktisi & Rekruter terkurasi</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/img/iconorg.png" alt="2in1" class="feature-icon">
-                <h5>2 in 1 Function</h5>
-                <p>Materi dirancang untuk Jobseeker dan Recruiter</p>
-            </div>
+    <!-- FITUR -->
+    <div class="hero-features">
+        <div class="feature-item">
+            <img src="assets/img/award.png" alt="Exclusive" class="feature-icon">
+            <h5>Exclusive Platform</h5>
+            <p>Kami pionir e-learning untuk pembelajaran rekrutmen</p>
+        </div>
+        <div class="feature-item">
+            <img src="assets/img/mic.png" alt="Speakers" class="feature-icon">
+            <h5>Top Speakers</h5>
+            <p>Dibuat oleh Profesional, Praktisi & Rekruter terkurasi</p>
+        </div>
+        <div class="feature-item">
+            <img src="assets/img/iconorg.png" alt="2in1" class="feature-icon">
+            <h5>2 in 1 Function</h5>
+            <p>Materi dirancang untuk Jobseeker dan Recruiter</p>
         </div>
     </div>
 </section>
-
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <style>
 /* ===== HERO SECTION ===== */
 .hero-section {
-    background: url("assets/img/herolearn.jpg") no-repeat center center;
+    background: url("assets/img/desktoppx.jpg") center center no-repeat;
     background-size: cover;
+    background-position: top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    padding: 120px 20px 100px;
     text-align: center;
 }
 
-.hero-section .container {
-    position: relative;
+
+/* ===== HERO CONTENT (judul + tombol) ===== */
+.hero-content {
     z-index: 2;
-    max-width: 1100px;
-    text-align: center;
-    padding: 0 20px;
+    max-width: 800px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /* Judul */
 .hero-title {
-    font-size: 2.8rem;
+    font-size: 48px;
     font-weight: 1000;
     margin-bottom: 30px;
     line-height: 1.3;
@@ -180,7 +180,7 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Tombol */
+/* Tombol Utama */
 .btn-hero {
     display: inline-flex;
     align-items: center;
@@ -195,65 +195,72 @@
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
 }
+
 .btn-hero .btn-icon {
-    width: 26px;
-    height: 26px;
+    width: 14px;
+    height: 14px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
+
 .btn-hero:hover {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
+
 .btn-hero:hover .btn-icon {
     transform: translateX(5px);
 }
-.btn-hero:active {
-    transform: scale(0.97);
-}
-.btn-hero:focus {
-    outline: none;
-}
 
-/* ===== HERO FEATURES ===== */
+/* ===== HERO FEATURES (pindah ke bawah) ===== */
 .hero-features {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
-    margin-top: 60px;
     position: relative;
     z-index: 2;
+    max-width: 1100px;
+    margin-bottom: 20px;
 }
 
+/* Item Fitur */
 .feature-item {
     flex: 1;
     max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* icon + teks rata tengah */
+    justify-content: space-between; /* bagi ruang biar rapi */
     text-align: center;
     color: #2e6bbc;
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
     transition: transform 0.3s ease;
 }
+}
+
 .feature-item:hover {
     transform: scale(1.05);
 }
+
+/* Icon */
 .feature-icon {
     width: 65px;
     height: 65px;
     object-fit: contain;
     margin-bottom: 12px;
 }
+
+/* Judul Fitur */
 .feature-item h5 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 6px;
     color: #004AAD;
 }
+
+/* Deskripsi Fitur */
 .feature-item p {
     font-size: 14px;
     color: #333;
@@ -261,65 +268,34 @@
     line-height: 1.5;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-
-/* Tablet */
-@media (max-width: 991px) {
-    .hero-title {
-        font-size: 2.3rem;
-        line-height: 1.3;
-    }
-    .hero-features {
-        gap: 35px;
-        margin-top: 50px;
-    }
-}
-
-/* Mobile Medium */
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 80px 20px;
-        min-height: auto;
-    }
-    .hero-title {
-        font-size: 2rem;
-        -webkit-text-stroke: 1.5px #fff;
-    }
-    .hero-features {
-        flex-direction: column;
-        gap: 30px;
-        margin-top: 40px;
-    }
-    .feature-item {
-        max-width: 100%;
-    }
-    .btn-hero {
-        padding: 12px 22px;
-        font-size: 0.95rem;
-    }
-}
-
-/* Mobile Small */
+/* MOBILE SMALL (≤576px) */
 @media (max-width: 576px) {
-    .hero-section {
-        padding: 60px 15px;
-    }
+  .hero-section {
+    background: url("assets/img/desktoppx.jpg") center center no-repeat;
+    min-height: 100vh;
+  }
+}
+
     .hero-title {
         font-size: 1.6rem;
         line-height: 1.4;
         -webkit-text-stroke: 1px #fff;
     }
+
     .btn-hero {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+
     .feature-icon {
         width: 55px;
         height: 55px;
     }
+
     .feature-item h5 {
         font-size: 16px;
     }
+
     .feature-item p {
         font-size: 13px;
     }
