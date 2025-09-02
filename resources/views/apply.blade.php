@@ -194,21 +194,20 @@
   margin-top: 100px; /* Geser sedikit ke bawah supaya tidak menempel header */
 }
 
-/* Judul Utama */
 .hero-title {
-    font-size: 2.8rem;
-    font-weight: 1000;
-    margin-bottom: 30px;
-    line-height: 1.3;
-
-    /* Warna isi teks */
-    -webkit-text-fill-color: #2e6bbc;
-
-    /* Warna kerangka putih */
-    -webkit-text-stroke: 2px #ffffff;
-
-    /* Sedikit bayangan supaya makin jelas */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.4;
+  color: #2e6bbc;  
+  text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+    -2px -2px 0 #fff,  
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff; /* tambahan biar makin tebal */
 }
 
 @media (max-width: 768px) {

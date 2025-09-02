@@ -118,39 +118,54 @@
     <h1 class="hero-title">
       Cari Kerja Sendiri Itu Berat,<br> Kamu Pasti Butuh Penyemangat
     </h1>
-    <a href="#" class="btn-hero mt-3">
-      Jelajahi Komunitas ➝
-    </a>
+<a href="#" class="btn-hero mt-3">
+  Jelajahi Komunitas 
+  <img src="assets/img/panahputih.png" alt="panah" class="icon-panah">
+</a>
+
   </div>
 </section>
 
 <style>
+  .btn-hero .icon-panah {
+  width: 16px;    /* sesuaikan */
+  height: auto;
+  margin-left: 8px; /* kasih jarak dari teks */
+  vertical-align: middle;
+}
+
 .hero-section {
-    background: url("assets/img/community.jpg") center center no-repeat;
+    background: url("assets/img/raw.jpg") center center no-repeat;
     background-size: cover;
     background-position: top;
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh; /* full layar */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    margin-top: 70px; /* sesuaikan tinggi header */
 }
 
-/* Judul */
+
 .hero-title {
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 4rem;
   line-height: 1.4;
-  color: #fff;
-  text-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+  color: #2e6bbc;  
+  text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+    -2px -2px 0 #fff,  
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff; /* tambahan biar makin tebal */
 }
-
 /* Tombol gradasi */
 .btn-hero {
   display: inline-block;
@@ -169,62 +184,122 @@
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
+/* Versi mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    background: url("assets/img/communitymobile.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    margin-top: 60px; /* kalau perlu lebih kecil di mobile */
+    padding: 0 20px;  /* kasih padding biar teks gak mepet */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* kecilkan ukuran teks biar pas di mobile */
+    line-height: 1.2;
+  }
+
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .btn-hero .icon-panah {
+    width: 14px;
+    margin-left: 6px;
+  }
+}
 </style>
 
 <!-- UPCOMING EVENT SECTION -->
-<section class="upcoming-section py-5">
-  <div class="container" data-aos="fade-up">
-    <h2 class="event-title">Upcoming Event</h2>
-    <p class="event-subtitle">Exclusive only for Community Members</p>
+<!-- UPCOMING EVENT SECTION -->
+<section class="event-section py-5">
+  <div class="container text-center">
+    <div class="event-header mb-4">
+      <h2 class="text-white">Upcoming Event</h2>
+      <p class="text-white">Exclusive only for Community Members</p>
+    </div>
 
-    <!-- Carousel -->
-    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="eventCarousel" class="carousel slide">
       <div class="carousel-inner">
 
-        <!-- Baris 1 -->
+        <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="row g-4 justify-content-center">
-
-            <!-- Event 1 -->
+            
+            <!-- Kartu 1 -->
             <div class="col-md-4">
-              <div class="card h-100 text-center border-0 shadow event-card">
-                <img src="assets/img/andi.jpg" class="card-img-top img-fluid" alt="Event 1">
-                <div class="card-body">
-                  <h5 class="fw-bold text-primary">LIVE CLASS</h5>
-                  <p class="text-muted mb-0">JUMAT, 18 APRIL 2025</p>
-                </div>
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/andi.jpg" class="w-100 rounded-top" alt="Event 1">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE CLASS</h3>
+                <p class="text-info">JUMAT, 18 APRIL 2025</p>
               </div>
             </div>
 
-            <!-- Event 2 -->
+            <!-- Kartu 2 -->
             <div class="col-md-4">
-              <div class="card h-100 text-center border-0 shadow event-card">
-                <img src="assets/img/adam.jpg" class="card-img-top img-fluid" alt="Event 2">
-                <div class="card-body">
-                  <h5 class="fw-bold text-primary">LIVE HIRING</h5>
-                  <p class="text-muted mb-0">JUMAT, 09 MEI 2025</p>
-                </div>
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/adam.jpg" class="w-100 rounded-top" alt="Event 2">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE HIRING</h3>
+                <p class="text-info">JUMAT, 09 MEI 2025</p>
               </div>
             </div>
 
-            <!-- Event 3 -->
+            <!-- Kartu 3 -->
             <div class="col-md-4">
-              <div class="card h-100 text-center border-0 shadow event-card">
-                <img src="assets/img/far.jpg" class="card-img-top img-fluid" alt="Event 3">
-                <div class="card-body">
-                  <h5 class="fw-bold text-primary">LIVE CLASS</h5>
-                  <p class="text-muted mb-0">KAMIS, 12 JUNI 2025</p>
-                </div>
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/far.jpg" class="w-100 rounded-top" alt="Event 3">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE CLASS</h3>
+                <p class="text-info">KAMIS, 12 JUNI 2025</p>
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- Baris 2 (opsional, kalau ada event tambahan) -->
+        <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="row g-4 justify-content-center">
-            <!-- Tambahkan event baru di sini -->
+            
+            <!-- Kartu 4 -->
+            <div class="col-md-4">
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/andi.jpg" class="w-100 rounded-top" alt="Event 4">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE HIRING</h3>
+                <p class="text-info">JUMAT, 20 JUNI 2025</p>
+              </div>
+            </div>
+
+            <!-- Kartu 5 -->
+            <div class="col-md-4">
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/adam.jpg" class="w-100 rounded-top" alt="Event 5">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE CLASS</h3>
+                <p class="text-info">JUMAT, 25 JULI 2025</p>
+              </div>
+            </div>
+
+            <!-- Kartu 6 -->
+            <div class="col-md-4">
+              <div class="event-card bg-white rounded-3 shadow">
+                <img src="assets/img/far.jpg" class="w-100 rounded-top" alt="Event 6">
+              </div>
+              <div class="event-caption mt-2">
+                <h3 class="text-white mb-1">LIVE HIRING</h3>
+                <p class="text-info">JUMAT, 15 AGUSTUS 2025</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -235,6 +310,7 @@
         <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
+
       <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
@@ -245,42 +321,139 @@
 </section>
 
 <style>
-.event-title {
-  font-size: 48px;
-  font-weight: 800;
-  text-align: center;   /* biar rata tengah */
-  color: #fff;          /* warna putih */
+/* Section background */
+/* Section background */
+.event-section {
+  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-.event-subtitle {
-  font-size: 22px;
-  font-weight: 400;
-  text-align: center;   /* biar rata tengah */
-  color: #fff;          /* warna putih */
-}
-.upcoming-section {
-  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+/* Judul */
+.event-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
   color: #fff;
 }
 
-.upcoming-section .card {
-  border-radius: 12px;
+.event-header p {
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.upcoming-section .card-body {
-  background: #fff;
-  border-top: 1px solid #eee;
-  padding: 15px;
+/* Track */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.upcoming-section h5 {
-  font-size: 1.1rem;
+/* Wrapper untuk kartu */
+.event-wrapper {
+  flex: 0 0 calc(100% / 3); /* tampil 3 kartu */
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.upcoming-section p {
-  font-size: 0.9rem;
+/* Kartu */
+.event-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gambar */
+.event-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Caption */
+.event-caption {
+  margin-top: 12px;
+  text-align: center;
+  color: white;
+}
+
+.event-caption h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.event-caption p {
+  font-size: 14px;
+  opacity: 0.9;
+  color: #5de0e6;
+}
+
+/* Tombol Navigasi */
+.slider-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.slider-btn.prev {
+  left: 15px;
+}
+
+.slider-btn.next {
+  right: 15px;
+}
+/* Geser tombol panah keluar area kartu */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;                        /* tetap di tengah vertikal */
+  transform: translateY(-50%);     /* biar benar-benar center */
+  width: auto;                     
+  height: auto;
+}
+
+.carousel-control-prev {
+  left: -60px;   /* geser keluar ke kiri */
+}
+
+.carousel-control-next {
+  right: -60px;  /* geser keluar ke kanan */
+}
+
+/* Styling ikon biar tetap kelihatan */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 30px 30px;
+  filter: invert(1); /* bikin putih */
+}
+
 </style>
 <!-- BENEFIT MEMBER SECTION -->
 <section class="benefit-section py-5" style="background-color: #E9F5FB;">
@@ -314,7 +487,7 @@
 
     <!-- Highlight Text -->
     <p class="text-center fw-bold fs-5 mt-5">
-      Disini kamu bukan hanya belajar, tapi benar-benar terhubung ke berbagai peluang kerja dan dipersiapkan untuk di rekrut.
+      Disini kamu bukan hanya belajar, tapi benar-benar terhubung ke berbagai <br>peluang kerja dan dipersiapkan untuk di rekrut.
     </p>
 
   </div>
@@ -322,54 +495,62 @@
 
 <!-- CSS -->
 <style>
+  .benefit-section h2 {
+  color: #000;        /* warna hitam pekat */
+  font-weight: 700;   /* bold tebal */
+}
   .check-icon {
     width: 28px;   /* atur ukuran icon checklist */
     height: 28px;
     flex-shrink: 0;
   }
 
-  .benefit-item p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.6;
-  }
+.benefit-item p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;  /* bikin teks rata kiri-kanan */
+}
+
 </style>
 <!-- PRICING SECTION -->
 <section class="pricing-section py-5">
   <div class="container text-center" data-aos="fade-up">
 
+<!-- Badge Pricing -->
+<span class="badge">Pricing</span>
+
     <!-- Judul -->
-    <span class="badge bg-gradient mb-3">Pricing</span>
-    <h2 class="fw-bold mb-3">Join to Community</h2>
-    <p class="text-muted mb-5">Untuk freshgraduate, freelancer dan jobseeker</p>
+    <h2 class="fw-bold mb-3 title-heading">Join to Community</h2>
+    <p class="mb-5 pricing-desc">Untuk freshgraduate, freelancer dan jobseeker</p>
 
-    <div class="row justify-content-center g-4">
+    <div class="row justify-content-center g-1">
       
-      <!-- Pre-launch -->
-      <div class="col-md-4">
-        <div class="card pricing-card border-0 shadow-lg h-100 text-white bg-gradient-blue">
-          <div class="card-body p-4 d-flex flex-column">
-            <div>
-              <h5 class="fw-bold">Pre-launch</h5>
-              <p class="text-decoration-line-through small">Rp 99.000</p>
-              <h2 class="fw-bold">Rp 49.000</h2>
-              <p>Akses semua benefit sekali bayar</p>
-            </div>
-
-            <div class="mt-auto">
-              <a href="#" class="btn btn-light w-100 fw-semibold">Pilih →</a>
-              <ul class="list-unstyled text-start mt-4">
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2"> Akses Komunitas</li>
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2"> Exclusive Event</li>
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2"> Grup Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<!-- Pre-launch -->
+<div class="col-md-3">
+  <div class="card pricing-card border-0 shadow-lg h-100 text-white bg-gradient-blue">
+    <div class="card-body d-flex flex-column text-start"> <!-- text-start -->
+      <div>
+        <h5 class="fw-bold">Pre-launch</h5>
+        <p class="text-decoration-line-through small">Rp 99.000</p>
+        <h2 class="fw-bold">Rp 49.000</h2>
+        <p>Akses semua benefit sekali bayar</p>
       </div>
 
+      <div class="mt-auto">
+        <a href="#" class="btn btn-light fw-semibold pilih-btn">Pilih →</a>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Akses Komunitas</li>
+          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Exclusive Event</li>
+          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Grup Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
       <!-- Normal Price -->
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="card pricing-card border-0 shadow-lg h-100 text-white bg-gradient-gray">
           <div class="card-body p-4 d-flex flex-column">
             <div>
@@ -394,14 +575,57 @@
   </div>
 </section>
 
+
 <!-- CSS -->
 <style>
-  .pricing-section .badge {
-    background: linear-gradient(135deg, #5DE0E6, #004AAD);
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 30px;
-  }
+  .pricing-card {
+  max-width: 280px; /* bisa disesuaikan, misalnya 260–300px */
+  margin: 0 auto;   /* biar tetap center di col */
+}
+
+  .pilih-btn {
+  display: inline-block;
+  padding: 12px 50px  ; /* atur ukuran tombol */
+  border-radius: 30px; /* biar tetap rounded */
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2e6bbc;
+}
+
+.pricing-card .card-body {
+  padding: 1rem; /* kecilin padding (default biasanya 1.5rem/24px) */
+}
+
+.pricing-card h5 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.pricing-card h2 {
+  font-size: 1.6rem;
+  margin: 0.25rem 0;
+}
+
+.pricing-card p {
+  margin-bottom: 0.4rem; /* jarak antar paragraf kecil */
+  font-size: 0.9rem;
+}
+
+.pricing-card ul li {
+  font-size: 0.9rem; /* list lebih kecil */
+}
+
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px; /* bikin bentuk kapsul */
+  color: #fff; /* warna teks putih */
+  margin-bottom: 20px; /* kasih gap bawah */
+}
 
   .bg-gradient-blue {
     background: linear-gradient(135deg, #5DE0E6, #004AAD);
@@ -433,7 +657,7 @@
   <div class="container" data-aos="fade-up">
 
     <!-- Judul -->
-    <h2 class="fw-bold mb-5">Rasanya Gabung Komunitas KLIK Rekrut</h2>
+    <h2 class="fw-bold mb-5 klik-heading-white">Rasanya Gabung Komunitas KLIK Rekrut</h2>
 
     <!-- Card List -->
     <div class="row g-4 justify-content-center">
@@ -441,7 +665,7 @@
       <!-- Card 1 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/awan.png" class="card-img-top" alt="Community">
+          <img src="assets/img/4.jpg" class="card-img-top" alt="Community">
           <div class="card-body">
             <p class="fw-semibold">Punya temen seperjuangan menghadapi kegagalan rekrutmen</p>
           </div>
@@ -451,7 +675,7 @@
       <!-- Card 2 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/awan.png" class="card-img-top" alt="Live Hiring">
+          <img src="assets/img/3.jpg" class="card-img-top" alt="Live Hiring">
           <div class="card-body">
             <p class="fw-semibold">Bisa interview langsung sama rekruter perusahaan di Live Hiring</p>
           </div>
@@ -461,7 +685,7 @@
       <!-- Card 3 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/awan.png" class="card-img-top" alt="Portofolio">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="Portofolio">
           <div class="card-body">
             <p class="fw-semibold">Bisa bangun portofolio dari project yang di share member lain</p>
           </div>
@@ -471,7 +695,7 @@
       <!-- Card 4 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/awan.png" class="card-img-top" alt="Networking">
+          <img src="assets/img/2.jpg" class="card-img-top" alt="Networking">
           <div class="card-body">
             <p class="fw-semibold">Ngobrol dan Networking bareng member lain dari lintas bidang</p>
           </div>
@@ -492,6 +716,10 @@
 
 <!-- CSS -->
 <style>
+  .klik-heading-white {
+  color: #fff;
+}
+
   .community-section {
     background: linear-gradient(135deg, #5DE0E6, #004AAD);
   }
@@ -502,7 +730,9 @@
 
   .community-section .card {
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible;
+    width: 300px;      /* paksa lebar */
+    max-width: 100%;   /* tetap responsif */
   }
 
   .community-section .card-body p {

@@ -171,13 +171,19 @@
 
 /* Judul */
 .hero-title {
-    font-size: 48px;
-    font-weight: 1000;
-    margin-bottom: 30px;
-    line-height: 1.3;
-    -webkit-text-fill-color: #2e6bbc;
-    -webkit-text-stroke: 2px #ffffff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.4;
+  color: #2e6bbc;  
+  text-shadow: 
+    -1px -1px 0 #fff,  
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+    -2px -2px 0 #fff,  
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff; /* tambahan biar makin tebal */
 }
 
 /* Tombol Utama */
@@ -268,38 +274,7 @@
     line-height: 1.5;
 }
 
-/* MOBILE SMALL (≤576px) */
-@media (max-width: 576px) {
-  .hero-section {
-    background: url("assets/img/desktoppx.jpg") center center no-repeat;
-    min-height: 100vh;
-  }
-}
 
-    .hero-title {
-        font-size: 1.6rem;
-        line-height: 1.4;
-        -webkit-text-stroke: 1px #fff;
-    }
-
-    .btn-hero {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .feature-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .feature-item h5 {
-        font-size: 16px;
-    }
-
-    .feature-item p {
-        font-size: 13px;
-    }
-}
 </style>
 
 <!-- ================= TESTIMONI SECTION ================= -->
@@ -524,7 +499,7 @@
 .carousel-btn.next {
   right: -40px; /* 🔹 Lebih menjauh dari kartu */
 }
-
+}
 </style>
 
 <!-- ================= JAVASCRIPT ================= -->
