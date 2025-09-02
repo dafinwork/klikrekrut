@@ -164,19 +164,31 @@
 <style>
 /* Hero Wrapper */
 .hero-partner {
-  position: relative;
-  width: 100%;
-  min-height: calc(100vh - 56px); /* 100% tinggi layar dikurangi tinggi header */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 20px 40px; /* spasi dalam hero */
-  font-family: 'Poppins', sans-serif;
-  z-index: 1;
+    background: url("assets/img/partner.jpg") center center no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 79.8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px; /* sesuaikan tinggi header */
+        position: relative;
+    overflow: hidden;
+    }
+    .hero-partner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url("assets/img/partner.jpg") center center no-repeat;
+    background-size: contain;
+    transform: scaleX(1.05); /* geser ukuran horizontal sedikit */
+    z-index: -1;
 }
 
 /* Responsif untuk mobile */

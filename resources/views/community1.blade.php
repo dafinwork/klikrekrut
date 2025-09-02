@@ -136,12 +136,12 @@
 
 .hero-section {
     background: url("assets/img/raw.jpg") center center no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh;
+    min-height: 79.8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -665,7 +665,7 @@
       <!-- Card 1 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/4.jpg" class="card-img-top" alt="Community">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="Community">
           <div class="card-body">
             <p class="fw-semibold">Punya temen seperjuangan menghadapi kegagalan rekrutmen</p>
           </div>
@@ -675,7 +675,7 @@
       <!-- Card 2 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/3.jpg" class="card-img-top" alt="Live Hiring">
+          <img src="assets/img/2.jpg" class="card-img-top" alt="Live Hiring">
           <div class="card-body">
             <p class="fw-semibold">Bisa interview langsung sama rekruter perusahaan di Live Hiring</p>
           </div>
@@ -685,7 +685,7 @@
       <!-- Card 3 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="Portofolio">
+          <img src="assets/img/3.jpg" class="card-img-top" alt="Portofolio">
           <div class="card-body">
             <p class="fw-semibold">Bisa bangun portofolio dari project yang di share member lain</p>
           </div>
@@ -695,7 +695,7 @@
       <!-- Card 4 -->
       <div class="col-md-3">
         <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/2.jpg" class="card-img-top" alt="Networking">
+          <img src="assets/img/4.jpg" class="card-img-top" alt="Networking">
           <div class="card-body">
             <p class="fw-semibold">Ngobrol dan Networking bareng member lain dari lintas bidang</p>
           </div>
@@ -728,17 +728,21 @@
     font-family: 'Poppins', sans-serif;
   }
 
-  .community-section .card {
-    border-radius: 15px;
-    overflow: visible;
-    width: 300px;      /* paksa lebar */
-    max-width: 100%;   /* tetap responsif */
-  }
+.community-section .card {
+    padding: 10px;         /* masih bisa diganti sesuai kebutuhan */
+    border-radius: 15px;   /* biar tetap rounded */
+    overflow: hidden;      /* biar gambar dan isi rapih */
+}
 
-  .community-section .card-body p {
+.community-section .card-body {
+    padding: 10px;         /* kecilkan padding biar compact */
+}
+.community-section .card-body p {
+    margin: 0;             /* hilangkan margin bawaan <p> */
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-  }
+    font-weight: 600;      /* sama seperti fw-semibold */
+}
 
   .community-section .btn {
     font-family: 'Poppins', sans-serif;

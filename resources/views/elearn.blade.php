@@ -146,18 +146,19 @@
 <style>
 /* ===== HERO SECTION ===== */
 .hero-section {
-    background: url("assets/img/desktoppx.jpg") center center no-repeat;
-    background-size: cover;
+    background: url("assets/img/elearning.jpg") center center no-repeat;
+    background-size: contain;
     background-position: top;
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 70px; /* sesuaikan tinggi header */
 }
 
 
@@ -172,7 +173,7 @@
 /* Judul */
 .hero-title {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 41px;
   line-height: 1.4;
   color: #2e6bbc;  
   text-shadow: 
@@ -202,6 +203,7 @@
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    margin-top: 80px; /* sesuaikan angkanya */
 }
 
 .btn-hero .btn-icon {
@@ -244,7 +246,6 @@
     color: #2e6bbc;
     transition: transform 0.3s ease;
 }
-}
 
 .feature-item:hover {
     transform: scale(1.05);
@@ -272,6 +273,61 @@
     color: #333;
     margin: 0;
     line-height: 1.5;
+}
+@media (max-width: 768px) {
+    /* HERO SECTION */
+    .hero-section {
+        background-size: cover;           /* nutup penuh layar */
+        background-position: center top;  /* fokus ke atas */
+        min-height: 60vh;                 /* lebih pas di mobile */
+        padding: 40px 20px;               /* beri padding supaya konten nggak nempel tepi layar */
+        margin-top: 60px;                 /* sesuaikan header di mobile */
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+        max-width: 95%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    /* Judul */
+    .hero-title {
+        font-size: 28px;   /* lebih kecil supaya muat di layar kecil */
+        line-height: 1.3;
+    }
+
+    /* Tombol */
+    .btn-hero {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 40px;
+    }
+
+    /* HERO FEATURES */
+    .hero-features {
+        flex-direction: column;  /* stack vertical */
+        gap: 30px;
+    }
+
+    .feature-item {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .feature-item h5 {
+        font-size: 16px;
+    }
+
+    .feature-item p {
+        font-size: 13px;
+    }
 }
 
 
