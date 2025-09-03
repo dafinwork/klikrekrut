@@ -558,6 +558,11 @@
   right: -40px; /* 🔹 Lebih menjauh dari kartu */
 }
 }
+  .section-title {
+    white-space: nowrap;       /* Supaya tidak pecah ke baris baru */
+    font-size: 12px;           /* Kecilkan sedikit biar muat */
+    text-align: center;        /* Pastikan teks tetap rapi di tengah */
+  }
 </style>
 
 <!-- ================= JAVASCRIPT ================= -->
