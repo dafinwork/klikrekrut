@@ -212,12 +212,10 @@
 </style>
 
 <!-- UPCOMING EVENT SECTION -->
-<!-- UPCOMING EVENT SECTION -->
 <section class="event-section py-5">
   <div class="container text-center">
     <div class="event-header mb-4">
-      <h2 class="text-white">Upcoming Event</h2>
-      <p class="text-white">Exclusive only for Community Members</p>
+      <h2 class="text-white">Upcoming Event for Members</h2>
     </div>
 
     <div id="eventCarousel" class="carousel slide">
@@ -365,24 +363,36 @@
   box-sizing: border-box;
 }
 
-/* Kartu */
+/* Efek Pop-Up pada Card */
 .event-card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
+/* Saat kursor diarahkan ke kartu */
 .event-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.08) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-/* Gambar */
+/* Biar gambar ikut smooth */
 .event-card img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+/* Gambar sedikit zoom pas hover */
+.event-card:hover img {
+  transform: scale(1.05);
 }
 
 /* Caption */
@@ -460,7 +470,7 @@
   <div class="container">
 
     <!-- Judul -->
-    <h2 class="text-center fw-bold mb-5">Benefit Member</h2>
+    <h2 class="text-center fw-bold mb-5">Member Benefit </h2>
 
     <!-- List Benefit -->
     <div class="benefit-list">
@@ -487,7 +497,7 @@
 
     <!-- Highlight Text -->
     <p class="text-center fw-bold fs-5 mt-5">
-      Disini kamu bukan hanya belajar, tapi benar-benar terhubung ke berbagai <br>peluang kerja dan dipersiapkan untuk di rekrut.
+      Disini kamu bukan hanya belajar, tapi benar-benar terhubung ke berbagai peluang kerja dan dipersiapkan untuk di rekrut.
     </p>
 
   </div>
@@ -651,6 +661,24 @@
   .pricing-section h5 {
     font-family: 'Poppins', sans-serif;
   }
+/* Perbesar ukuran judul dan rapatkan jaraknya */
+.pricing-section .title-heading {
+  font-size: 3.4rem;      /* Tetap besar */
+  font-weight: 700;
+  margin-bottom: 4px;     /* Jarak ke subjudul lebih dekat lagi */
+  color: #3c678b;
+  line-height: 1.1;       /* Supaya teks besar terlihat lebih rapi */
+}
+
+/* Subjudul */
+.pricing-section .pricing-desc {
+  font-size: 1rem;
+  margin-top: 0;          /* Pastikan tidak ada jarak atas bawaan */
+  margin-bottom: 12px !important; /* Rapatkan ke bawah */
+  color: #555;
+}
+
+
 </style>
 <!-- COMMUNITY SECTION -->
 <section class="community-section py-5 text-center text-white">
@@ -704,12 +732,13 @@
 
     </div>
 
-    <!-- CTA Button -->
-    <div class="mt-5">
-      <a href="#" class="btn btn-light px-4 py-2 fw-semibold rounded-pill shadow">
-        → Gabung Sekarang ←
-      </a>
-    </div>
+<!-- CTA Button -->
+<div class="mt-5">
+  <a href="#" class="btn btn-light px-4 py-2 fw-semibold rounded-pill shadow heartbeat-btn">
+    → Gabung Sekarang ←
+  </a>
+</div>
+
 
   </div>
 </section>
@@ -748,6 +777,35 @@
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
   }
+  /* Efek Detak Jantung */
+.heartbeat-btn {
+  animation: heartbeat 1.3s ease-in-out infinite;
+  transform-origin: center; /* titik pusat detak */
+  display: inline-block;
+}
+
+/* Keyframes untuk efek detak */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.15);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 </style>
 
 <!-- footer -->

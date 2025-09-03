@@ -198,7 +198,7 @@
     font-weight: 600;
     padding: 12px 26px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -424,7 +424,7 @@
 <style>
 /* Section */
 .testimoni-section {
-  padding: 60px 20px;
+  padding: 20px 80px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #5DE0E6, #004AAD);
@@ -434,10 +434,9 @@
 .testimoni-section .section-title {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: -15px; /* lebih dekat ke card */
   color: #fff;
 }
-
 /* Wrapper Carousel */
 .testimoni-wrapper {
   display: flex;
@@ -446,6 +445,7 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
+  margin-top: -30px; /* geser carousel lebih dekat ke judul */
 }
 
 /* Tombol Panah */
@@ -475,7 +475,9 @@
   gap: 20px;
   overflow: hidden;
   flex: 1;
+  transition: transform 0.5s ease-in-out; /* animasi geser */
 }
+
 
 /* Card Testimoni */
 .testimoni-card {
@@ -588,7 +590,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex < totalCards - cardsPerPage) {
       currentIndex++;
     } else {
-      currentIndex = 0; // Loop balik ke awal kalau mau infinite
+      currentIndex = 0;
     }
     updateCarousel();
   });
@@ -597,10 +599,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex > 0) {
       currentIndex--;
     } else {
-      currentIndex = totalCards - cardsPerPage; // Balik ke akhir kalau mau infinite
+      currentIndex = totalCards - cardsPerPage;
     }
     updateCarousel();
   });
+
+  // Auto-slide setiap 3 detik
+  setInterval(() => {
+    nextBtn.click();
+  }, 3000);
 
   window.addEventListener("resize", () => {
     cardsPerPage = getCardsPerPage();
@@ -616,43 +623,45 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="container">
     <h2 class="koleksi-title">KOLEKSI MATERI TERBARU</h2>
 
-<!-- Tab Buttons -->
-<div class="tab-buttons">
-  <button class="tab active" data-target="clients">For Jobseeker</button>
-  <button class="tab" data-target="talents">For Recruiter</button>
-</div>
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab active" data-target="clients">For Jobseeker</button>
+      <button class="tab" data-target="talents">For Recruiter</button>
+    </div>
 
     <!-- ====== TAB CONTENT JOBSEEKER ====== -->
     <div id="clients" class="tab-content active">
       <div class="card-container">
         <!-- Card 1 -->
-        <div class="materi-card">
-          <img src="assets/img/andi.jpg" alt="Bang Andi" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/andi.jpg" alt="Bang Andi" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
+
         <!-- Card 2 -->
-        <div class="materi-card">
-          <img src="assets/img/far.jpg" alt="Kak Faridah" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/far.jpg" alt="Kak Faridah" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
+
         <!-- Card 3 -->
-        <div class="materi-card">
-          <img src="assets/img/adam.jpg" alt="Mas Adam" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/adam.jpg" alt="Mas Adam" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
       </div>
@@ -662,58 +671,93 @@ document.addEventListener("DOMContentLoaded", function () {
     <div id="talents" class="tab-content">
       <div class="card-container">
         <!-- Card 1 -->
-        <div class="materi-card">
-          <img src="assets/img/andi.jpg" alt="Bang Andi" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/andi.jpg" alt="Bang Andi" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
+
         <!-- Card 2 -->
-        <div class="materi-card">
-          <img src="assets/img/far.jpg" alt="Kak Faridah" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/far.jpg" alt="Kak Faridah" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
+
         <!-- Card 3 -->
-        <div class="materi-card">
-          <img src="assets/img/adam.jpg" alt="Mas Adam" class="materi-img">
-          <div class="flip-button">
-            <div class="flip-inner">
-              <div class="flip-front">RP 19.000</div>
-              <div class="flip-back">BELI</div>
-            </div>
+        <div class="materi-wrapper">
+          <div class="materi-card">
+            <img src="assets/img/adam.jpg" alt="Mas Adam" class="materi-img">
+          </div>
+          <div class="button-group">
+            <button class="preview-btn">PREVIEW <br> MATERI</button>
+            <button class="buy-btn">BUY NOW <br> RP 19.000</button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- STYLE -->
 <style>
-  .koleksi-title {
-  font-size: 28px; /* Bisa disesuaikan */
-  font-weight: 700; /* Bold */
-  color: #3c678b; /* Warna sesuai permintaan */
+/* ===== KOLEKSI TITLE ===== */
+.koleksi-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3c678b;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
   letter-spacing: 0.5px;
 }
 
-  .client-title {
-  text-align: center; /* <-- INI YANG MEMBUAT JUDUL DI TENGAH */
-  font-size: 28px;    /* Opsional: biar lebih besar */
-  font-weight: bold;
-  margin-bottom: 20px;
+/* ===== TAB BUTTONS ===== */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.tab {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.tab:hover {
+  background: #e0e0e0;
+}
+.tab.active {
+  background: linear-gradient(90deg, #5DE0E6, #004AAD);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(93, 224, 230, 0.3);
+  transform: scale(1.05);
+}
+
+/* ===== TAB CONTENT ===== */
+.tab-content {
+  display: none;
+  margin-top: 25px;
+}
+.tab-content.active {
+  display: block;
 }
 
 /* ===== CARD CONTAINER ===== */
@@ -721,13 +765,21 @@ document.addEventListener("DOMContentLoaded", function () {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ===== WRAPPER PER CARD ===== */
+.materi-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
 }
 
 /* ===== MATERI CARD ===== */
 .materi-card {
-  width: 280px;
+  width: 100%;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -743,96 +795,54 @@ document.addEventListener("DOMContentLoaded", function () {
 .materi-img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
-/* ===== FLIP BUTTON ===== */
-.flip-button {
-  width: 120px;
-  height: 45px;
-  margin: 0 auto;
-  perspective: 1000px;
-}
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-.flip-button:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-.flip-front,
-.flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-}
-.flip-front {
-  background-color: #333;
-  color: white;
-}
-.flip-back {
-  background-color: #004AAD;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-/* ===== TAB KONTEN ===== */
-.tab-content {
-  display: none;
-  margin-top: 25px;
-}
-.tab-content.active {
-  display: block;
-}
-
-/* ===== TAB BUTTONS ===== */
-.tab-buttons {
+/* ===== BUTTON GROUP (DI BAWAH CARD) ===== */
+.button-group {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  margin-top: 50px;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-.tab {
-  padding: 10px 22px;
+/* ===== BUTTON STYLING ===== */
+.preview-btn,
+.buy-btn {
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  background: #f0f0f0; /* Warna default abu-abu */
-  color: #333;
-  cursor: pointer;
   font-weight: 600;
-  font-size: 16px;
+  cursor: pointer;
+  font-size: 14px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Warna saat hover pada tombol yang belum dipilih */
-.tab:hover {
-  background: #e0e0e0;
+/* Preview Materi */
+.preview-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.preview-btn:hover {
+  background-color: #e0e0e0;
 }
 
-/* Warna tombol saat aktif */
-.tab.active {
-  background: linear-gradient(90deg, #5DE0E6, #004AAD);
+/* Buy Now */
+.buy-btn {
+  background-color: #333;
   color: #fff;
-  box-shadow: 0 4px 10px rgba(93, 224, 230, 0.3);
-  transform: scale(1.05);
+}
+.buy-btn:hover {
+  background-color: #004AAD;
 }
 
+/* ===== RESPONSIVE UNTUK MOBILE ===== */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
 
 <!-- SCRIPT -->

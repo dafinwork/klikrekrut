@@ -229,12 +229,11 @@
   <p class="mb-4">
     Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen minim pusing, minim risiko dan minim resouce.
   </p>
-  <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-     class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah" 
-     target="_blank" rel="noopener noreferrer">
-     Baca Lebih Lanjut
-     <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
-  </a>
+<a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
+  Baca Lebih Lanjut
+  <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
+</a>
+
 </div>
 
       <div class="col-lg-6 text-center" data-aos="fade-left">
@@ -341,7 +340,11 @@ a.pulse-button {
   background-color: #7ed957 !important;
   border-color: #7ed957 !important;
   color: white !important;
+  
+  display: inline-block; /* Pastikan bisa di-scale */
+  animation: pulse 1.2s infinite; /* Tambahkan animasi pulse */
 }
+
 
 a.pulse-button:hover {
   background-color: #6cc44a !important;
@@ -552,7 +555,7 @@ a.pulse-button:hover {
         </h2>
 
         <!-- Baris 1 -->
-        <div class="service-row">
+        <div class="service-row first-row">
             <div class="service-img">
                 <img src="assets/img/comu.png" alt="Talent Sourcing">
             </div>
@@ -564,7 +567,13 @@ a.pulse-button:hover {
                     <li>Talent Pool</li>
                     <li>Sourcing Support</li>
                 </ul>
-                <a href="#" class="btn-service">Pesan Layanan →</a>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+   class="btn-service" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   Pesan Layanan →
+</a>
+
             </div>
         </div>
 
@@ -580,7 +589,13 @@ a.pulse-button:hover {
                     <li>Approach Passive Candidate</li>
                     <li>Talent Replacement Guarantee</li>
                 </ul>
-                <a href="#" class="btn-service">Pesan Layanan →</a>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+   class="btn-service" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   Pesan Layanan →
+</a>
+
             </div>
             <div class="service-img">
                 <img src="assets/img/asistant.png" alt="Recruitment Assistant">
@@ -590,6 +605,10 @@ a.pulse-button:hover {
 </section>
 
 <style>
+  .service-row.first-row {
+    margin-bottom: 80px; /* contoh jarak lebih besar */
+}
+
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
     * {
@@ -936,28 +955,6 @@ document.querySelectorAll('.counter').forEach(counter => {
               </div>
               <p class="card-description">Testimonial from Client 4 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
             </div>
-            
-            <div class="card">
-              <div class="card-header">
-                <img src="assets/img/client5.png" alt="Client 5 Logo" class="card-logo">
-                <div class="card-titles">
-                  <h3>Client 5</h3>
-                  <p class="role">Industry Type</p>
-                </div>
-              </div>
-              <p class="card-description">Testimonial from Client 5 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
-            </div>
-            
-            <div class="card">
-              <div class="card-header">
-                <img src="assets/img/client6.png" alt="Client 6 Logo" class="card-logo">
-                <div class="card-titles">
-                  <h3>Client 6</h3>
-                  <p class="role">Industry Type</p>
-                </div>
-              </div>
-              <p class="card-description">Testimonial from Client 6 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
-            </div>
           </div>
         </div>
         
@@ -1249,7 +1246,7 @@ document.querySelectorAll('.counter').forEach(counter => {
     color: #444;
     line-height: 1.5;
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
     flex-shrink: 0;
   }
   
@@ -1367,7 +1364,13 @@ document.querySelectorAll('.counter').forEach(counter => {
         <p class="mb-4">
           Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
         </p>
-        <a href="https://api.whatsapp.com/send?phone=6289678868752" class="btn btn-success rounded-pill px-4 py-2"style="background-color: #7ed957; border-color: #7ed957; color: white;">Book a Special Offer ➝</a>
+<a href="https://api.whatsapp.com/send?phone=6289678868752" 
+   class="btn btn-success rounded-pill px-4 py-2 pulse-whatsapp"
+   style="background-color: #7ed957; border-color: #7ed957; color: white;"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Book a Special Offer ➝
+</a>
       </div>
 
       <!-- Foto Orang -->
@@ -1380,6 +1383,24 @@ document.querySelectorAll('.counter').forEach(counter => {
 </section>
 
 <style>
+/* Animasi detak jantung khusus tombol WhatsApp */
+@keyframes pulseWhatsapp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-whatsapp {
+  display: inline-block;
+  animation: pulseWhatsapp 1s infinite;
+  transition: transform 0.2s;
+}
   .cta-section p.mb-4 {
   font-size: 14px; /* 🔹 Ubah sesuai keinginan */
   line-height: 1.6; /* 🔹 Biar lebih rapi dibaca */

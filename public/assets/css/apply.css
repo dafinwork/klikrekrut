@@ -200,21 +200,28 @@ h6 {
   color: #004AAD; /* Biru lebih gelap saat hover */
 }
 
-/* Tombol Join */
 /* Tombol Join to Talent Community */
-.btn-outline-light {
-  background-color: #ffffff !important; /* Tetap putih */
-  border: 2px solid #2971a1 !important; /* Garis biru */
+.btn-outline-light.wa-btn {
+  background-color: #ffffff !important; /* Default putih */
+  border: 2px solid #2971a1 !important; /* Outline biru */
   color: #2971a1 !important; /* Teks biru */
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Opsional, biar elegan */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hilangkan animasi naik */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Jarak icon & teks */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.btn-outline-light:hover {
-  background-color: #2971a1 !important; /* Saat hover, biru */
-  color: #ffffff !important; /* Teks jadi putih */
-  border-color: #2971a1 !important;
+/* Hover Effect */
+.btn-outline-light.wa-btn:hover,
+.btn-outline-light.wa-btn:focus,
+.btn-outline-light.wa-btn:active {
+  background-color: #2971a1 !important; /* Jadi biru */
+  color: #ffffff !important; /* Teks putih */
+  border: 2px solid #2971a1 !important; /* Outline tetap biru */
+  box-shadow: 0 0 0 3px rgba(41, 113, 161, 0.4) !important; /* Outline tambahan biar lebih jelas */
+  cursor: pointer;
 }
 
 /* ========== MOBILE NAV ========== */
