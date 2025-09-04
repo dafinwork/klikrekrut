@@ -258,7 +258,6 @@ let i = 0;
 </script>
 <style>
 /* Tombol dengan ikon panah */
-/* Tombol dengan ikon panah */
 .tombol-panah {
   display: inline-flex;          /* Biar teks & panah sejajar */
   align-items: center;           /* Rata tengah vertikal */
@@ -271,7 +270,7 @@ let i = 0;
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
-  line-height: 1;                /* Biar panah sejajar dengan teks */
+  line-height: 1;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -286,7 +285,7 @@ let i = 0;
   transition: transform 0.3s ease;
 }
 
-/* Efek animasi hover */
+/* Efek hover panah */
 .tombol-panah:hover .icon-panah {
   transform: translateX(4px);
 }
@@ -294,57 +293,28 @@ let i = 0;
 /* Pastikan di mobile tampilannya sama persis */
 @media (max-width: 768px) {
   .tombol-panah {
-    padding: 12px 12px;  /* Sama persis dengan desktop */
-    gap: 8px;            /* Sama dengan desktop */
-    font-size: 16px;     /* Sama dengan desktop */
-    line-height: 1;      /* Supaya panah nggak turun */
+    padding: 12px 12px;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1;
   }
 
-.icon-panah {
-    width: 12px;       /* 🔹 Perbesar ukuran lebar ikon */
-    height: 12px;      /* 🔹 Perbesar ukuran tinggi ikon */
+  .icon-panah {
+    width: 12px;
+    height: 12px;
     position: relative;
-    top: -11px;         /* 🔹 Tetap naikkan posisinya */
-}
-}
-/* ==================== HERO SECTION ==================== */
-#typing-hero {
-  white-space: pre-line;
-}
-
-.hero-title {
-  font-weight: 700;
-}
-
-.hero-title .animated-word {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.3s ease-out forwards;
-  animation-delay: var(--delay);
-  animation-fill-mode: both;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    top: -11px;
   }
 }
 
+/* Hapus animasi pulse */
 a.pulse-button {
   background-color: #7ed957 !important;
   border-color: #7ed957 !important;
   color: white !important;
-  
-  display: inline-block; /* Pastikan bisa di-scale */
-  animation: pulse 1.2s infinite; /* Tambahkan animasi pulse */
+  display: inline-block;
+  /* ❌ Animasi dihapus */
 }
-
 
 a.pulse-button:hover {
   background-color: #6cc44a !important;
@@ -359,6 +329,7 @@ a.pulse-button:hover {
     padding-right: 1.5rem;
   }
 }
+
 
 @keyframes pulse {
   0% { transform: scale(1); }

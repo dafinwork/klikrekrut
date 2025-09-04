@@ -331,7 +331,7 @@
 
 /* Judul */
 .event-header h2 {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
   margin-bottom: 5px;
   color: #fff;
@@ -363,7 +363,7 @@
   box-sizing: border-box;
 }
 
-/* Efek Pop-Up pada Card */
+/* Hapus efek zoom di kartu */
 .event-card {
   background: white;
   border-radius: 16px;
@@ -371,8 +371,6 @@
   overflow: hidden;
   transition: all 0.35s ease;
   cursor: pointer;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
 }
 
 /* Saat kursor diarahkan ke kartu */
@@ -382,18 +380,22 @@
   z-index: 10;
 }
 
-/* Biar gambar ikut smooth */
+/* Pas hover, card tetap diam, tapi gambar yang nge-zoom */
 .event-card img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 16px 16px 0 0;
 }
 
-/* Gambar sedikit zoom pas hover */
+
+/* Gambar nge-pop-up */
 .event-card:hover img {
-  transform: scale(1.05);
-}
+  transform: scale(1.08); /* Zoom lebih terasa */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Efek pop-up */
+  z-index: 2;
+}}
 
 /* Caption */
 .event-caption {
