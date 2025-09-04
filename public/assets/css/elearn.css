@@ -201,36 +201,31 @@ h6 {
 }
 
 /* Tombol Join to Talent Community */
-.btn-outline-light.wa-btn {
-  background-color: #ffffff !important; /* Default putih */
-  border: 2px solid #2971a1 !important; /* Border biru */
-  color: #2971a1 !important; /* Teks biru */
+.wa-btn {
+  background-color: #004AAD !important; /* Biru permanen */
+  border: 2px solid #004AAD !important; /* Border biru */
+  color: #ffffff !important; /* Teks putih */
   font-weight: 600;
-  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* Hover Effect → Outline biru muncul */
-.btn-outline-light.wa-btn:hover {
-  background-color: #5DE0E6 !important; /* Background biru */
-  color: #ffffff !important; /* Teks putih */
-  border: 2px solid #5DE0E6 !important; /* Border tetap biru */
-  box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.5) !important; /* Outline biru */
+  padding: 8px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: none !important; /* Hilangkan efek transisi */
   cursor: pointer;
 }
 
-/* Fokus & Klik → Outline biru juga */
-.btn-outline-light.wa-btn:focus,
-.btn-outline-light.wa-btn:active {
-  background-color: #5DE0E6 !important; /* Tetap biru */
-  color: #ffffff !important;
-  border: 2px solid #5DE0E6 !important;
-  box-shadow: 0 0 0 3px #5DE0E6(41, 113, 161, 0.5) !important; /* Outline biru */
+/* Tetap biru di semua kondisi */
+.wa-btn:hover,
+.wa-btn:focus,
+.wa-btn:active,
+.wa-btn:visited {
+  background-color: #004AAD !important; /* Tetap biru */
+  border-color: #004AAD !important;
+  color: #ffffff !important; /* Tetap putih */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
 }
-
 
 /* ========== MOBILE NAV ========== */
 .mobile-nav-toggle {

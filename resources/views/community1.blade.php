@@ -257,7 +257,6 @@
                 <p class="text-info">KAMIS, 12 JUNI 2025</p>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -297,10 +296,8 @@
                 <p class="text-info">JUMAT, 15 AGUSTUS 2025</p>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
 
       <!-- Controls -->
@@ -313,13 +310,11 @@
         <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-
     </div>
   </div>
 </section>
 
 <style>
-/* Section background */
 /* Section background */
 .event-section {
   background: linear-gradient(135deg, #5DE0E6, #004AAD);
@@ -342,66 +337,55 @@
   color: #fff;
 }
 
-/* Slider Container */
-.slider-container {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-/* Track */
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-/* Wrapper untuk kartu */
-.event-wrapper {
-  flex: 0 0 calc(100% / 3); /* tampil 3 kartu */
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-/* Hapus efek zoom di kartu */
+/* Kartu Event */
 .event-card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  transition: all 0.35s ease;
   cursor: pointer;
+  padding-bottom: 12px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  z-index: 1;
 }
 
-/* Saat kursor diarahkan ke kartu */
-.event-card:hover {
-  transform: scale(1.08) translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-
-/* Pas hover, card tetap diam, tapi gambar yang nge-zoom */
+/* Hapus animasi zoom gambar */
 .event-card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  border-radius: 16px 16px 0 0;
+  display: block;
+  transition: none !important; /* Tidak ada zoom */
 }
 
+/* Saat diarahkan ke kartu */
+.event-card:hover {
+  transform: scale(1.12); /* Membesar lebih signifikan */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Supaya kartu berada di atas yang lain */
+}
 
-/* Gambar nge-pop-up */
-.event-card:hover img {
-  transform: scale(1.08); /* Zoom lebih terasa */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Efek pop-up */
-  z-index: 2;
-}}
+/* Supaya kartu tidak kepotong */
+.carousel-inner {
+  overflow: visible !important;
+}
+
+/* Supaya container punya ruang */
+.carousel-item {
+  padding: 15px 5px; /* Tambah ruang biar nggak mentok */
+}
+
+/* Jika pakai gap antar kartu */
+.event-card-container {
+  display: flex;
+  gap: 20px; /* Cukup ruang antar kartu */
+}
+
 
 /* Caption */
 .event-caption {
   margin-top: 12px;
   text-align: center;
-  color: white;
 }
 
 .event-caption h3 {
@@ -417,56 +401,60 @@
   color: #5de0e6;
 }
 
-/* Tombol Navigasi */
-.slider-btn {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.slider-btn:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-.slider-btn.prev {
-  left: 15px;
-}
-
-.slider-btn.next {
-  right: 15px;
-}
-/* Geser tombol panah keluar area kartu */
+/* Tombol Navigasi Carousel */
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50%;                        /* tetap di tengah vertikal */
-  transform: translateY(-50%);     /* biar benar-benar center */
-  width: auto;                     
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
   height: auto;
 }
 
 .carousel-control-prev {
-  left: -60px;   /* geser keluar ke kiri */
+  left: -60px;
 }
 
 .carousel-control-next {
-  right: -60px;  /* geser keluar ke kanan */
+  right: -60px;
 }
 
-/* Styling ikon biar tetap kelihatan */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-size: 30px 30px;
-  filter: invert(1); /* bikin putih */
+  filter: invert(1);
 }
 
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .event-header h2 {
+    font-size: 26px;
+  }
+
+  .event-header p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .event-caption h3 {
+    font-size: 14px;
+  }
+
+  .event-caption p {
+    font-size: 12px;
+  }
+
+  .event-section {
+    padding: 40px 15px;
+  }
+
+  /* Pop-out lebih kecil di mobile */
+  .event-card:hover {
+    transform: scale(1.07);
+  }
+}
 </style>
+
+
 <!-- BENEFIT MEMBER SECTION -->
 <section class="benefit-section py-5" style="background-color: #E9F5FB;">
   <div class="container">
