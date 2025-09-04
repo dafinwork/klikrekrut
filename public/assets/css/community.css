@@ -226,6 +226,7 @@ h6 {
   color: #ffffff !important; /* Tetap putih */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
 }
+
 /* ========== MOBILE NAV ========== */
 .mobile-nav-toggle {
   font-size: 26px;
@@ -281,10 +282,6 @@ h6 {
     display: block;
   }
 }
-
-
-
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

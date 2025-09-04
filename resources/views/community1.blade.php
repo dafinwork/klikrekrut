@@ -41,7 +41,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-<link href="assets/css/elearn.css" rel="stylesheet">
+<link href="assets/css/community.css" rel="stylesheet">
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -70,7 +70,7 @@
         <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
         <li>
 <a href="{{ url('community1') }}"
-   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
         </li>
