@@ -948,7 +948,7 @@ document.querySelectorAll('.counter').forEach(counter => {
       <div class="carousel-slide active">
         <div class="card">
           <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Agustina Gita" class="card-logo">
+            <img src="assets/img/gita.jpg" alt="Agustina Gita" class="card-logo">
             <div class="card-titles">
               <h3>Agustina Gita</h3>
               <p class="role">Jr. Finance & Accounting</p>
