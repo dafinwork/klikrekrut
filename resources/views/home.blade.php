@@ -51,10 +51,10 @@
 <nav id="navmenu" class="navmenu">
   <ul>
     <li><a href="/">Services</a></li>
-    <li><a href="{{ url('elearn') }}">E-learning</a></li>
-    <li><a href="{{ url('apply') }}">Apply as partner</a></li>
+    <li><a href="elearning">E-learning</a></li>
+    <li><a href="partner">Apply as partner</a></li>
     <li>
-<a href="{{ url('community1') }}"
+<a href="community"
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
@@ -920,11 +920,12 @@ document.querySelectorAll('.counter').forEach(counter => {
               <div class="card-header">
                 <img src="assets/img/client4.png" alt="Client 4 Logo" class="card-logo">
                 <div class="card-titles">
-                  <h3>Client 4</h3>
-                  <p class="role">Industry Type</p>
+                  <h3>Hokkaido Baked</h3>
+                  <p class="role">F&B Brand</p>
                 </div>
               </div>
-              <p class="card-description">Testimonial from Client 4 about their positive experience with your service. Highlighting key benefits and results achieved through your partnership.</p>
+              <p class="card-description">KLIK Rekrut prosesnya praktis dan sangat membantu. Kami bisa langsung dapat pengganti yang tepat saat salah satu karyawan kami resign mendadak.
+               Operasional outlet pun tetap berjalan normal.</p>
             </div>
           </div>
         </div>
@@ -1444,16 +1445,16 @@ document.querySelectorAll('.counter').forEach(counter => {
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="#">Cari Pelamar</a></li>
-            <li><a href="#">Cari Asisten</a></li>
+            <li><a href="/">e-Recruitmen</a></li>
+            <li><a href="elearn">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
           <h6>KOMUNITAS</h6>
           <ul>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Cara Gabung</a></li>
+            <li><a href="community1">Komunitas</a></li>
+            <li><a href="apply">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->
@@ -1461,7 +1462,9 @@ document.querySelectorAll('.counter').forEach(counter => {
           <h6>BANTUAN</h6>
           <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Kemitraan</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=6289678868752" 
+     target="_blank" 
+     rel="noopener noreferrer">Hubungi Kami</a></li>
           </ul>
         </div>
       </div>
@@ -1614,14 +1617,6 @@ document.querySelectorAll('.counter').forEach(counter => {
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Floating WhatsApp Button -->
-<a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Chat via WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
-</a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

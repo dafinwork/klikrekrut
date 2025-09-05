@@ -5,28 +5,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
-Route::get('/find', function () {
-    return view('find');
-});
-
-Route::get('/job', function () {
-    return view('job');
-});
-
-Route::get('/learning', function () {
-    return view('learning');
-});
-
 Route::get('/community', function () {
     return view('community');
 });
-Route::get('/apply', function () {
-    return view('apply');
+Route::get('/partner', function () {
+    return view('partner');
 });
-Route::get('/elearn', function () {
-    return view('elearn');
-});
-Route::get('/community1', function () {
-    return view('community1');
+Route::get('/elearning', function () {
+    return view('elearning');
 });

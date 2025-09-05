@@ -56,15 +56,15 @@
     <!-- Mobile Toggle -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- Nav Menu -->
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="/">Services</a></li>
-        <li><a href="{{ url('elearn') }}">E-learning</a></li>
-        <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
-        <li>
-<a href="{{ url('community1') }}"
-   class="btn wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+<!-- Nav Menu -->
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="/">Services</a></li>
+    <li><a href="elearning">E-learning</a></li>
+    <li><a href="partner">Apply as partner</a></li>
+    <li>
+<a href="community"
+   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
         </li>
@@ -105,7 +105,7 @@
 <main class="main">
 
 <!-- ==================== HERO PARTNER SECTION ==================== -->
-<section class="hero-partner" style="background-image: url('assets/img/partnerbg.jpg');">
+<section class="hero-partner">
   <div class="container hero-content" data-aos="fade-up">
 
     <!-- Judul -->
@@ -170,13 +170,13 @@
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 79.8vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 70px; /* sesuaikan tinggi header */
+    margin-top: 50px; /* sesuaikan tinggi header */
         position: relative;
     overflow: hidden;
     }
@@ -190,20 +190,12 @@
     transform: scaleX(1.05); /* geser ukuran horizontal sedikit */
     z-index: -1;
 }
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-  .hero-partner {
-    min-height: calc(100vh - 50px); /* sesuaikan tinggi header di mobile */
-    padding: 80px 15px 30px;
-  }
-}
 /* Hero Content */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 1000px;
-  margin-top: 100px; /* Geser sedikit ke bawah supaya tidak menempel header */
+  margin-top: -60px; /* Geser sedikit ke bawah supaya tidak menempel header */
 }
 
 .hero-title {
@@ -221,14 +213,6 @@
     -2px  2px 0 #fff,
      2px  2px 0 #fff; /* tambahan biar makin tebal */
 }
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 28px;
-  }
-}
-
-
 .hero-title span {
   color: #5DE0E6;
 }
@@ -240,7 +224,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 100px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -351,6 +335,19 @@
   width: 28px;
   height: 28px;
 }
+@media (max-width: 768px) {
+  .hero-partner {
+    background: url("assets/img/applymobile.png") center center no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+}
 
 </style>
 <!-- footer -->
@@ -370,16 +367,16 @@
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="#">Cari Pelamar</a></li>
-            <li><a href="#">Cari Asisten</a></li>
+            <li><a href="/">e-Recruitmen</a></li>
+            <li><a href="elearn">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
           <h6>KOMUNITAS</h6>
           <ul>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Cara Gabung</a></li>
+            <li><a href="community1">Komunitas</a></li>
+            <li><a href="apply">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->
@@ -387,7 +384,9 @@
           <h6>BANTUAN</h6>
           <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Kemitraan</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=6289678868752" 
+     target="_blank" 
+     rel="noopener noreferrer">Hubungi Kami</a></li>
           </ul>
         </div>
       </div>
@@ -540,14 +539,6 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Floating WhatsApp Button -->
-<a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Chat via WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
-</a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

@@ -56,15 +56,15 @@
     <!-- Mobile Toggle -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- Nav Menu -->
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="/">Services</a></li>
-        <li><a href="{{ url('elearn') }}">E-learning</a></li>
-        <li><a href="{{ url('apply') }}">Apply as Partner</a></li>
-        <li>
-<a href="{{ url('community1') }}"
-   class="btn wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+<!-- Nav Menu -->
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="/">Services</a></li>
+    <li><a href="elearning">E-learning</a></li>
+    <li><a href="partner">Apply as partner</a></li>
+    <li>
+<a href="community"
+   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
 
@@ -275,14 +275,15 @@
     margin: 0;
     line-height: 1.5;
 }
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
     /* HERO SECTION */
     .hero-section {
-        background-size: cover;           /* nutup penuh layar */
-        background-position: center top;  /* fokus ke atas */
-        min-height: 60vh;                 /* lebih pas di mobile */
-        padding: 40px 20px;               /* beri padding supaya konten nggak nempel tepi layar */
-        margin-top: 60px;                 /* sesuaikan header di mobile */
+        background: url("assets/img/learningmobile.png") center top no-repeat; /* ✅ Ganti gambar */
+        background-size: cover;          /* biar penuh */
+        min-height: 60vh;
+        padding: 40px 20px;
+        margin-top: 60px;
     }
 
     /* HERO CONTENT */
@@ -294,7 +295,7 @@
 
     /* Judul */
     .hero-title {
-        font-size: 28px;   /* lebih kecil supaya muat di layar kecil */
+        font-size: 28px;
         line-height: 1.3;
     }
 
@@ -307,7 +308,7 @@
 
     /* HERO FEATURES */
     .hero-features {
-        flex-direction: column;  /* stack vertical */
+        flex-direction: column;
         gap: 30px;
     }
 
@@ -330,8 +331,6 @@
         font-size: 13px;
     }
 }
-
-
 </style>
 
 <!-- ================= TESTIMONI SECTION ================= -->
@@ -352,66 +351,76 @@
       <!-- Track Carousel -->
       <div class="carousel-track">
         
-        <!-- Card 1 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Andi</h4>
-          <p class="profile-role">Jobseeker</p>
-          <p class="testimoni-text">
-            Platform ini sangat membantu saya mendapatkan pekerjaan pertama saya!
-          </p>
-        </div>
+<!-- Card 1 -->
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Materinya daging"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Ela Kamilah</h4>
+    <p class="profile-role">Career Switcher</p>
+  </div>
+</div>
 
-        <!-- Card 2 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Sinta</h4>
-          <p class="profile-role">Recruiter</p>
-          <p class="testimoni-text">
-            Kandidat yang saya temukan di sini sangat berkualitas dan cepat direkrut.
-          </p>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Rizky</h4>
-          <p class="profile-role">Jobseeker</p>
-          <p class="testimoni-text">
-            Materinya jelas, sistemnya mudah digunakan, dan hasilnya nyata.
-          </p>
-        </div>
+<!-- Card 2 -->
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Tips-tipsnya sangat saya perlukan"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Nurul Firdaus</h4>
+    <p class="profile-role">Freshgraduate</p>
+  </div>
+</div>
 
+
+<!-- Card 3 -->
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Materinya keren!"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Virda Manik</h4>
+    <p class="profile-role">Career Switcher</p>
+  </div>
+</div>
+<!-- Card lainnya sama formatnya -->
         <!-- Card 4 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Dewi</h4>
-          <p class="profile-role">HRD</p>
-          <p class="testimoni-text">
-            Saya bisa menemukan talenta yang sesuai kebutuhan perusahaan dengan cepat.
-          </p>
-        </div>
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Materi sangat menarik dan memberikan banyak wawasan baru. Penyampaian mudah dipahami"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Erdiansyah</h4>
+    <p class="profile-role">Employee</p>
+  </div>
+</div>
 
-        <!-- Card 5 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Bima</h4>
-          <p class="profile-role">Jobseeker</p>
-          <p class="testimoni-text">
-            Fitur pelatihan dan simulasi interview-nya benar-benar membantu saya lolos seleksi.
-          </p>
-        </div>
 
-        <!-- Card 6 -->
-        <div class="testimoni-card">
-          <img src="assets/img/iconorg.png" alt="Foto" class="profile-img">
-          <h4 class="profile-name">Lisa</h4>
-          <p class="profile-role">Recruiter</p>
-          <p class="testimoni-text">
-            Database kandidatnya lengkap, sistemnya efisien, dan proses rekrutmen jadi lebih cepat.
-          </p>
-        </div>
-      </div>
+<!-- Card 2 -->
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Terima kasih untuk materi dan ilmunya"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Riza Surya</h4>
+    <p class="profile-role">Career Switcher</p>
+  </div>
+</div>
+
+
+<!-- Card 3 -->
+<div class="testimoni-card">
+  <p class="testimoni-text">
+    "Perbanyak lagi materi supaya membantu yang ingin melamar kerja"
+  </p>
+  <div class="profile-info">
+    <h4 class="profile-name">Silvi</h4>
+    <p class="profile-role">College Student</p>
+  </div>
+</div>
+
 
       <!-- Tombol Panah Kanan -->
       <button class="carousel-btn next" aria-label="Next">
@@ -463,6 +472,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 10;
+  display: none !important;
 }
 
 .carousel-btn:hover {
@@ -483,13 +493,17 @@
 /* Card Testimoni */
 .testimoni-card {
   background: #fff;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 20px;
-  flex: 0 0 calc((100% - 40px) / 3); /* 🔹 PASTI 3 KARTU */
-  min-height: 300px;
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-height: 250px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   text-align: left;
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .testimoni-card:hover {
@@ -505,25 +519,30 @@
   margin-bottom: 10px;
 }
 
-/* Nama & Role */
+/* Nama */
 .profile-name {
   font-size: 16px;
   font-weight: 700;
   color: #333;
+  margin: 0 0 5px 0;
+}
+
+/* Role */
+.profile-role {
+  font-size: 13px;
+  color: #777;
   margin: 0;
 }
-
-.profile-role {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 15px;
+/* Container untuk Nama & Role */
+.profile-info {
+  margin-top: auto; /* ✅ Nempel ke bawah */
 }
-
 /* Teks Testimoni */
 .testimoni-text {
   font-size: 14px;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 /* Responsive Tablet - 2 kartu */
@@ -538,6 +557,7 @@
   .testimoni-card {
     flex: 0 0 100%;
   }
+}
 
   /* Tampilkan tombol di mobile */
   .carousel-btn {
@@ -558,7 +578,7 @@
 .carousel-btn.next {
   right: -40px; /* 🔹 Lebih menjauh dari kartu */
 }
-}
+
   .section-title {
     white-space: nowrap;       /* Supaya tidak pecah ke baris baru */
     font-size: 12px;           /* Kecilkan sedikit biar muat */
@@ -610,10 +630,59 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
   });
 
+  // === Swipe Support untuk Mobile ===
+  let startX = 0;
+  let endX = 0;
+  let isDragging = false;
+
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    endX = e.touches[0].clientX;
+  });
+
+  track.addEventListener("touchend", () => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    let diff = startX - endX;
+
+    if (Math.abs(diff) > 50) { // Threshold minimal 50px
+      if (diff > 0) {
+        // Geser kiri → ke kartu berikutnya
+        if (currentIndex < totalCards - cardsPerPage) {
+          currentIndex++;
+        }
+      } else {
+        // Geser kanan → ke kartu sebelumnya
+        if (currentIndex > 0) {
+          currentIndex--;
+        }
+      }
+      updateCarousel();
+    }
+  });
+
   // Auto-slide setiap 3 detik
-  setInterval(() => {
+  let autoSlide = setInterval(() => {
     nextBtn.click();
   }, 3000);
+
+  // Hentikan auto-slide saat disentuh (biar lebih natural)
+  track.addEventListener("touchstart", () => {
+    clearInterval(autoSlide);
+  });
+
+  // Jalanin ulang auto-slide setelah 5 detik
+  track.addEventListener("touchend", () => {
+    autoSlide = setInterval(() => {
+      nextBtn.click();
+    }, 3000);
+  });
 
   window.addEventListener("resize", () => {
     cardsPerPage = getCardsPerPage();
@@ -780,21 +849,28 @@ document.addEventListener("DOMContentLoaded", function () {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
+  width: 400px; /* 🔹 Dibuat sama kayak card poster community */
 }
 
 /* ===== MATERI CARD ===== */
 .materi-card {
   width: 100%;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px; /* 🔹 Disamakan dengan card poster */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+    /* 🔹 Garis biru */
+  border: 3px solid #5573a0ff;
 }
 .materi-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.12); /* 🔹 Efek pop-out sama dengan poster community */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 /* ===== GAMBAR ===== */
@@ -848,7 +924,18 @@ document.addEventListener("DOMContentLoaded", function () {
     flex-direction: column;
     align-items: center;
   }
+
+  /* 🔹 Kurangi ukuran pop-out di mobile agar tidak kepotong */
+  .materi-card:hover {
+    transform: scale(1.07);
+  }
+
+  /* 🔹 Atur ulang lebar kartu di mobile */
+  .materi-wrapper {
+    width: 90%;
+  }
 }
+
 </style>
 
 <!-- SCRIPT -->
@@ -885,16 +972,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="#">Cari Pelamar</a></li>
-            <li><a href="#">Cari Asisten</a></li>
+            <li><a href="/">e-Recruitmen</a></li>
+            <li><a href="elearn">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
           <h6>KOMUNITAS</h6>
           <ul>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Cara Gabung</a></li>
+            <li><a href="community1">Komunitas</a></li>
+            <li><a href="apply">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->
@@ -902,7 +989,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <h6>BANTUAN</h6>
           <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Kemitraan</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=6289678868752" 
+     target="_blank" 
+     rel="noopener noreferrer">Hubungi Kami</a></li>
           </ul>
         </div>
       </div>
@@ -1055,14 +1144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Floating WhatsApp Button -->
-<a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Chat via WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
-</a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
