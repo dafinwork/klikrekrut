@@ -227,7 +227,7 @@
     <span id="typing-hero"></span>
   </h1>
   <p class="mb-4">
-    Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen minim pusing, minim risiko dan minim resouce.
+    Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen minim pusing, minim risiko dan minim resouce.
   </p>
 <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
   Baca Lebih Lanjut
@@ -241,21 +241,41 @@
       </div>
     </div>
   </div>
-  <script>
-const text = "Membantu Anda\nMerekrut Tim Masa Depan";
+<script>
+const lines = ["Membantu Anda", "Merekrut Tim Masa Depan"];
 const el = document.getElementById("typing-hero");
-let i = 0;
+let lineIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-  function typeText() {
-    if (i < text.length) {
-      el.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeText, 50); // kecepatan ketik
+function typeEffect() {
+  let currentLine = lines[lineIndex];
+
+  if (!isDeleting) {
+    // Tampilkan baris yang sudah selesai + baris yang sedang diketik
+    el.innerHTML = lines.slice(0, lineIndex).join("<br>") + "<br>" + currentLine.substring(0, charIndex + 1);
+    charIndex++;
+
+    // Kalau sudah selesai 1 baris, kasih jeda sebelum lanjut baris berikutnya
+    if (charIndex === currentLine.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 700); // jeda setelah selesai 1 baris
+      return;
+    }
+  } else {
+    // Lanjut ke baris berikutnya
+    if (lineIndex < lines.length - 1) {
+      isDeleting = false;
+      lineIndex++;
+      charIndex = 0;
     }
   }
+  setTimeout(typeEffect, 50); // kecepatan ketik per huruf
+}
 
-  window.addEventListener("DOMContentLoaded", typeText);
+window.addEventListener("DOMContentLoaded", typeEffect);
 </script>
+
 <style>
 /* Tombol dengan ikon panah */
 .tombol-panah {
@@ -918,7 +938,7 @@ document.querySelectorAll('.counter').forEach(counter => {
           <div class="carousel-slide">
             <div class="card">
               <div class="card-header">
-                <img src="assets/img/client4.png" alt="Client 4 Logo" class="card-logo">
+                <img src="assets/img/hokkaido.png" alt="Client 4 Logo" class="card-logo">
                 <div class="card-titles">
                   <h3>Hokkaido Baked</h3>
                   <p class="role">F&B Brand</p>
@@ -1110,20 +1130,25 @@ document.querySelectorAll('.counter').forEach(counter => {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.1);
-    color: #3c678b;
+    background: linear-gradient(135deg, #5DE0E6, #004AAD); /* Warna gradient tetap */
+    color: white; /* Warna panah */
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     z-index: 10;
-    transition: all 0.3s;
-  }
-  .carousel-button:hover {
-    background: rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease-in-out; /* Animasi smooth saat hover */
+}
+
+/* Hover cuma buat animasi zoom aja, warnanya nggak berubah */
+.carousel-button:hover {
+    transform: scale(1.1);
+}
+
   .prev {
     left: -50px;
   }
@@ -1326,46 +1351,52 @@ document.querySelectorAll('.counter').forEach(counter => {
   <div class="container">
     <div class="row align-items-center">
       
-<!-- Teks -->
-<div class="col-lg-6 text-white">
-  <h2 class="mb-4" style="font-weight:700; color:white;">
-    Siap merekrut kandidat<br>
-    terbaik untuk bergabung<br>
-    jadi tim Anda?
-</h2>
+      <!-- Teks -->
+      <div class="col-lg-6 text-white">
+        <h2 class="mb-4" style="font-weight:700; color:white;">
+          Siap merekrut kandidat<br>
+          terbaik untuk bergabung<br>
+          jadi tim Anda?
+        </h2>
         <p class="mb-4">
-          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
+          Jangan biarkan momentum bisnis Anda hilang karena tim belum siap!<br>
+          Klik tombol untuk mulai merekrut dan bawa bisnis Anda ke level berikutnya!
         </p>
-<a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="btn btn-success rounded-pill px-4 py-2 pulse-whatsapp"
-   style="background-color: #7ed957; border-color: #7ed957; color: white;"
-   target="_blank" 
-   rel="noopener noreferrer">
-   Book a Special Offer ➝
-</a>
+
+        <!-- Tombol CTA -->
+        <div class="cta-buttons d-flex flex-wrap gap-3">
+          <!-- Tombol WhatsApp -->
+          <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+            class="btn btn-success rounded-pill px-4 py-2 pulse-whatsapp"
+            style="background-color: #7ed957; border-color: #7ed957; color: white;"
+            target="_blank" 
+            rel="noopener noreferrer">
+            Book a Special Offer ➝
+          </a>
+
+          <!-- Tombol Download Proposal -->
+          <a href="assets/proposal.pdf" 
+            class="btn btn-outline-proposal rounded-pill px-4 py-2"
+            target="_blank" 
+            rel="noopener noreferrer">
+            Download Proposal
+          </a>
+        </div>
       </div>
 
       <!-- Foto Orang -->
       <div class="col-lg-6 text-center">
         <img src="assets/img/cta.png" class="img-fluid" style="max-height: 500px;" alt="Tim Rekrut">
       </div>
-
     </div>
   </div>
 </section>
-
 <style>
 /* Animasi detak jantung khusus tombol WhatsApp */
 @keyframes pulseWhatsapp {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .pulse-whatsapp {
@@ -1373,16 +1404,33 @@ document.querySelectorAll('.counter').forEach(counter => {
   animation: pulseWhatsapp 1s infinite;
   transition: transform 0.2s;
 }
-  .cta-section p.mb-4 {
-  font-size: 14px; /* 🔹 Ubah sesuai keinginan */
-  line-height: 1.6; /* 🔹 Biar lebih rapi dibaca */
+
+/* Tombol Download Proposal */
+.btn-outline-proposal {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
+
+.btn-outline-proposal:hover {
+  background-color: white;
+  color: #004AAD;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.cta-section p.mb-4 {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .cta-section {
   background: 
     linear-gradient(to right, #5DE0E6, #004AAD),
     url('assets/img/ornamencta.png') no-repeat right center;
   background-size: cover;
-  padding: 80px 0 60px; /* Atas 80px, kanan/kiri 0, bawah 60px */
+  padding: 80px 0 60px;
   overflow: hidden;
   position: relative;
 }
@@ -1393,18 +1441,18 @@ document.querySelectorAll('.counter').forEach(counter => {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%; /* Lebih lebar biar nutup setengah kanan */
+  width: 60%;
   height: 100%;
   background: url('assets/img/ornamencta.png') no-repeat center right;
-  background-size: 150%; /* Perbesar ornament */
-  opacity: 0.4; /* Biar lebih kelihatan */
+  background-size: 150%;
+  opacity: 0.4;
   z-index: 0;
   pointer-events: none;
 }
 
 .cta-section .container {
   position: relative;
-  z-index: 1; /* konten di atas ornament */
+  z-index: 1;
 }
 
 /* Responsif Mobile */
@@ -1426,7 +1474,14 @@ document.querySelectorAll('.counter').forEach(counter => {
     max-height: 300px !important;
     margin-top: 20px;
   }
+
+  /* Tombol agar rapi di mobile */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 </style>
 <!-- footer -->
 <footer class="footer">
@@ -1445,16 +1500,16 @@ document.querySelectorAll('.counter').forEach(counter => {
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="/">e-Recruitmen</a></li>
-            <li><a href="elearn">e-Learning</a></li>
+            <li><a href="/">e-Recruitment</a></li>
+            <li><a href="elearning">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
-          <h6>KOMUNITAS</h6>
+          <h6>LAINNYA</h6>
           <ul>
-            <li><a href="community1">Komunitas</a></li>
-            <li><a href="apply">Kemitraan</a></li>
+            <li><a href="community">Komunitas</a></li>
+            <li><a href="partner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

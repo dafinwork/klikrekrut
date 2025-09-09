@@ -35,7 +35,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-<link href="assets/css/elearn.css" rel="stylesheet">
+<link href="assets/css/apply.css" rel="stylesheet">
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -64,10 +64,9 @@
     <li><a href="partner">Apply as partner</a></li>
     <li>
 <a href="community"
-   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
-
         </li>
       </ul>
     </nav>
@@ -786,7 +785,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <style>
 /* ===== KOLEKSI TITLE ===== */
 .koleksi-title {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 700;
   color: #3c678b;
   text-align: center;
@@ -856,17 +855,18 @@ document.addEventListener("DOMContentLoaded", function () {
 .materi-card {
   width: 100%;
   background: #fff;
-  border-radius: 16px; /* 🔹 Disamakan dengan card poster */
+  border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  padding: 15px;
+  padding: 0; /* 🔹 Hapus padding */
   text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
   position: relative;
   z-index: 1;
-    /* 🔹 Garis biru */
   border: 3px solid #5573a0ff;
+  box-shadow: 0 0 8px rgba(0, 74, 173, 0.3); /* Efek glow biru */
 }
+
 .materi-card:hover {
   transform: scale(1.12); /* 🔹 Efek pop-out sama dengan poster community */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
@@ -972,16 +972,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="/">e-Recruitmen</a></li>
-            <li><a href="elearn">e-Learning</a></li>
+            <li><a href="/">e-Recruitment</a></li>
+            <li><a href="elearning">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
-          <h6>KOMUNITAS</h6>
+          <h6>LAINNYA</h6>
           <ul>
-            <li><a href="community1">Komunitas</a></li>
-            <li><a href="apply">Kemitraan</a></li>
+            <li><a href="community">Komunitas</a></li>
+            <li><a href="partner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

@@ -367,16 +367,16 @@
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="/">e-Recruitmen</a></li>
-            <li><a href="elearn">e-Learning</a></li>
+            <li><a href="/">e-Recruitment</a></li>
+            <li><a href="elearning">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
-          <h6>KOMUNITAS</h6>
+          <h6>LAINNYA</h6>
           <ul>
-            <li><a href="community1">Komunitas</a></li>
-            <li><a href="apply">Kemitraan</a></li>
+            <li><a href="community">Komunitas</a></li>
+            <li><a href="partner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

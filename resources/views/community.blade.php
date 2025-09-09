@@ -18,14 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <style>
-    * {
-  font-family: 'Poppins', sans-serif !important;
-}
-
   /* Terapkan Poppins untuk semua elemen */
   * {
     font-family: 'Poppins', sans-serif !important;
@@ -41,7 +35,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-<link href="assets/css/community.css" rel="stylesheet">
+<link href="assets/css/apply.css" rel="stylesheet">
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -70,7 +64,7 @@
     <li><a href="partner">Apply as partner</a></li>
     <li>
 <a href="community"
-   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
         </li>
@@ -427,7 +421,8 @@
 .event-date {
   display: inline-block;
   background: #fff; /* Kapsul putih */
-  color: #5892c3; /* Teks biru tua biar kontras */
+  color: #2E6BBC; /* Warna biru */
+  font-family: 'Poppins', sans-serif; /* ✅ Font khusus untuk teks tanggal */
   font-weight: 600;
   font-size: 14px;
   padding: 6px 18px;
@@ -439,11 +434,17 @@
 
 /* Efek hover interaktif */
 .event-date:hover {
-  background: #5DE0E6; /* Biru saat hover */
+  background: #ffffffff; /* Biru saat hover */
   color: #fff; /* Teks jadi putih saat hover */
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
+.event-section .event-date {
+  color: #2E6BBC !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
 /* Responsif Mobile */
 @media (max-width: 768px) {
   /* Judul */
@@ -476,13 +477,12 @@
   /* ==== POSISI PANAH DI MOBILE ==== */
   .carousel-control-prev,
   .carousel-control-next {
-    top: auto;                /* Hilangkan posisi default di tengah */
-    bottom: -40px;            /* Letakkan tombol di bawah kartu */
+    top: auto;
+    bottom: -40px;
     transform: none;
     position: absolute;
   }
 
-  /* Geser panah kiri dan kanan agar simetris */
   .carousel-control-prev {
     left: 30%;
   }
@@ -491,22 +491,19 @@
     right: 30%;
   }
 
-  /* Perkecil ukuran ikon panah biar pas di mobile */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     background-size: 24px 24px;
     padding: 12px;
   }
+
+  /* Ukuran font kapsul tanggal di mobile */
+  .event-date {
+    font-size: 12px !important;   /* ✅ Pasti mengecil */
+    padding: 4px 12px !important; /* ✅ Kapsul lebih ramping */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 }
-  .event-date {
-    font-size: 12px;
-    padding: 5px 14px;
-  }
-    /* Ukuran font kapsul tanggal di mobile */
-  .event-date {
-    font-size: 12px;  /* ✅ Atur lebih kecil khusus mobile */
-    padding: 5px 12px; /* ✅ Biar kapsulnya juga lebih ramping */
-  }
 
 </style>
 
@@ -902,16 +899,16 @@
         <div class="footer-column">
           <h6>LAYANAN</h6>
           <ul>
-            <li><a href="/">e-Recruitmen</a></li>
-            <li><a href="elearn">e-Learning</a></li>
+            <li><a href="/">e-Recruitment</a></li>
+            <li><a href="elearning">e-Learning</a></li>
           </ul>
         </div>
         <!-- Komunitas -->
         <div class="footer-column">
-          <h6>KOMUNITAS</h6>
+          <h6>LAINNYA</h6>
           <ul>
-            <li><a href="community1">Komunitas</a></li>
-            <li><a href="apply">Kemitraan</a></li>
+            <li><a href="community">Komunitas</a></li>
+            <li><a href="partner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->
