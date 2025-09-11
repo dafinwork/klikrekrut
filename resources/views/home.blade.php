@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" href="{{ asset('assets/img/square.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png') }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -227,7 +227,7 @@
     <span id="typing-hero"></span>
   </h1>
   <p class="mb-4">
-    Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen minim pusing, minim risiko dan minim resouce.
+    Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen minim pusing, minim risiko dan minim resource.
   </p>
 <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
   Baca Lebih Lanjut
@@ -783,7 +783,7 @@ a.pulse-button:hover {
 
         <!-- Item 1 -->
         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
-          <h1 class="counter mb-0" data-target="7">0</h1>
+          <h1 class="counter mb-0" data-target="11">0</h1>
           <div class="text-start stat-text">
             key positions<br>successfully filled
           </div>
@@ -791,7 +791,7 @@ a.pulse-button:hover {
 
         <!-- Item 2 -->
         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
-          <h1 class="counter mb-0" data-target="14">0</h1>
+          <h1 class="counter mb-0" data-target="17">0</h1>
           <div class="text-start stat-text">
             of talents elevate<br>their career
           </div>

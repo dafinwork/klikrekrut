@@ -607,95 +607,231 @@
       
 <!-- Pre-launch -->
 <div class="col-md-3">
-  <div class="card pricing-card border-0 shadow-lg h-100 text-white bg-gradient-blue">
-    <div class="card-body d-flex flex-column text-start"> <!-- text-start -->
-      <div>
-        <h5 class="fw-bold">Pre-launch</h5>
-        <p class="text-decoration-line-through small">Rp 99.000</p>
-        <h2 class="fw-bold">Rp 49.000</h2>
-        <p>Akses semua benefit sekali bayar</p>
+  <div class="prelaunch-wrapper">
+    <div class="prelaunch-card">
+      <!-- Header Pre-Launch -->
+      <div class="prelaunch-header">
+        <h5>Pre-Launch</h5>
       </div>
 
-      <div class="mt-auto">
-        <a href="#" class="btn btn-light fw-semibold pilih-btn">Pilih →</a>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Akses Komunitas</li>
-          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Exclusive Event</li>
-          <li class="mb-2"><img src="assets/img/check.png" width="18" class="me-2"> Grup Support</li>
+      <!-- Body -->
+      <div class="prelaunch-body">
+        <div class="prelaunch-original-price">Rp 99.000</div>
+        <div class="prelaunch-current-price">Rp 49.000</div>
+        <div class="prelaunch-description">Akses semua benefit sekali bayar</div>
+
+        <ul class="prelaunch-benefits">
+          <li><div class="prelaunch-check"></div> Masuk Komunitas</li>
+          <li><div class="prelaunch-check"></div> Live Class</li>
+          <li><div class="prelaunch-check"></div> Grup Support</li>
         </ul>
       </div>
+    </div>
+
+    <!-- Tombol di tengah outline -->
+    <div class="prelaunch-btn-wrapper">
+      <button class="prelaunch-btn">Daftar Sekarang</button>
     </div>
   </div>
 </div>
 
-      <!-- Normal Price -->
-      <div class="col-md-3">
-        <div class="card pricing-card border-0 shadow-lg h-100 text-white bg-gradient-gray">
-          <div class="card-body p-4 d-flex flex-column">
-            <div>
-              <h5 class="fw-bold">Normal Price</h5>
-              <h2 class="fw-bold">Rp 99.000</h2>
-              <p>Akses semua benefit sekali bayar</p>
-            </div>
-
-            <div class="mt-auto">
-              <button class="btn btn-light w-100 fw-semibold" disabled>Early Coming Soon</button>
-              <ul class="list-unstyled text-start mt-4 text-light">
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2 opacity-50"> Akses Komunitas</li>
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2 opacity-50"> Exclusive Event</li>
-                <li class="mb-2"><img src="assets/img/check.png" width="20" class="me-2 opacity-50"> Grup Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <!-- Normal Price -->
+  <div class="col-md-3">
+    <div class="normal-price-card">
+      <h5 class="title">Normal Price</h5>
+      <h2 class="price">Rp 99.000</h2>
+      <button class="coming-soon" disabled>Coming Soon</button>
+      <p class="desc">Akses semua benefit sekali bayar</p>
+      <ul class="benefits">
+        <li>✅ Masuk Komunitas</li>
+        <li>✅ Live Class</li>
+        <li>✅ Grup Support</li>
+      </ul>
     </div>
   </div>
+
+</div>
+
 </section>
 <!-- CSS -->
 <style>
+/* Wrapper untuk efek border gradient */
+.prelaunch-wrapper {
+  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  padding: 4px;
+  border-radius: 0px;
+  width: 340px;   /* sebelumnya 280px → dibesarkan */
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prelaunch-card {
+  border-radius: 0px;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  min-height: auto;   /* biar gak kepaksa panjang */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.prelaunch-btn-wrapper {
+  position: absolute;
+  bottom: -20px; /* keluar sedikit dari wrapper */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prelaunch-header {
+  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  padding: 16px;
+  text-align: center;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.prelaunch-header h5 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.prelaunch-body {
+  padding: 24px 20px;  /* lebih kecil, jadi ringkas */
+  text-align: center;
+}
+
+.prelaunch-original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.prelaunch-current-price {
+  font-size: 28px;   /* sedikit lebih kecil */
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+}
+
+.prelaunch-description {
+  color: #666;
+  font-size: 14px;
+  margin: 20px 0 30px 0;
+  line-height: 1.4;
+}
+
+.prelaunch-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.prelaunch-benefits li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 14px;
+}
+
+.prelaunch-check {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prelaunch-check::after {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.prelaunch-btn {
+  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 220px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prelaunch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(93, 224, 230, 0.4);
+}
   .pricing-section .row {
   row-gap: 24px; /* jarak vertikal antar card */
-  column-gap: 24px; /* jarak horizontal antar card */
+  column-gap: 60px; /* jarak horizontal antar card */
 }
-  .pricing-card {
-  max-width: 280px; /* bisa disesuaikan, misalnya 260–300px */
-  margin: 0 auto;   /* biar tetap center di col */
+.normal-price-card {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 350px;   /* besarin kartunya */
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
 }
 
-  .pilih-btn {
-  display: inline-block;
-  padding: 12px 50px  ; /* atur ukuran tombol */
-  border-radius: 30px; /* biar tetap rounded */
+
+.normal-price-card .title {
+  font-size: 16px;
   font-weight: 600;
-  font-size: 0.95rem;
-  color: #2e6bbc;
+  margin-bottom: 8px;
 }
 
-.pricing-card .card-body {
-  padding: 1rem; /* kecilin padding (default biasanya 1.5rem/24px) */
+.normal-price-card .price {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.pricing-card h5 {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+.normal-price-card .coming-soon {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: not-allowed;
+  margin-bottom: 15px;
 }
 
-.pricing-card h2 {
-  font-size: 1.6rem;
-  margin: 0.25rem 0;
+.normal-price-card .desc {
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-.pricing-card p {
-  margin-bottom: 0.4rem; /* jarak antar paragraf kecil */
-  font-size: 0.9rem;
+.normal-price-card .benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
-.pricing-card ul li {
-  font-size: 0.9rem; /* list lebih kecil */
+.normal-price-card .benefits li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
 
 .badge {
   display: inline-block;

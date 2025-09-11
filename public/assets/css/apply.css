@@ -228,62 +228,124 @@ h6 {
 }
 /* ========== MOBILE NAV ========== */
 .mobile-nav-toggle {
-  font-size: 26px;
-  color: #2971a1; /* Ikon biru */
+  font-size: 28px;
+  color: #004AAD; /* biru biar kontras di header putih */
   cursor: pointer;
-  transition: color 0.3s ease;
+  display: none;
+  z-index: 1001;
 }
 
-/* Nav Mobile */
-.navmenu {
-  display: flex;
-  align-items: center;
+
+/* ========== MOBILE NAV (Final Version) ========== */
+.mobile-nav-toggle {
+  font-size: 28px;
+  color: #004AAD; /* biru biar kontras di header putih */
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
 }
 
 @media (max-width: 991px) {
-  .navmenu {
+  .mobile-nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 10001;
+    font-size: 28px;
+    color: #004AAD; /* biru biar kontras di header putih */
+    cursor: pointer;
+  }
+
+  #navmenu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 75%;
-    height: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-    transition: right 0.35s ease;
-    z-index: 9999;
-  }
-
-  .navmenu.active {
     right: 0;
-  }
-
-  .navmenu ul {
+    height: 100%;
+    width: 280px;
+    background-color: #ffffff;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
+    overflow-y: auto;
+    z-index: 9999;
+    display: flex;
     flex-direction: column;
-    gap: 18px;
   }
 
+  #navmenu.active {
+    transform: translateX(0);
+  }
+
+  #navmenu ul {
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #navmenu ul li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #navmenu ul li a {
+    display: block;
+    width: 100%;
+    color: #004AAD;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Dropdown animasi buka */
+  #navmenu ul li ul {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  #navmenu ul li.open > ul {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  #navmenu ul li .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: #004AAD;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+  }
+
+  /* Overlay background */
   .mobile-nav-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 999;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
   }
 
   .mobile-nav-overlay.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
+
+body.mobile-nav-active .mobile-nav-toggle {
+  color: #000 !important; /* saat aktif */
 }
-
-
-
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1221,4 +1283,4 @@ section,
   .transition-img.fade-out {
     opacity: 0;
   }
-  
+    

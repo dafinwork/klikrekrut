@@ -64,7 +64,7 @@
     <li><a href="partner">Apply as partner</a></li>
     <li>
 <a href="community"
-   class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
         </li>

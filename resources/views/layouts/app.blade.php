@@ -3,17 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Klik Rekrut</title>
+
+  <!-- Title & Meta -->
+  <title>@yield('title', 'Klik Rekrut')</title>
+  <meta name="description" content="@yield('description', 'Platform pencarian kerja dan komunitas talenta')">
+  <meta name="keywords" content="@yield('keywords', 'job, career, klik rekrut')">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="{{ asset('assets/img/square.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png') }}">
 
   <!-- CSS -->
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+
+  <!-- Bootstrap Icons (CDN, 1x aja cukup) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
-  @include('partials.navbar') {{-- Ini navbar kamu --}}
+  @include('partials.navbar') {{-- Navbar global --}}
   @yield('content')
 
   <!-- JS -->
@@ -34,15 +46,4 @@
           toggle.classList.toggle('bi-list');
         });
 
-        overlay.addEventListener('click', function () {
-          nav.classList.remove('active');
-          overlay.classList.remove('active');
-          toggle.classList.add('bi-list');
-          toggle.classList.remove('bi-x');
-        });
-      }
-    });
-  </script>
-
-</body>
-</html>
+        overlay.addEven
