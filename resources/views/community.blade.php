@@ -643,9 +643,10 @@
       <button class="coming-soon" disabled>Coming Soon</button>
       <p class="desc">Akses semua benefit sekali bayar</p>
       <ul class="benefits">
-        <li>✅ Masuk Komunitas</li>
-        <li>✅ Live Class</li>
-        <li>✅ Grup Support</li>
+<li>Masuk Komunitas</li>
+<li>Live Class</li>
+<li>Grup Support</li>
+
       </ul>
     </div>
   </div>
@@ -739,23 +740,29 @@
   font-size: 14px;
 }
 
+/* Prelaunch ceklis */
 .prelaunch-check {
   width: 20px;
   height: 20px;
-  background: #4CAF50;
-  border-radius: 50%;
+  background: url('assets/img/check.png') no-repeat center center;
+  background-size: contain; /* biar pas */
   margin-right: 12px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
+/* Hilangkan pseudo-element ✓ bawaan */
 .prelaunch-check::after {
-  content: '✓';
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
+  content: none;
+}
+/* Normal price ceklis */
+.normal-price-card .benefits li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('assets/img/check.png') no-repeat center center;
+  background-size: contain;
+  margin-right: 8px;
 }
 
 .prelaunch-btn {
