@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title', 'Klik Rekrut - Layanan Asisten Rekrutmen')
+@section('description', 'Temukan pekerjaan impianmu di Klik Rekrut')
+@section('keywords', 'find job, lowongan kerja, klik rekrut')
 
+@section('content')
+  <!-- isi halaman -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>KLIK rekrut - Find Job</title>
@@ -52,7 +56,7 @@
   <ul>
     <li><a href="/">Services</a></li>
     <li><a href="elearning">E-learning</a></li>
-    <li><a href="partner">Apply as partner</a></li>
+    <li><a href="applypartner">Apply as partner</a></li>
     <li>
 <a href="community"
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
@@ -226,16 +230,31 @@
   <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
     <span id="typing-hero"></span>
   </h1>
-  <p class="mb-4">
-    Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen minim pusing, minim risiko dan minim resource.
-  </p>
+
+<!-- ✅ Tambahan ceklis -->
+<div class="hero-checklist">
+  <div class="check-item">
+    <img src="assets/img/check.png" alt="Check" class="check-icon">
+    <span>Supports All Hiring Levels</span>
+  </div>
+  <div class="check-item">
+    <img src="assets/img/check.png" alt="Check" class="check-icon">
+    <span>Ergonomic Solution</span>
+  </div>
+  <div class="check-item">
+    <img src="assets/img/check.png" alt="Check" class="check-icon">
+    <span>All in One Recruitment Support</span>
+  </div>
+</div>
+
+<p class="mb-4">
+Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen yang lengkap dan sesuai kebutuhan.
+</p>
 <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
   Baca Lebih Lanjut
   <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
 </a>
-
 </div>
-
       <div class="col-lg-6 text-center" data-aos="fade-left">
         <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
       </div>
@@ -275,17 +294,39 @@ function typeEffect() {
 
 window.addEventListener("DOMContentLoaded", typeEffect);
 </script>
-
 <style>
-/* Tombol dengan ikon panah */
+/* ==================== HERO CHECKLIST ==================== */
+.hero-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ==================== TOMBOL PANAH ==================== */
 .tombol-panah {
-  display: inline-flex;          /* Biar teks & panah sejajar */
-  align-items: center;           /* Rata tengah vertikal */
-  justify-content: center;       /* Rata tengah horizontal */
-  gap: 8px;                      /* Jarak teks & ikon */
-  padding: 10px 22px;            /* Biar tombol rapi */
+  display: inline-flex;      
+  align-items: center;       
+  justify-content: center;   
+  gap: 8px;                  
+  padding: 10px 22px;        
   background-color: #7ed957;
-  border-radius: 50px;           /* Biar tombol bulat */
+  border-radius: 50px;       
   color: white;
   font-weight: 600;
   font-size: 16px;
@@ -295,7 +336,6 @@ window.addEventListener("DOMContentLoaded", typeEffect);
   white-space: nowrap;
 }
 
-/* Ukuran ikon panah */
 .icon-panah {
   width: 12px;
   height: 12px;
@@ -310,30 +350,13 @@ window.addEventListener("DOMContentLoaded", typeEffect);
   transform: translateX(4px);
 }
 
-/* Pastikan di mobile tampilannya sama persis */
-@media (max-width: 768px) {
-  .tombol-panah {
-    padding: 12px 12px;
-    gap: 8px;
-    font-size: 16px;
-    line-height: 1;
-  }
-
-  .icon-panah {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: -11px;
-  }
-}
-
-/* Hapus animasi pulse */
+/* ==================== TOMBOL PULSE ==================== */
 a.pulse-button {
   background-color: #7ed957 !important;
   border-color: #7ed957 !important;
   color: white !important;
   display: inline-block;
-  /* ❌ Animasi dihapus */
+  /* animasi pulse dihapus */
 }
 
 a.pulse-button:hover {
@@ -341,63 +364,15 @@ a.pulse-button:hover {
   border-color: #6cc44a !important;
 }
 
-/* Batasi lebar di mobile */
-@media (max-width: 576px) {
-  .pulse-button {
-    width: auto !important;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.07); }
   100% { transform: scale(1); }
 }
 
+/* ==================== HERO IMAGE ==================== */
 .hero img {
   clip-path: ellipse(60% 90% at 50% 50%);
-}
-
-/* ==================== RESPONSIF HERO ==================== */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 1.8rem !important;
-    text-align: center;
-  }
-
-  .hero .btn {
-    display: inline-block;
-    margin: 0 auto;
-    width: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  @media (max-width: 576px) {
-    .hero .btn {
-      display: inline-block !important;
-      width: auto !important;
-      margin: 0 auto !important;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  .hero img {
-    max-height: 300px !important;
-    margin-top: 20px;
-  }
-
-  .hero p {
-    text-align: center;
-  }
-
-  .hero .col-lg-6 {
-    text-align: center;
-  }
 }
 
 /* ==================== BACKGROUND HERO ==================== */
@@ -411,7 +386,6 @@ a.pulse-button:hover {
   position: relative;
 }
 
-/* Supaya ornament lebih transparan */
 .hero::before {
   content: "";
   position: absolute;
@@ -426,12 +400,86 @@ a.pulse-button:hover {
   pointer-events: none;
 }
 
-/* Pastikan konten di atas ornament */
 .hero .container {
   position: relative;
   z-index: 1;
 }
 
+/* ========================================================= */
+/* ==================== RESPONSIF HERO ==================== */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+    .hero-checklist {
+    flex-direction: column;   /* item jadi ke bawah */
+    align-items: center;      /* ceklis + teks ke tengah */
+    gap: 12px;                /* jarak antar item */
+    text-align: center;       /* teks di tengah */
+  }
+
+  .check-item {
+    justify-content: center;  /* ikon & teks ke tengah */
+  }
+    .check-icon {
+    transform: translateY(-10px); /* Naikin 2px */
+  }
+  .hero-title {
+    font-size: 1.8rem !important;
+    text-align: center;
+  }
+
+  .hero p {
+    text-align: center;
+  }
+
+  .hero .col-lg-6 {
+    text-align: center;
+  }
+
+  .hero .btn {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero img {
+    max-height: 300px !important;
+    margin-top: 20px;
+  }
+
+  .tombol-panah {
+    padding: 12px 12px;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .icon-panah {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: -11px; /* kalau ini terasa terlalu geser, bisa dikurangi */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .pulse-button {
+    width: auto !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero .btn {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 </style>
 </section>
 <!-- Trusted By Section -->
@@ -551,49 +599,75 @@ a.pulse-button:hover {
                 <img src="assets/img/comu.png" alt="Talent Sourcing">
             </div>
             <div class="service-content">
-                <h3>Talent Sourcing</h3>
-                <p>Dapatkan kandidat dengan mudah, cepat, tanpa repot sourcing lewat komunitas talent kami dari berbagai bidang.</p>
+                <h3>Job Posting</h3>
+                <p>Iklankan loker Anda dengan mudah dan dapatkan calon kandidat potential tanpa repot sourcing. </p>
                 <ul>
-                    <li>Supports Entry & Mid Levels</li>
-                    <li>Talent Pool</li>
-                    <li>Sourcing Support</li>
+                  <li>
+                    <span class="title">Supports Entry & Mid Levels</span>
+                    <span class="desc">Dapatkan dukungan sourcing lewat jaringan media kami dari berbagai kota.</span>
+                  </li>
+                  <li>
+                    <span class="title">Community</span>
+                    <span class="desc">Dapatkan dukungan sourcing lewat komunitas talent kami dari berbagai bidang.</span>
+                  </li>
                 </ul>
                 <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="btn-service" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Pesan Layanan →
-</a>
-
+                   class="btn-service" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Pesan Layanan →
+                </a>
             </div>
         </div>
 
         <!-- Baris 2 -->
-        <div class="service-row reverse">
+        <div class="service-row reverse baris-dua">
             <div class="service-content">
-                <h3>Recruitment Assistant</h3>
-                <p>Dapatkan referensi kandidat terbaik dari para mitra rekruter kami yang berpengalaman di berbagai industri.</p>
+                <h3>Interview Support</h3>
+                <p>Tak perlu repot mengatur proses HR Interview, dari persiapan, interviewer hingga laporan akhir, semua dalam satu layanan. </p>
                 <ul>
-                    <li>Supports All Hiring Levels</li>
-                    <li>End-to-end Recruitment</li>
-                    <li>Talent Personalization</li>
-                    <li>Approach Passive Candidate</li>
-                    <li>Talent Replacement Guarantee</li>
+                    <li>Interview Scheduling Assistant</li>
+                    <li>Interviewer Support</li>
+                    <li>Selection Candidate Report</li>
                 </ul>
                 <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-   class="btn-service" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Pesan Layanan →
-</a>
-
+                   class="btn-service" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Pesan Layanan →
+                </a>
             </div>
             <div class="service-img">
                 <img src="assets/img/asistant.png" alt="Recruitment Assistant">
             </div>
         </div>
-    </div>
+
+        <!-- Baris 3 -->
+        <div class="service-row reverse">
+            <div class="service-content">
+                <h3>Full Service</h3>
+                <p>Kami bantu kelola seluruh proses rekrutmen, kami akan berikan kandidat yang sesuai permintaan Anda.</p>
+                <ul>
+      <li>Talent Personalization</li>
+      <li>End-to-end Recruitment</li>
+      <li>Approach Passive Candidate</li>
+      <li>Selection Candidate Report</li>
+      <li>Rejection Guarantee</li>
+      <li>Talent Replacement</li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
+                   class="btn-service" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Pesan Layanan →
+                </a>
+            </div>
+            <div class="service-img">
+                <img src="assets/img/asistant.png" alt="Recruitment Assistant">
+            </div>
+        </div>
 </section>
+
 
 <style>
   .service-row.first-row {
@@ -658,7 +732,9 @@ a.pulse-button:hover {
         border-radius: 0;
         box-shadow: none;
     }
-
+  .baris-dua {
+  margin-bottom: 80px; /* lebih besar daripada default */
+}
     .service-row.reverse {
         flex-direction: row-reverse;
     }
@@ -673,7 +749,12 @@ a.pulse-button:hover {
         width: 100%;
         height: auto;
     }
-
+.service-content ul li .desc {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.4;
+}
     .service-content {
         flex: 1;
         text-align: left;
@@ -681,7 +762,7 @@ a.pulse-button:hover {
 
     .service-content h3 {
         font-size: 1.8rem;
-        font-weight: 700;
+        font-weight: 800;
         color: #000;
         margin-bottom: 15px;
     }
@@ -699,28 +780,33 @@ a.pulse-button:hover {
         margin: 0 0 25px 0;
     }
 
-    .service-content ul li {
-        padding-left: 35px;
-        position: relative;
-        margin-bottom: 12px;
-        color: #444;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+.service-content ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Teks utama & deskripsi jadi vertikal */
+  align-items: flex-start; /* Biar rata kiri */
+  padding-left: 35px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #444;
+}
 
     /* Ganti icon panah → jadi icon centang */
-    .service-content ul li::before {
-        content: "";
-        background-image: url('assets/img/check.png');
-        background-size: 20px 20px;
-        background-repeat: no-repeat;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-    }
+.service-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px; /* icon sejajar dengan title */
+  width: 20px;
+  height: 20px;
+  background: url('assets/img/check.png') no-repeat center;
+  background-size: 20px 20px;
+}
+.service-content ul li .title {
+  font-weight: 600;
+  color: #000;
+}
 
     .btn-service {
         display: inline-block;
@@ -740,37 +826,42 @@ a.pulse-button:hover {
         box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
     }
 
-    @media (max-width: 992px) {
-        .service-row {
-            flex-direction: column;
-            text-align: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+@media (max-width: 992px) {
+  .service-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 
-        .service-row.reverse {
-            flex-direction: column;
-        }
+  .service-row.reverse {
+    flex-direction: column;
+  }
 
-        .service-content {
-            text-align: center;
-        }
+  .service-content {
+    text-align: center;
+  }
 
-        .service-img {
-            order: -1;
-        }
+  .service-img {
+    order: -1;
+  }
 
-        /* PERUBAHAN UNTUK MOBILE */
-        .service-content ul {
-            text-align: left; /* Pusatkan list di mobile */
-            display: inline-block;
-        }
+  /* PERUBAHAN UNTUK MOBILE */
+  .service-content ul {
+    text-align: left;
+    display: inline-block;
+  }
 
-        .service-content ul li {
-            padding-left: 28px; /* Mengurangi padding untuk mendekatkan ikon */
-        }
-    }
-    
+  .service-content ul li {
+    padding-left: 28px;
+  }
+
+  /* ✅ Jarak ekstra baris 2 di mobile juga */
+  .baris-dua {
+    margin-bottom: 60px; /* Bisa disesuaikan lebih kecil dari desktop */
+  }
+}
+
 </style>
 
 <!-- Import Font Poppins -->
@@ -1509,7 +1600,7 @@ document.querySelectorAll('.counter').forEach(counter => {
           <h6>LAINNYA</h6>
           <ul>
             <li><a href="community">Komunitas</a></li>
-            <li><a href="partner">Kemitraan</a></li>
+            <li><a href="applypartner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

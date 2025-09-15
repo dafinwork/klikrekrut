@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Klik Rekrut - Komunitas')
+@section('description', 'Temukan pekerjaan impianmu di Klik Rekrut')
+@section('keywords', 'find job, lowongan kerja, klik rekrut')
+
 @section('content')
 
   <meta charset="utf-8">
@@ -61,10 +65,11 @@
   <ul>
     <li><a href="/">Services</a></li>
     <li><a href="elearning">E-learning</a></li>
-    <li><a href="partner">Apply as partner</a></li>
+    <li><a href="applypartner">Apply as partner</a></li>
     <li>
 <a href="community"
-   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2"
+   id="joinBtn">
     Join to Talent Community ➝
 </a>
         </li>
@@ -72,6 +77,22 @@
     </nav>
   </div>
 </header>
+
+<!-- Overlay untuk mobile -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const joinBtn = document.getElementById("joinBtn");
+    joinBtn.addEventListener("click", function (e) {
+      // Tambahkan kelas loading
+      this.classList.add("loading");
+
+      // Optional: kalau mau otomatis balik normal setelah 3 detik
+      // setTimeout(() => {
+      //   this.classList.remove("loading");
+      // }, 3000);
+    });
+  });
+</script>
 
 <!-- Overlay untuk mobile -->
 <div class="mobile-nav-overlay"></div>
@@ -519,28 +540,22 @@
     <div class="benefit-list">
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Company Talent Pool :</strong> Terhubung langsung dengan rekruter dari berbagai perusahaan dan dapatkan info rekrutmen lebih dulu dari publik.</p>
+        <p><strong>Inside Opportunity : </strong> Dapatkan informasi peluang kerja terbaru dari perusahaan yang bekerja sama dengan Klik Rekrut dan ikuti sesi wawancara instan di acara Live Hiring.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Company Live Hiring :</strong> Ikuti acara rekrutmen langsung dan dapatkan kesempatan interview instan.</p>
+        <p><strong>Recruitment Class :</strong> Live class tentang tips rekrutmen dari para profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Recruitment Live Class :</strong> Kelas langsung dengan topik rekrutmen dari Profesional, Praktisi & Rekruter terkurasi.</p>
+        <p><strong>Support Group :</strong> Berjejaring, diskusi karir dan berbagi peluang kerja dengan anggota lain. Dapatkan juga akses eksklusif ke buletin, insight, dan tools dari tim Klik Rekrut.</p>
       </div>
-
-      <div class="benefit-item d-flex mb-4">
-        <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Exclusive WhatsApp Group :</strong> Berjejaring dan berdiskusi karir dengan member lain yang sebidang denganmu. Dapatkan career discussion grup, job opportunity dan rekrutmen news.</p>
-      </div>
-    </div>
 
     <!-- Highlight Text -->
     <p class="text-center fw-bold fs-5 mt-5">
-      Disini kamu bukan hanya belajar, tapi benar-benar terhubung ke berbagai peluang kerja dan dipersiapkan untuk di rekrut.
+      Selain bisa belajar dan berjejaring di dalam komunitas, kamu juga akan terhubung ke berbagai peluang kerja dan dipersiapkan untuk di rekrut.
     </p>
 
   </div>
@@ -621,16 +636,16 @@
         <div class="prelaunch-description">Akses semua benefit sekali bayar</div>
 
         <ul class="prelaunch-benefits">
-          <li><div class="prelaunch-check"></div> Masuk Komunitas</li>
-          <li><div class="prelaunch-check"></div> Live Class</li>
-          <li><div class="prelaunch-check"></div> Grup Support</li>
+          <li><div class="prelaunch-check"></div> Access to All Live Class</li>
+          <li><div class="prelaunch-check"></div> Access to All Support Group </li>
+          <li><div class="prelaunch-check"></div> Connect First with Opportunity</li>
         </ul>
       </div>
     </div>
 
     <!-- Tombol di tengah outline -->
     <div class="prelaunch-btn-wrapper">
-      <button class="prelaunch-btn">Daftar Sekarang</button>
+      <button class="prelaunch-btn">Gabung Sekarang</button>
     </div>
   </div>
 </div>
@@ -643,10 +658,9 @@
       <button class="coming-soon" disabled>Coming Soon</button>
       <p class="desc">Akses semua benefit sekali bayar</p>
       <ul class="benefits">
-<li>Masuk Komunitas</li>
-<li>Live Class</li>
-<li>Grup Support</li>
-
+<li>Access to All Live Class</li>
+<li>Access to All Support Group </li>
+<li>Connect First with Opportunity</li>
       </ul>
     </div>
   </div>
@@ -659,9 +673,9 @@
 /* Wrapper untuk efek border gradient */
 .prelaunch-wrapper {
   background: linear-gradient(135deg, #5DE0E6, #004AAD);
-  padding: 4px;
-  border-radius: 0px;
-  width: 340px;   /* sebelumnya 280px → dibesarkan */
+  padding: 8px;
+  border-radius: 12px;   /* tambahin lengkungan */
+  width: 340px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -670,13 +684,14 @@
 }
 
 .prelaunch-card {
-  border-radius: 0px;
+  border-radius: 12px;   /* sama kayak wrapper */
   overflow: hidden;
   background: #fff;
   width: 100%;
-  min-height: auto;   /* biar gak kepaksa panjang */
+  min-height: auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 .prelaunch-btn-wrapper {
   position: absolute;
   bottom: -20px; /* keluar sedikit dari wrapper */
@@ -685,17 +700,16 @@
 }
 
 .prelaunch-header {
-  background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  background: linear-gradient(135deg, #5DE0E6, #004AAD); 
   padding: 16px;
   text-align: center;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
-
 .prelaunch-header h5 {
   color: white;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;   /* lebih besar */
+  font-weight: 700;  /* tetap tebal */
   margin: 0;
 }
 
@@ -718,11 +732,13 @@
   margin: 8px 0;
 }
 
+/* Pre-launch description */
 .prelaunch-description {
-  color: #666;
-  font-size: 14px;
-  margin: 20px 0 30px 0;
+  color: #000000ff;
+  font-size: 17px;
+  margin: 10px 0 15px 0;  /* sebelumnya 20px 0 30px 0 */
   line-height: 1.4;
+  font-weight: 600;   /* bikin bold */
 }
 
 .prelaunch-benefits {
@@ -821,9 +837,12 @@
 }
 
 .normal-price-card .desc {
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 15px;
+  font-weight: 600;   /* bikin bold */
+  color: #000;        /* pastiin teksnya hitam */
 }
+
 
 .normal-price-card .benefits {
   list-style: none;
@@ -891,6 +910,31 @@
   margin-bottom: 30px !important; /* Rapatkan ke bawah */
   color: #555;
 }
+.normal-price-card .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;   /* judul hitam */
+}
+
+.normal-price-card .price {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;   /* harga hitam */
+}
+
+.normal-price-card .coming-soon {
+  background: #fff;       /* tetap putih */
+  border: 1px solid #000; /* border hitam */
+  color: #000;            /* teks hitam */
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: not-allowed;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
   .pricing-section .row {
     row-gap: 42px; /* lebih lega di mobile */
@@ -1051,7 +1095,7 @@
           <h6>LAINNYA</h6>
           <ul>
             <li><a href="community">Komunitas</a></li>
-            <li><a href="partner">Kemitraan</a></li>
+            <li><a href="applypartner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

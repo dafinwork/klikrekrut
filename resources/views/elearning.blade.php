@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Klik Rekrut - Belajar Rekrutmen')
+@section('description', 'Temukan pekerjaan impianmu di Klik Rekrut')
+@section('keywords', 'find job, lowongan kerja, klik rekrut')
+
 @section('content')
 
   <meta charset="utf-8">
@@ -61,10 +65,11 @@
   <ul>
     <li><a href="/">Services</a></li>
     <li><a href="elearning">E-learning</a></li>
-    <li><a href="partner">Apply as partner</a></li>
+    <li><a href="applypartner">Apply as partner</a></li>
     <li>
 <a href="community"
-   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
+   class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2"
+   id="joinBtn">
     Join to Talent Community ➝
 </a>
         </li>
@@ -72,6 +77,22 @@
     </nav>
   </div>
 </header>
+
+<!-- Overlay untuk mobile -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const joinBtn = document.getElementById("joinBtn");
+    joinBtn.addEventListener("click", function (e) {
+      // Tambahkan kelas loading
+      this.classList.add("loading");
+
+      // Optional: kalau mau otomatis balik normal setelah 3 detik
+      // setTimeout(() => {
+      //   this.classList.remove("loading");
+      // }, 3000);
+    });
+  });
+</script>
 
 <!-- Overlay untuk mobile -->
 <div class="mobile-nav-overlay"></div>
@@ -981,7 +1002,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h6>LAINNYA</h6>
           <ul>
             <li><a href="community">Komunitas</a></li>
-            <li><a href="partner">Kemitraan</a></li>
+            <li><a href="applypartner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

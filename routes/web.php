@@ -14,3 +14,6 @@ Route::get('/partner', function () {
 Route::get('/elearning', function () {
     return view('elearning');
 });
+Route::get('/applypartner', function () {
+    return view('applypartner');
+});

@@ -65,7 +65,7 @@
   <ul>
     <li><a href="/">Services</a></li>
     <li><a href="elearning">E-learning</a></li>
-    <li><a href="partner">Apply as partner</a></li>
+    <li><a href="applypartner">Apply as partner</a></li>
     <li>
 <a href="community"
    class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2"
@@ -401,7 +401,7 @@
           <h6>LAINNYA</h6>
           <ul>
             <li><a href="community">Komunitas</a></li>
-            <li><a href="partner">Kemitraan</a></li>
+            <li><a href="applypartner">Kemitraan</a></li>
           </ul>
         </div>
         <!-- Bantuan -->

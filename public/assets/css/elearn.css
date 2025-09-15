@@ -200,11 +200,11 @@ h6 {
   color: #004AAD; /* Biru lebih gelap saat hover */
 }
 
-/* Tombol Join to Talent Community */
+/* Default tombol */
 .wa-btn {
-  background-color: #004AAD !important; /* Biru permanen */
-  border: 2px solid #004AAD !important; /* Border biru */
-  color: #ffffff !important; /* Teks putih */
+  background-color: #004AAD !important;
+  border: 2px solid #004AAD !important;
+  color: #ffffff !important;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -212,20 +212,19 @@ h6 {
   padding: 8px 20px;
   border-radius: 25px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: none !important; /* Hilangkan efek transisi */
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Tetap biru di semua kondisi */
-.wa-btn:hover,
-.wa-btn:focus,
-.wa-btn:active,
-.wa-btn:visited {
-  background-color: #004AAD !important; /* Tetap biru */
+/* Saat loading (klik) */
+.wa-btn.loading {
+  background-color: #ffffff !important; /* Jadi putih */
   border-color: #004AAD !important;
-  color: #ffffff !important; /* Tetap putih */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  color: #004AAD !important;
+  pointer-events: none; /* Supaya ga bisa diklik lagi */
+  opacity: 0.8;         /* Biar keliatan disabled */
 }
+
 /* ========== MOBILE NAV ========== */
 .mobile-nav-toggle {
   font-size: 26px;
@@ -281,10 +280,6 @@ h6 {
     display: block;
   }
 }
-
-
-
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
