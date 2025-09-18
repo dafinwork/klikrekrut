@@ -540,22 +540,17 @@
     <div class="benefit-list">
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Priority Talent : </strong>Jadi yang pertama mendapat info rekrutmen dari klien Klik Rekrut, dan juga dapatkan kesempatan interview instan lewat acara Live Hiring.</p>
+        <p><strong>Inside Opportunity: </strong> Dapatkan informasi peluang kerja terbaru dari perusahaan yang bekerja sama dengan Klik Rekrut dan ikuti sesi wawancara instan di acara Live Hiring.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Support Group :</strong>Berjejaring, berdiskusi karir dan saling berbagi peluang kerja dengan member lain yang sebidang denganmu di dalam grup.</p>
+        <p><strong>Recruitment Class :</strong>Live class tentang tips rekrutmen dari para profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Live Class : </strong>Kelas online dengan topik rekrutmen dari profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
-      </div>
-
-      <div class="benefit-item d-flex mb-4">
-        <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Exclusive Resource : </strong>Akses eksklusif ke buletin, insight dan tools dari tim KLIK Rekrut khusus untuk anggota komunitas.</p>
+        <p><strong>Support Group : </strong>Berjejaring, diskusi karir dan berbagi peluang kerja dengan anggota lain. Dapatkan juga akses eksklusif ke buletin, insight, dan tools dari tim Klik Rekrut.</p>
       </div>
 
     <!-- Highlight Text -->
