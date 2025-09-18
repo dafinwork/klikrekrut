@@ -534,7 +534,7 @@
   <div class="container">
 
     <!-- Judul -->
-    <h2 class="text-center fw-bold mb-5">Member Benefit</h2>
+    <h2 class="text-center fw-bold mb-5">Community Resources</h2>
 
     <!-- List Benefit -->
     <div class="benefit-list">
