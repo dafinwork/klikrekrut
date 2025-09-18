@@ -235,7 +235,7 @@
 <div class="hero-checklist">
   <div class="check-item">
     <img src="assets/img/check.png" alt="Check" class="check-icon">
-    <span>Supports All Hiring Levels</span>
+    <span>Hiring Entry & Mid Levels</span>
   </div>
   <div class="check-item">
     <img src="assets/img/check.png" alt="Check" class="check-icon">
@@ -588,7 +588,7 @@ a.pulse-button:hover {
 <!-- layanan utama -->
 <section class="services-section">
     <div class="container">
-        <p class="section-subtitle">LAYANAN REKRUTMEN KAMI</p>
+        <p class="section-subtitle">LAYANAN ASISTEN REKRUTMEN KAMI</p>
         <h2 class="section-title">
             Bantu Rekrut Kandidat, Bikin Bisnis Melesat
         </h2>
@@ -603,7 +603,7 @@ a.pulse-button:hover {
                 <p>Iklankan loker Anda dengan mudah dan dapatkan calon kandidat potential tanpa repot sourcing. </p>
                 <ul>
                   <li>
-                    <span class="title">Supports Entry & Mid Levels</span>
+                    <span class="title">Media</span>
                     <span class="desc">Dapatkan dukungan sourcing lewat jaringan media kami dari berbagai kota.</span>
                   </li>
                   <li>
@@ -797,7 +797,7 @@ a.pulse-button:hover {
   content: "";
   position: absolute;
   left: 0;
-  top: 6px; /* icon sejajar dengan title */
+  top: 1px; /* icon sejajar dengan title */
   width: 20px;
   height: 20px;
   background: url('assets/img/check.png') no-repeat center;
@@ -848,19 +848,22 @@ a.pulse-button:hover {
 
   /* PERUBAHAN UNTUK MOBILE */
   .service-content ul {
-    text-align: left;
-    display: inline-block;
+    display: inline-block;   /* bikin ul "block" di tengah */
+    margin: 0 auto;          /* center di parent */
+    text-align: center;        /* isi tetap rata kiri */
   }
 
   .service-content ul li {
-    padding-left: 28px;
+    text-align: center;        /* biar judul & deskripsi rata kiri */
+    padding-left: 28px;      /* ruang buat icon ceklis */
   }
+}
 
   /* ✅ Jarak ekstra baris 2 di mobile juga */
   .baris-dua {
     margin-bottom: 60px; /* Bisa disesuaikan lebih kecil dari desktop */
   }
-}
+
 
 </style>
 

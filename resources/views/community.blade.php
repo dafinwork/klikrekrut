@@ -540,17 +540,22 @@
     <div class="benefit-list">
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Inside Opportunity : </strong> Dapatkan informasi peluang kerja terbaru dari perusahaan yang bekerja sama dengan Klik Rekrut dan ikuti sesi wawancara instan di acara Live Hiring.</p>
+        <p><strong>Priority Talent : </strong>Jadi yang pertama mendapat info rekrutmen dari klien Klik Rekrut, dan juga dapatkan kesempatan interview instan lewat acara Live Hiring.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Recruitment Class :</strong> Live class tentang tips rekrutmen dari para profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
+        <p><strong>Support Group :</strong>Berjejaring, berdiskusi karir dan saling berbagi peluang kerja dengan member lain yang sebidang denganmu di dalam grup.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Support Group :</strong> Berjejaring, diskusi karir dan berbagi peluang kerja dengan anggota lain. Dapatkan juga akses eksklusif ke buletin, insight, dan tools dari tim Klik Rekrut.</p>
+        <p><strong>Live Class : </strong>Kelas online dengan topik rekrutmen dari profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
+      </div>
+
+      <div class="benefit-item d-flex mb-4">
+        <img src="assets/img/check.png" alt="check" class="check-icon me-3">
+        <p><strong>Exclusive Resource : </strong>Akses eksklusif ke buletin, insight dan tools dari tim KLIK Rekrut khusus untuk anggota komunitas.</p>
       </div>
 
     <!-- Highlight Text -->
@@ -563,6 +568,7 @@
 
 <!-- CSS -->
 <style>
+  
 /* ===== HEADING ===== */
 .benefit-section h2 {
   color: #000;
@@ -606,7 +612,124 @@
   }
 }
 </style>
+<!-- COMMUNITY SECTION -->
+<section class="community-section py-5 text-center text-white">
+  <div class="container" data-aos="fade-up">
 
+    <!-- Judul -->
+    <h2 class="fw-bold mb-5 klik-heading-white">Rasanya Gabung Komunitas KLIK Rekrut</h2>
+
+    <!-- Card List -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-lg border-0">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="Community">
+          <div class="card-body">
+            <p class="fw-semibold">Punya temen seperjuangan menghadapi kegagalan rekrutmen</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-lg border-0">
+          <img src="assets/img/2.jpg" class="card-img-top" alt="Live Hiring">
+          <div class="card-body">
+            <p class="fw-semibold">Bisa interview langsung sama rekruter perusahaan di Live Hiring</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-lg border-0">
+          <img src="assets/img/3.jpg" class="card-img-top" alt="Portofolio">
+          <div class="card-body">
+            <p class="fw-semibold">Bisa bangun portofolio dari project yang di share member lain</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-lg border-0">
+          <img src="assets/img/4.jpg" class="card-img-top" alt="Networking">
+          <div class="card-body">
+            <p class="fw-semibold">Ngobrol dan Networking bareng member lain dari lintas bidang</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+</section>
+
+<!-- CSS -->
+<style>
+  .klik-heading-white {
+  color: #fff;
+}
+
+  .community-section {
+    background: linear-gradient(135deg, #5DE0E6, #004AAD);
+  }
+
+  .community-section h2 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+.community-section .card {
+    padding: 10px;         /* masih bisa diganti sesuai kebutuhan */
+    border-radius: 15px;   /* biar tetap rounded */
+    overflow: hidden;      /* biar gambar dan isi rapih */
+}
+
+.community-section .card-body {
+    padding: 10px;         /* kecilkan padding biar compact */
+}
+.community-section .card-body p {
+    margin: 0;             /* hilangkan margin bawaan <p> */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;      /* sama seperti fw-semibold */
+}
+
+  .community-section .btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  /* Efek Detak Jantung */
+.heartbeat-btn {
+  animation: heartbeat 1.3s ease-in-out infinite;
+  transform-origin: center; /* titik pusat detak */
+  display: inline-block;
+}
+
+/* Keyframes untuk efek detak */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.15);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
 <!-- PRICING SECTION -->
 <section class="pricing-section py-5">
   <div class="container text-center" data-aos="fade-up">
@@ -633,7 +756,7 @@
       <div class="prelaunch-body">
         <div class="prelaunch-original-price">Rp 99.000</div>
         <div class="prelaunch-current-price">Rp 49.000</div>
-        <div class="prelaunch-description">Akses semua benefit sekali bayar</div>
+        <div class="prelaunch-description">Akses komunitas dan benefitnya</div>
 
         <ul class="prelaunch-benefits">
           <li><div class="prelaunch-check"></div> Access to All Live Class</li>
@@ -656,7 +779,7 @@
       <h5 class="title">Normal Price</h5>
       <h2 class="price">Rp 99.000</h2>
       <button class="coming-soon" disabled>Coming Soon</button>
-      <p class="desc">Akses semua benefit sekali bayar</p>
+      <p class="desc">Akses komunitas dan benefitnya</p>
       <ul class="benefits">
 <li>Access to All Live Class</li>
 <li>Access to All Support Group </li>
@@ -670,6 +793,15 @@
 </section>
 <!-- CSS -->
 <style>
+  /* Kecilkan font khusus untuk kartu Pre-Launch */
+.prelaunch-body .prelaunch-description {
+  font-size: 16px;   /* lebih kecil dari normal */
+  font-weight: 700;  /* bisa dikurangi biar lebih ringan */
+  white-space: nowrap; /* paksa jadi 1 baris */
+  overflow: hidden;
+  text-overflow: ellipsis; /* kalau kepanjangan kasih "..." */
+}
+
 /* Wrapper untuk efek border gradient */
 .prelaunch-wrapper {
   background: linear-gradient(135deg, #5DE0E6, #004AAD);
@@ -736,16 +868,34 @@
 .prelaunch-description {
   color: #000000ff;
   font-size: 17px;
-  margin: 10px 0 15px 0;  /* sebelumnya 20px 0 30px 0 */
+  margin: 10px auto 15px auto; /* auto kiri kanan biar center */
   line-height: 1.4;
-  font-weight: 600;   /* bikin bold */
+  font-weight: 600;
+  text-align: center !important;
+  display: block;
+  width: 100%; /* biar bisa rata tengah penuh */
 }
+/* ✅ Normal Price */
+.normal-price-card .desc {
+  font-size: 17px;
+  margin: 15px auto;  /* auto kiri kanan */
+  font-weight: 600;
+  color: #000;
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
+.prelaunch-body,
+.normal-price-card {
+  text-align: center;
+}
+
 
 .prelaunch-benefits {
   list-style: none;
   padding: 0;
   margin: 0 0 30px 0;
-  text-align: left;
+  text-align: center;
 }
 
 .prelaunch-benefits li {
@@ -792,6 +942,26 @@
   width: 220px;
   cursor: pointer;
   transition: all 0.3s ease;
+    /* Animasi heartbeat */
+  animation: heartbeat 1.5s infinite;
+}
+/* Animasi heartbeat */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .prelaunch-btn:hover {
@@ -808,7 +978,7 @@
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  width: 350px;   /* besarin kartunya */
+  width: 340px;   /* besarin kartunya */
   font-family: 'Poppins', sans-serif;
   margin: auto;
 }
@@ -836,19 +1006,14 @@
   margin-bottom: 15px;
 }
 
-.normal-price-card .desc {
-  font-size: 17px;
-  margin-bottom: 15px;
-  font-weight: 600;   /* bikin bold */
-  color: #000;        /* pastiin teksnya hitam */
-}
+
 
 
 .normal-price-card .benefits {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .normal-price-card .benefits li {
@@ -934,6 +1099,14 @@
   cursor: not-allowed;
   margin-bottom: 15px;
 }
+.prelaunch-benefits,
+.normal-price-card .benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;          /* auto biar tetap center */
+  text-align: left;        /* isi list rata kiri */
+  display: inline-block;   /* biar grupnya bisa ditengah */
+}
 
 @media (max-width: 768px) {
   .pricing-section .row {
@@ -941,134 +1114,6 @@
   }
 }
 </style>
-<!-- COMMUNITY SECTION -->
-<section class="community-section py-5 text-center text-white">
-  <div class="container" data-aos="fade-up">
-
-    <!-- Judul -->
-    <h2 class="fw-bold mb-5 klik-heading-white">Rasanya Gabung Komunitas KLIK Rekrut</h2>
-
-    <!-- Card List -->
-    <div class="row g-4 justify-content-center">
-
-      <!-- Card 1 -->
-      <div class="col-md-3">
-        <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="Community">
-          <div class="card-body">
-            <p class="fw-semibold">Punya temen seperjuangan menghadapi kegagalan rekrutmen</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-3">
-        <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/2.jpg" class="card-img-top" alt="Live Hiring">
-          <div class="card-body">
-            <p class="fw-semibold">Bisa interview langsung sama rekruter perusahaan di Live Hiring</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-3">
-        <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/3.jpg" class="card-img-top" alt="Portofolio">
-          <div class="card-body">
-            <p class="fw-semibold">Bisa bangun portofolio dari project yang di share member lain</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-3">
-        <div class="card h-100 shadow-lg border-0">
-          <img src="assets/img/4.jpg" class="card-img-top" alt="Networking">
-          <div class="card-body">
-            <p class="fw-semibold">Ngobrol dan Networking bareng member lain dari lintas bidang</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-<!-- CTA Button -->
-<div class="mt-5">
-  <a href="#" class="btn btn-light px-4 py-2 fw-semibold rounded-pill shadow heartbeat-btn">
-    → Gabung Sekarang ←
-  </a>
-</div>
-
-
-  </div>
-</section>
-
-<!-- CSS -->
-<style>
-  .klik-heading-white {
-  color: #fff;
-}
-
-  .community-section {
-    background: linear-gradient(135deg, #5DE0E6, #004AAD);
-  }
-
-  .community-section h2 {
-    font-family: 'Poppins', sans-serif;
-  }
-
-.community-section .card {
-    padding: 10px;         /* masih bisa diganti sesuai kebutuhan */
-    border-radius: 15px;   /* biar tetap rounded */
-    overflow: hidden;      /* biar gambar dan isi rapih */
-}
-
-.community-section .card-body {
-    padding: 10px;         /* kecilkan padding biar compact */
-}
-.community-section .card-body p {
-    margin: 0;             /* hilangkan margin bawaan <p> */
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;      /* sama seperti fw-semibold */
-}
-
-  .community-section .btn {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-  }
-  /* Efek Detak Jantung */
-.heartbeat-btn {
-  animation: heartbeat 1.3s ease-in-out infinite;
-  transform-origin: center; /* titik pusat detak */
-  display: inline-block;
-}
-
-/* Keyframes untuk efek detak */
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  14% {
-    transform: scale(1.15);
-  }
-  28% {
-    transform: scale(1);
-  }
-  42% {
-    transform: scale(1.15);
-  }
-  70% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-</style>
-
 <!-- footer -->
 <footer class="footer">
   <div class="container">
