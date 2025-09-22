@@ -62,8 +62,6 @@
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
     Join to Talent Community ➝
 </a>
-
-
     </li>
   </ul>
 </nav>
@@ -410,17 +408,27 @@ a.pulse-button:hover {
 /* ========================================================= */
 
 @media (max-width: 768px) {
-    .hero-checklist {
-    flex-direction: column;   /* item jadi ke bawah */
-    align-items: center;      /* ceklis + teks ke tengah */
-    gap: 12px;                /* jarak antar item */
-    text-align: center;       /* teks di tengah */
+  .hero-checklist {
+    flex-direction: column;   /* item ke bawah */
+    align-items: center;      /* blok tetap di tengah */
+    gap: 10px;
+    width: 100%;
   }
 
   .check-item {
-    justify-content: center;  /* ikon & teks ke tengah */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px;             /* kasih lebar seragam supaya rata */
+    gap: 8px;
+    text-align: left;
   }
-    .check-icon {
+    .check-item span {
+    display: inline-block;
+    padding-left: 4px;        /* jarak tambahan biar teks mulai lurus */
+    flex: 1;                  /* biar teks isi sisa ruang */
+  }
+   .check-icon {
     transform: translateY(-10px); /* Naikin 2px */
   }
   .hero-title {
@@ -846,24 +854,41 @@ a.pulse-button:hover {
     order: -1;
   }
 
-  /* PERUBAHAN UNTUK MOBILE */
+  /* UL di tengah */
   .service-content ul {
-    display: inline-block;   /* bikin ul "block" di tengah */
-    margin: 0 auto;          /* center di parent */
-    text-align: center;        /* isi tetap rata kiri */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* <== ini bikin seluruh li ada di tengah */
+    gap: 12px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .service-content ul li {
-    text-align: center;        /* biar judul & deskripsi rata kiri */
-    padding-left: 28px;      /* ruang buat icon ceklis */
+    position: relative;
+    list-style: none;
+    padding-left: 28px;    /* ruang icon */
+    text-align: left;      /* teks dalam blok tetap rata kiri */
+    max-width: 280px;      /* biar ada batas lebar rapi */
+    width: 100%;           /* supaya semua li punya lebar sama */
   }
-}
+
+  .service-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background: url('assets/img/check.png') no-repeat center;
+    background-size: contain;  /* biar pas ukurannya */
+  }
 
   /* ✅ Jarak ekstra baris 2 di mobile juga */
   .baris-dua {
     margin-bottom: 60px; /* Bisa disesuaikan lebih kecil dari desktop */
   }
-
+}
 
 </style>
 

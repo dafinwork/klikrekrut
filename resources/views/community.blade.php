@@ -148,17 +148,16 @@
   margin-left: 8px; /* kasih jarak dari teks */
   vertical-align: middle;
 }
-
 .hero-section {
     background: url("assets/img/raw.jpg") center center no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: top;
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 79.8vh;
+    min-height: 80vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -762,9 +761,13 @@
     </div>
 
     <!-- Tombol di tengah outline -->
-    <div class="prelaunch-btn-wrapper">
-      <button class="prelaunch-btn">Gabung Sekarang</button>
-    </div>
+<div class="prelaunch-btn-wrapper">
+  <button class="prelaunch-btn"
+          onclick="window.open('https://api.whatsapp.com/send?phone=6289678868752', '_blank')">
+    Gabung Sekarang
+  </button>
+</div>
+
   </div>
 </div>
 
@@ -1105,7 +1108,7 @@
 
 @media (max-width: 768px) {
   .pricing-section .row {
-    row-gap: 42px; /* lebih lega di mobile */
+    row-gap: 60px; /* lebih lega di mobile */
   }
 }
 </style>

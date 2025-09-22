@@ -167,15 +167,15 @@
 <style>
 /* ===== HERO SECTION ===== */
 .hero-section {
-    background: url("assets/img/elearning.jpg") center center no-repeat;
-    background-size: contain;
+    background: url("assets/img/desktoppx.jpg") center center no-repeat;
+    background-size: cover;
     background-position: top;
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 80vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     text-align: center;

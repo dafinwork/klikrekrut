@@ -4,7 +4,7 @@
   <!-- Open Graph Tags -->
 <meta property="og:title" content="Klik Rekrut">
 <meta property="og:description" content="Platform pencarian kerja dan komunitas talenta">
-<meta property="og:image" content="https://klikrekrut.com/assets/img/circle1.png">
+<meta property="og:image" content="https://klikrekrut.com/assets/img/square.png">
 <meta property="og:url" content="https://klikrekrut.com">
 <meta property="og:type" content="website">
 
@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Klik Rekrut">
 <meta name="twitter:description" content="Platform pencarian kerja dan komunitas talenta">
-<meta property="twiiter:image" content="https://klikrekrut.com/assets/img/circle1.png">
+<meta property="twiiter:image" content="https://klikrekrut.com/assets/img/square.png">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
