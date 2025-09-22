@@ -245,9 +245,17 @@
   </div>
 </div>
 
-<p class="mb-4">
-Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br> rekrutmen yang lengkap dan sesuai kebutuhan.
+<!-- Desktop -->
+<p class="mb-4 d-none d-md-block">
+  Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br>
+  rekrutmen yang lengkap dan sesuai kebutuhan.
 </p>
+
+<!-- Mobile -->
+<p class="mb-4 d-block d-md-none">
+  Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen yang lengkap dan sesuai kebutuhan.
+</p>
+
 <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
   Baca Lebih Lanjut
   <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
