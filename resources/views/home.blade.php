@@ -616,11 +616,11 @@ a.pulse-button:hover {
             </div>
             <div class="service-content">
                 <h3>Job Posting</h3>
-                <p>Iklankan loker Anda dengan mudah dan dapatkan calon kandidat potential tanpa repot sourcing. </p>
+                <p>Iklankan loker Anda dengan mudah dan dapatkan calon kandidat potensial tanpa repot sourcing. </p>
                 <ul>
                   <li>
                     <span class="title">Media</span>
-                    <span class="desc">Dapatkan dukungan sourcing lewat jaringan media kami dari berbagai kota.</span>
+                    <span class="desc">Dapatkan dukungan sourcing melalui jaringan media kami dari berbagai kota.</span>
                   </li>
                   <li>
                     <span class="title">Community</span>
@@ -661,8 +661,8 @@ a.pulse-button:hover {
         <!-- Baris 3 -->
         <div class="service-row reverse">
             <div class="service-content">
-                <h3>Full Service</h3>
-                <p>Kami bantu kelola seluruh proses rekrutmen, kami akan berikan kandidat yang sesuai permintaan Anda.</p>
+                <h3>Full Services</h3>
+                <p>Kami bantu kelola seluruh proses rekrutmen, dan berikan kandidat yang sesuai permintaan Anda.</p>
                 <ul>
       <li>Talent Personalization</li>
       <li>End-to-end Recruitment</li>
@@ -928,7 +928,7 @@ a.pulse-button:hover {
         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center gap-4">
           <h1 class="counter mb-0" data-target="90" data-suffix="%">0%</h1>
           <div class="text-start stat-text">
-            of our client successfully<br>grows their business
+            of our client successfully<br>grown their business
           </div>
         </div>
 
@@ -1011,7 +1011,7 @@ document.querySelectorAll('.counter').forEach(counter => {
 <!-- Client & Talent Section -->
 <section class="client-section">
   <div class="container">
-    <h2 class="client-title">Empowering Indonesia's Talent and Business Ecosystem</h2>  
+    <h2 class="client-title">Empowering Indonesian Talent and Business Ecosystem</h2>  
 
     <!-- Tab Buttons -->
     <div class="tab-buttons">
@@ -1618,7 +1618,7 @@ document.querySelectorAll('.counter').forEach(counter => {
       <!-- Kiri: Logo + deskripsi -->
 <div class="footer-about">
   <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan talenta Siap Kerja.</p>
 </div>
 
       <!-- Tengah: Menu Footer Baru -->

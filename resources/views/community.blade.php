@@ -539,12 +539,12 @@
     <div class="benefit-list">
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Inside Opportunity: </strong> Dapatkan informasi peluang kerja terbaru dari perusahaan yang bekerja sama dengan Klik Rekrut dan ikuti sesi wawancara instan di acara Live Hiring.</p>
+        <p><strong>Insider Opportunity : </strong>Dapatkan informasi peluang kerja terbaru dari perusahaan yang bekerja sama dengan Klik Rekrut dan ikuti sesi wawancara instan di acara Live Hiring.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
         <img src="assets/img/check.png" alt="check" class="check-icon me-3">
-        <p><strong>Recruitment Class :</strong>Live class tentang tips rekrutmen dari para profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
+        <p><strong>Recruitment Class : </strong>Live class tentang tips rekrutmen dari para profesional, praktisi & rekruter terkurasi yang bisa kamu ikuti secara gratis.</p>
       </div>
 
       <div class="benefit-item d-flex mb-4">
@@ -1120,7 +1120,7 @@
       <!-- Kiri: Logo + deskripsi -->
 <div class="footer-about">
   <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan talenta Siap Kerja.</p>
 </div>
 
       <!-- Tengah: Menu Footer Baru -->

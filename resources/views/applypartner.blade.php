@@ -131,7 +131,7 @@
 
     <!-- Judul -->
     <h1 class="hero-title">
-      Ready to join as a <br>
+      Ready to join our <br>
       KLIK Rekrut Partner?
     </h1>
 
@@ -143,8 +143,8 @@
     <h3 class="card-title">Recruiter</h3>
     <div class="card-divider"></div>
     <p class="card-desc">
-      <strong>Kamu bertugas memproses permintaan talent dari klien lewat sistem manajemen rekrutmen kami.</strong><br><br>
-      Kamu akan ikut mendukung misi kami untuk menempatkan SDM terbaik di tempat yang tepat.
+      <strong>Kamu bertugas memproses permintaan talenta dari klien melalui sistem manajemen rekrutmen kami.</strong><br><br>
+      Kamu akan ikut mendukung misi kami untuk menempatkan talenta terbaik di tempat yang tepat.
     </p>
     <a href="#" class="btn-apply">Apply here →</a>
   </div>
@@ -155,7 +155,7 @@
     <div class="card-divider"></div>
     <p class="card-desc">
       <strong>Kamu bertugas mencari perusahaan yang lagi butuh kandidat terbaik.</strong><br><br>
-      Kamu akan ikut mendukung misi kami memberikan akses SDM terampil buat bisnis di Indonesia.
+      Kamu akan ikut mendukung misi kami memberikan akses talenta terampil untuk bisnis di Indonesia.
     </p>
     <a href="#" class="btn-apply">Apply here →</a>
   </div>
@@ -166,7 +166,7 @@
     <div class="card-divider"></div>
     <p class="card-desc">
       <strong>Kamu bertugas merekomendasikan pembelajaran rekrutmen kami ke recruiter dan jobseeker.</strong><br><br>
-      Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari kerja dan karyawan.
+      Kamu akan ikut mendukung misi kami untuk membantu mereka lebih jago cari pekerja dan cari kerja.
     </p>
     <a href="#" class="btn-apply">Apply here →</a>
   </div>
@@ -383,7 +383,7 @@
       <!-- Kiri: Logo + deskripsi -->
 <div class="footer-about">
   <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan talenta Siap Kerja.</p>
 </div>
 
       <!-- Tengah: Menu Footer Baru -->

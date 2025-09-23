@@ -720,8 +720,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Tab Buttons -->
     <div class="tab-buttons">
-      <button class="tab active" data-target="clients">For Jobseeker</button>
-      <button class="tab" data-target="talents">For Recruiter</button>
+      <button class="tab active" data-target="clients">For Jobseekers</button>
+      <button class="tab" data-target="talents">For Recruiters</button>
     </div>
 
     <!-- ====== TAB CONTENT JOBSEEKER ====== -->
@@ -984,7 +984,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <!-- Kiri: Logo + deskripsi -->
 <div class="footer-about">
   <img src="assets/img/Footer.png" alt="Klik Rekrut Logo" class="footer-logo">
-  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan SDM Siap Kerja.</p>
+  <p><strong>Klik Rekrut</strong> hadir sebagai solusi rekrutmen yang ergonomis untuk mendapatkan talenta Siap Kerja.</p>
 </div>
 
       <!-- Tengah: Menu Footer Baru -->
