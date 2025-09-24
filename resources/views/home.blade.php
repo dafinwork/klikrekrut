@@ -1046,7 +1046,7 @@ document.querySelectorAll('.counter').forEach(counter => {
                   <p class="role">Digital Agency</p>
                 </div>
               </div>
-              <p class="card-description">Klik Rekrut selalu tanggap dan mudah diajak komunikasi. Prosesnya singkat, efisien, dan tanpa langkah-langkah yang bikin ribet. Kandidat yang diberikan selalu sesuai kebutuhan, dan hasil kerjanya memuaskan.</p>
+              <p class="card-description">Rekrutmen jadi jauh lebih efisien dengan Klik Rekrut. Tidak perlu menunggu lama, kami langsung mendapat kandidat yang tepat dan kompeten. Prosesnya simpel, transparan, dan hasilnya memuaskan</p>
             </div>
             
             <div class="card">
@@ -1118,13 +1118,13 @@ document.querySelectorAll('.counter').forEach(counter => {
 
         <div class="card">
           <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Ical" class="card-logo">
+            <img src="assets/img/amanda.jpeg" alt="Ical" class="card-logo">
             <div class="card-titles">
-              <h3>Ical</h3>
-              <p class="role">Video Grapher & Editor</p>
+              <h3>Amanda</h3>
+              <p class="role">Digital Growth Intern</p>
             </div>
           </div>
-          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p class="card-description">Beneran terbantu dari awal apply sampai onboarding waktu intern di Sosialoka dan Prosesnya juga cepet banget.</p>
         </div>
       </div>
 

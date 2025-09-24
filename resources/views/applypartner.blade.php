@@ -131,8 +131,7 @@
 
     <!-- Judul -->
     <h1 class="hero-title">
-      Ready to join our <br>
-      KLIK Rekrut Partner?
+Let's Become Our Partner!
     </h1>
 
 <!-- Partner Cards -->
