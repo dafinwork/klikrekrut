@@ -224,278 +224,288 @@
 <section id="hero" class="hero section position-relative">
   <div class="container">
     <div class="row align-items-center">
-<div class="col-lg-6 text-white" data-aos="fade-right">
-  <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
-    <span id="typing-hero"></span>
-  </h1>
 
-<!-- ✅ Tambahan ceklis -->
-<div class="hero-checklist">
-  <div class="check-item">
-    <img src="assets/img/check.png" alt="Check" class="check-icon">
-    <span>Hiring Entry & Mid Levels</span>
-  </div>
-  <div class="check-item">
-    <img src="assets/img/check.png" alt="Check" class="check-icon">
-    <span>Ergonomic Solution</span>
-  </div>
-  <div class="check-item">
-    <img src="assets/img/check.png" alt="Check" class="check-icon">
-    <span>All in One Recruitment Support</span>
-  </div>
-</div>
+      <!-- Hero Left -->
+      <div class="col-lg-6 text-white" data-aos="fade-right">
+        <h1 class="mb-4 hero-title" style="font-weight:700; color:white;">
+          <span id="typing-hero"></span>
+        </h1>
 
-<!-- Desktop -->
-<p class="mb-4 d-none d-md-block">
-  Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br>
-  rekrutmen yang lengkap dan sesuai kebutuhan.
-</p>
+        <!-- ✅ Tambahan ceklis -->
+        <div class="hero-checklist">
+          <div class="check-item">
+            <img src="assets/img/check.png" alt="Check" class="check-icon">
+            <span>Hiring Entry & Mid Levels</span>
+          </div>
+          <div class="check-item">
+            <img src="assets/img/check.png" alt="Check" class="check-icon">
+            <span>Ergonomic Solution</span>
+          </div>
+          <div class="check-item">
+            <img src="assets/img/check.png" alt="Check" class="check-icon">
+            <span>All in One Recruitment Support</span>
+          </div>
+        </div>
 
-<!-- Mobile -->
-<p class="mb-4 d-block d-md-none">
-  Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen yang lengkap dan sesuai kebutuhan.
-</p>
+        <!-- Desktop -->
+        <p class="mb-4 d-none d-md-block">
+          Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br>
+          rekrutmen yang lengkap dan sesuai kebutuhan.
+        </p>
 
-<a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
-  Baca Lebih Lanjut
-  <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
-</a>
-</div>
+        <!-- Mobile -->
+        <p class="mb-4 d-block d-md-none">
+          Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen yang lengkap dan sesuai kebutuhan.
+        </p>
+
+        <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
+          Baca Lebih Lanjut
+          <img src="assets/img/panahputih.png" alt="Panah" class="icon-panah">
+        </a>
+      </div>
+
+      <!-- Hero Right -->
       <div class="col-lg-6 text-center" data-aos="fade-left">
         <img src="assets/img/orgbener.png" class="img-fluid" style="max-height: 500px;" alt="Rekruter Image">
       </div>
     </div>
   </div>
+</section>
+
+<!-- Typing Effect -->
 <script>
-const lines = ["Membantu Anda", "Merekrut Tim Masa Depan"];
-const el = document.getElementById("typing-hero");
-let lineIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+  const lines = ["Membantu Anda", "Merekrut Tim Masa Depan"];
+  const el = document.getElementById("typing-hero");
+  let lineIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-function typeEffect() {
-  let currentLine = lines[lineIndex];
+  function typeEffect() {
+    let currentLine = lines[lineIndex];
 
-  if (!isDeleting) {
-    // Tampilkan baris yang sudah selesai + baris yang sedang diketik
-    el.innerHTML = lines.slice(0, lineIndex).join("<br>") + "<br>" + currentLine.substring(0, charIndex + 1);
-    charIndex++;
+    if (!isDeleting) {
+      // Tampilkan baris yang sudah selesai + baris yang sedang diketik
+      el.innerHTML = lines.slice(0, lineIndex).join("<br>") + "<br>" + currentLine.substring(0, charIndex + 1);
+      charIndex++;
 
-    // Kalau sudah selesai 1 baris, kasih jeda sebelum lanjut baris berikutnya
-    if (charIndex === currentLine.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, 700); // jeda setelah selesai 1 baris
-      return;
+      // Kalau sudah selesai 1 baris, kasih jeda sebelum lanjut baris berikutnya
+      if (charIndex === currentLine.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 700); // jeda setelah selesai 1 baris
+        return;
+      }
+    } else {
+      // Lanjut ke baris berikutnya
+      if (lineIndex < lines.length - 1) {
+        isDeleting = false;
+        lineIndex++;
+        charIndex = 0;
+      }
     }
-  } else {
-    // Lanjut ke baris berikutnya
-    if (lineIndex < lines.length - 1) {
-      isDeleting = false;
-      lineIndex++;
-      charIndex = 0;
-    }
+    setTimeout(typeEffect, 50); // kecepatan ketik per huruf
   }
-  setTimeout(typeEffect, 50); // kecepatan ketik per huruf
-}
 
-window.addEventListener("DOMContentLoaded", typeEffect);
+  window.addEventListener("DOMContentLoaded", typeEffect);
 </script>
+
 <style>
-/* ==================== HERO CHECKLIST ==================== */
-.hero-checklist {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.check-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.check-icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
-
-/* ==================== TOMBOL PANAH ==================== */
-.tombol-panah {
-  display: inline-flex;      
-  align-items: center;       
-  justify-content: center;   
-  gap: 8px;                  
-  padding: 10px 22px;        
-  background-color: #7ed957;
-  border-radius: 50px;       
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  line-height: 1;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.icon-panah {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  object-fit: contain;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
-
-/* Efek hover panah */
-.tombol-panah:hover .icon-panah {
-  transform: translateX(4px);
-}
-
-/* ==================== TOMBOL PULSE ==================== */
-a.pulse-button {
-  background-color: #7ed957 !important;
-  border-color: #7ed957 !important;
-  color: white !important;
-  display: inline-block;
-  /* animasi pulse dihapus */
-}
-
-a.pulse-button:hover {
-  background-color: #6cc44a !important;
-  border-color: #6cc44a !important;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.07); }
-  100% { transform: scale(1); }
-}
-
-/* ==================== HERO IMAGE ==================== */
-.hero img {
-  clip-path: ellipse(60% 90% at 50% 50%);
-}
-
-/* ==================== BACKGROUND HERO ==================== */
-.hero {
-  background:
-    linear-gradient(to right, #5DE0E6, #004AAD),
-    url('assets/img/ornament1.png') no-repeat bottom center;
-  background-size: cover;
-  padding: 100px 0 0 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('assets/img/ornament1.png') no-repeat bottom center;
-  background-size: cover;
-  opacity: 0.3;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* ========================================================= */
-/* ==================== RESPONSIF HERO ==================== */
-/* ========================================================= */
-
-@media (max-width: 768px) {
+  /* ==================== HERO CHECKLIST ==================== */
   .hero-checklist {
-    flex-direction: column;   /* item ke bawah */
-    align-items: center;      /* blok tetap di tengah */
-    gap: 10px;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
   }
 
   .check-item {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 250px;             /* kasih lebar seragam supaya rata */
-    gap: 8px;
-    text-align: left;
-  }
-    .check-item span {
-    display: inline-block;
-    padding-left: 4px;        /* jarak tambahan biar teks mulai lurus */
-    flex: 1;                  /* biar teks isi sisa ruang */
-  }
-   .check-icon {
-    transform: translateY(-10px); /* Naikin 2px */
-  }
-  .hero-title {
-    font-size: 1.8rem !important;
-    text-align: center;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
   }
 
-  .hero p {
-    text-align: center;
+  .check-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
   }
 
-  .hero .col-lg-6 {
-    text-align: center;
-  }
-
-  .hero .btn {
-    display: inline-block;
-    margin: 0 auto;
-    width: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .hero img {
-    max-height: 300px !important;
-    margin-top: 20px;
-  }
-
+  /* ==================== TOMBOL PANAH ==================== */
   .tombol-panah {
-    padding: 12px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
+    padding: 10px 22px;
+    background-color: #7ed957;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
     font-size: 16px;
+    text-decoration: none;
     line-height: 1;
+    transition: all 0.3s ease;
+    white-space: nowrap;
   }
 
   .icon-panah {
     width: 12px;
     height: 12px;
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  /* Efek hover panah */
+  .tombol-panah:hover .icon-panah {
+    transform: translateX(4px);
+  }
+
+  /* ==================== TOMBOL PULSE ==================== */
+  a.pulse-button {
+    background-color: #7ed957 !important;
+    border-color: #7ed957 !important;
+    color: white !important;
+    display: inline-block;
+    /* animasi pulse dihapus */
+  }
+
+  a.pulse-button:hover {
+    background-color: #6cc44a !important;
+    border-color: #6cc44a !important;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+  }
+
+  /* ==================== HERO IMAGE ==================== */
+  .hero img {
+    clip-path: ellipse(60% 90% at 50% 50%);
+  }
+
+  /* ==================== BACKGROUND HERO ==================== */
+  .hero {
+    background:
+      linear-gradient(to right, #5DE0E6, #004AAD),
+      url('assets/img/ornament1.png') no-repeat bottom center;
+    background-size: cover;
+    padding: 100px 0 0 0;
+    overflow: hidden;
     position: relative;
-    top: -11px; /* kalau ini terasa terlalu geser, bisa dikurangi */
-  }
-}
-
-
-@media (max-width: 576px) {
-  .pulse-button {
-    width: auto !important;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
-  .hero .btn {
-    display: inline-block !important;
-    width: auto !important;
-    margin: 0 auto !important;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/img/ornament1.png') no-repeat bottom center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
   }
-}
+
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ========================================================= */
+  /* ==================== RESPONSIF HERO ==================== */
+  /* ========================================================= */
+
+  @media (max-width: 768px) {
+    .hero-checklist {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 250px;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .check-item span {
+      display: inline-block;
+      padding-left: 4px;
+      flex: 1;
+    }
+
+    .check-icon {
+      transform: translateY(-10px);
+    }
+
+    .hero-title {
+      font-size: 1.8rem !important;
+      text-align: center;
+    }
+
+    .hero p {
+      text-align: center;
+    }
+
+    .hero .col-lg-6 {
+      text-align: center;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      margin: 0 auto;
+      width: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .hero img {
+      max-height: 300px !important;
+      margin-top: 20px;
+    }
+
+    .tombol-panah {
+      padding: 12px 12px;
+      gap: 8px;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .icon-panah {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      top: -11px; /* kalau ini terasa terlalu geser, bisa dikurangi */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .pulse-button {
+      width: auto !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .hero .btn {
+      display: inline-block !important;
+      width: auto !important;
+      margin: 0 auto !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
 </style>
 </section>
 <!-- Trusted By Section -->
@@ -1118,10 +1128,10 @@ document.querySelectorAll('.counter').forEach(counter => {
 
         <div class="card">
           <div class="card-header">
-            <img src="assets/img/amanda.jpeg" alt="Ical" class="card-logo">
+            <img src="assets/img/amanda.jpg" alt="Ical" class="card-logo">
             <div class="card-titles">
               <h3>Amanda</h3>
-              <p class="role">Digital Growth Intern</p>
+              <p class="role">Digital Growth</p>
             </div>
           </div>
           <p class="card-description">Beneran terbantu dari awal apply sampai onboarding waktu intern di Sosialoka dan Prosesnya juga cepet banget.</p>
