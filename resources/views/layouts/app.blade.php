@@ -3,7 +3,7 @@
 <head>
   <!-- Open Graph Tags -->
 <meta property="og:title" content="Klik Rekrut">
-<meta property="og:description" content="Platform pencarian kerja dan komunitas talenta">
+<meta property="og:description" content="Platform assisten rekrutmen">
 <meta property="og:image" content="https://klikrekrut.com/assets/img/square.png">
 <meta property="og:url" content="https://klikrekrut.com">
 <meta property="og:type" content="website">
@@ -11,15 +11,15 @@
 <!-- Untuk Twitter (opsional) -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Klik Rekrut">
-<meta name="twitter:description" content="Platform pencarian kerja dan komunitas talenta">
-<meta property="twiiter:image" content="https://klikrekrut.com/assets/img/square.png">
+<meta name="twitter:description" content="Platform assisten rekrutmen">
+<meta property="twitter:image" content="https://klikrekrut.com/assets/img/square.png">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Title & Meta -->
   <title>@yield('title', 'Klik Rekrut')</title>
-  <meta name="description" content="@yield('description', 'Platform pencarian kerja dan komunitas talenta')">
+  <meta name="description" content="@yield('description', 'Platform assisten rekrutmen')">
   <meta name="keywords" content="@yield('keywords', 'job, career, klik rekrut')">
 
   <!-- Favicons -->

@@ -1099,7 +1099,6 @@ document.querySelectorAll('.counter').forEach(counter => {
 <!-- Talents Content -->
 <div class="tab-content" id="talents">
   <div class="carousel-container" data-carousel="talents">
-    <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
 
     <div class="carousel-track">
       <!-- Slide 1 -->
@@ -1112,7 +1111,7 @@ document.querySelectorAll('.counter').forEach(counter => {
               <p class="role">Jr. Finance & Accounting</p>
             </div>
           </div>
-          <p class="card-description gita-desc">KlikRekrut jadi pintu pertama perjalanan karierku. Dari intern 6 bulan di konsultan, sekarang sudah 2 tahun aku berkembang sebagai karyawan tetap. Smooth process, impactful result! Prosesnya gampang banget dan beneran ngebuka jalan karierku!</p>
+          <p class="card-description gita-desc">KlikRekrut jadi pintu pertama perjalanan karierku. Dari intern 6 bulan di konsultan, sekarang sudah 2 tahun aku berkembang sebagai karyawan tetap. Smooth process, impactful result! Prosesnya gampang banget dan beneran ngebuka jalan karierku!</p>
         </div>
 
         <div class="card">
@@ -1123,7 +1122,7 @@ document.querySelectorAll('.counter').forEach(counter => {
               <p class="role">E commerce specialist</p>
             </div>
           </div>
-          <p class="card-description fadhia-desc">Puas banget dari layanannya. Rekruternya komunikatif, prosesnya diupdate secara berkala, berjalan cepat dan profesional. Sangat terbantu dari membuat CV yang proper, dan dibantu mengenal lebih dalam mengenai jobdesk pekerjaan dan budaya perusahaan tempat saya melamar. Mulai dari awal melamar sampai penawaran kerja tetap diarahkan dengan baik</p>
+          <p class="card-description fadhia-desc">Puas banget dari layanannya. Rekruternya komunikatif, prosesnya diupdate secara berkala, berjalan cepat dan profesional. Sangat terbantu dari membuat CV yang proper, dan dibantu mengenal lebih dalam mengenai jobdesk pekerjaan dan budaya perusahaan tempat saya melamar. Mulai dari awal melamar sampai penawaran kerja tetap diarahkan dengan baik</p>
         </div>
 
         <div class="card">
@@ -1137,52 +1136,16 @@ document.querySelectorAll('.counter').forEach(counter => {
           <p class="card-description">Beneran terbantu dari awal apply sampai onboarding waktu intern di Sosialoka dan Prosesnya juga cepet banget.</p>
         </div>
       </div>
-
-      <!-- Slide 2 (contoh isi tambahan) -->
-      <div class="carousel-slide">
-        <div class="card">
-          <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Talent 4" class="card-logo">
-            <div class="card-titles">
-              <h3>Talent 4</h3>
-              <p class="role">Role 4</p>
-            </div>
-          </div>
-          <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Talent 5" class="card-logo">
-            <div class="card-titles">
-              <h3>Talent 5</h3>
-              <p class="role">Role 5</p>
-            </div>
-          </div>
-          <p class="card-description">Deskripsi singkat talent 5.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <img src="assets/img/cat1.png" alt="Talent 6" class="card-logo">
-            <div class="card-titles">
-              <h3>Talent 6</h3>
-              <p class="role">Role 6</p>
-            </div>
-          </div>
-          <p class="card-description">Deskripsi singkat talent 6.</p>
-        </div>
-      </div>
     </div>
 
-    <button class="carousel-button next" aria-label="Next">&#10095;</button>
   </div>
 
+  <!-- Karena hanya ada 1 slide, dot cukup 1 -->
   <div class="carousel-dots">
     <span class="dot active" data-slide="0"></span>
-    <span class="dot" data-slide="1"></span>
   </div>
 </div>
+
 </div>
 <style>
 .client-section {
