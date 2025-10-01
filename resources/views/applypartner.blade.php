@@ -190,39 +190,23 @@ Let's Become Our Partner!
     background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 50px; /* sesuaikan tinggi header */
-        position: relative;
+    padding-top: 150px; /* kasih jarak pasti dari atas */
+    position: relative;
     overflow: hidden;
     }
-    .hero-partner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url("assets/img/partner.jpg") center center no-repeat;
-    background-size: contain;
-    transform: scaleX(1.05); /* geser ukuran horizontal sedikit */
-    z-index: -1;
-}
-/* Hero Content */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin-top: -60px; /* Geser sedikit ke bawah supaya tidak menempel header */
-}
-
 .hero-title {
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.4;
   color: #2e6bbc;  
+  margin-top: 40px; /* ✨ Tambahin jarak dari atas */
   text-shadow: 
     -1px -1px 0 #fff,  
      1px -1px 0 #fff,
@@ -245,8 +229,11 @@ Let's Become Our Partner!
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-top: 100px;
-  font-family: 'Poppins', sans-serif;
+  max-width: 1100px;   /* ✨ kasih batas */
+  margin-left: auto;
+  margin-right: auto;  /* biar center */
 }
+
 
 /* Partner Card */
 .partner-card {
@@ -369,9 +356,12 @@ Let's Become Our Partner!
     margin-top: 40px; /* ✨ Tambahin jarak dari atas */
   }
 
-  .hero-content {
-    margin-top: 20px; /* ✨ Supaya konten turun sedikit */
-  }
+.hero-content {
+  max-width: 1200px;   /* batas lebar */
+  margin: 0 auto;      /* biar center */
+  padding: 0 20px;     /* biar ada ruang kanan kiri */
+}
+
 }
 </style>
 <!-- footer -->
