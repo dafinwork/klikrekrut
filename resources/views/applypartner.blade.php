@@ -200,7 +200,7 @@ Let's Become Our Partner!
     justify-content: center;
     text-align: center;
     margin-top: 50px; /* sesuaikan tinggi header */
-    padding-top: 150px; /* kasih jarak pasti dari atas */
+    padding-top: 100px; /* kasih jarak pasti dari atas */
     position: relative;
     overflow: hidden;
     }

@@ -12,7 +12,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Klik Rekrut">
 <meta name="twitter:description" content="Platform assisten rekrutmen">
-<meta property="twitter:image" content="https://klikrekrut.com/assets/img/square.png">
+<meta name="twitter:image" content="https://klikrekrut.com/assets/img/square.png">
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +33,10 @@
   <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+  <link rel="icon" href="{{ asset('assets/img/square.png') }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ asset('assets/img/square.png') }}" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png') }}">
+
 
   <!-- Bootstrap Icons (CDN, 1x aja cukup) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
