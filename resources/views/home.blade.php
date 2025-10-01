@@ -616,8 +616,17 @@
 <!-- ==================== 3 Langkah Section ==================== -->
 <section class="steps-section">
   <div class="container">
-    <h5 class="steps-subtitle">BAGAIMANA PESAN LAYANAN ASISTEN REKRUTMEN DI KLIK REKRUT?</h5>
-    <h2 class="steps-title">Cukup Dengan 3 Langkah Mudah</h2>
+    <h5 class="steps-subtitle">PAKAI LAYANAN ASISTEN REKRUTMEN KAMI</h5>
+    <!-- Desktop -->
+<h2 class="steps-title d-none d-md-block">
+  Cukup Dengan 3 Langkah Mudah
+</h2>
+
+<!-- Mobile -->
+<h2 class="steps-title d-block d-md-none">
+  Cukup Dengan <br> 3 Langkah Mudah
+</h2>
+
 
     <div class="steps-wrapper">
       <!-- Step 1 -->
@@ -643,7 +652,7 @@
         <div class="step-number">3</div>
         <h3 class="step-title">Rekrut<br>Kandidat</h3>
         <p class="step-desc">
-          Rekrut kandidat yg menurut anda sesuai
+          Rekrut kandidat yg menurut anda sesuai.
         </p>
       </div>
     </div>
