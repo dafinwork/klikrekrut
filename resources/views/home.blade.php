@@ -58,9 +58,11 @@
     <li><a href="elearning">E-learning</a></li>
     <li><a href="applypartner">Apply as partner</a></li>
     <li>
-<a href="community"
+<a href="https://chat.whatsapp.com/I3mvornLsmv96QiwlcLctQ?mode=ems_copy_t" 
+   target="_blank" 
+   rel="noopener noreferrer"
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
-    Join to Talent Community ➝
+    Join to Talent Community
 </a>
     </li>
   </ul>
@@ -1608,7 +1610,14 @@ document.querySelectorAll('.counter').forEach(counter => {
         <div class="footer-column">
           <h6>LAINNYA</h6>
           <ul>
-            <li><a href="community">Komunitas</a></li>
+            <li>
+  <a href="https://chat.whatsapp.com/I3mvornLsmv96QiwlcLctQ?mode=ems_copy_t" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    Komunitas
+  </a>
+</li>
+
             <li><a href="applypartner">Kemitraan</a></li>
           </ul>
         </div>
