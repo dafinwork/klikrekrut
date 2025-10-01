@@ -252,12 +252,12 @@
         <!-- Desktop -->
         <p class="mb-4 d-none d-md-block">
           Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br>
-          asisten yang membantu tugas rekrutmen Anda.
+          asisten yang membantu kegiatan rekrutmen Anda.
         </p>
 
         <!-- Mobile -->
         <p class="mb-4 d-block d-md-none">
-          Temukan orang yang tepat untuk tim Anda - menawarkan layanan asisten yang membantu tugas rekrutmen Anda.
+          Temukan orang yang tepat untuk tim Anda - menawarkan layanan asisten yang membantu kegiatan rekrutmen Anda.
         </p>
 
         <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
@@ -621,7 +621,7 @@
 
     <div class="steps-wrapper">
       <!-- Step 1 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">1</div>
         <h3 class="step-title">Minta<br>Kandidat</h3>
         <p class="step-desc">
@@ -630,7 +630,7 @@
       </div>
 
       <!-- Step 2 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">2</div>
         <h3 class="step-title">Pilih<br>Kandidat</h3>
         <p class="step-desc">
@@ -639,11 +639,11 @@
       </div>
 
       <!-- Step 3 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">3</div>
         <h3 class="step-title">Rekrut<br>Kandidat</h3>
         <p class="step-desc">
-          Rekrut kandidat yang paling cocok dengan Anda. Rekrutmen selesai tanpa Anda harus repot.
+          Rekrut kandidat yg menurut anda sesuai
         </p>
       </div>
     </div>
@@ -660,13 +660,13 @@
 
 .steps-subtitle {
   font-size: 14px;
-  color: #3c678b;
+  color: #2e6bbc;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
 .steps-title {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 800;
   color: #3c678b;
   margin-bottom: 40px;
@@ -682,9 +682,9 @@
 .step-card {
   background: #E9F5FF;
   border-radius: 12px;
-  padding: 50px 20px 30px; /* kasih padding top lebih besar biar ada ruang */
+  padding: 50px 20px 30px;
   text-align: center;
-  position: relative; /* wajib supaya step-number bisa absolute */
+  position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
@@ -699,14 +699,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: absolute;
-  top: -25px;   /* setengah tinggi bulatan keluar */
+  top: -25px;
   left: 50%;
-  transform: translateX(-50%); /* biar selalu di tengah */
+  transform: translateX(-50%);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
 
 .step-title {
   font-size: 30px;
@@ -722,8 +720,28 @@
   text-align: center;
 }
 
+/* ===== Animasi Fade Up ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* ===== Mobile (tetap seperti semula) ===== */
+.fade-up {
+  opacity: 0; /* default hidden */
+  transform: translateY(40px);
+}
+
+.fade-up.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
   .step-card {
     width: 100%;
@@ -731,18 +749,43 @@
   }
 }
 
-/* ===== Desktop: buat kartu lebih ramping dan panjang ke bawah ===== */
+/* ===== Desktop ===== */
 @media (min-width: 769px) {
   .step-card {
-    width: 220px;     /* lebih ramping */
-    min-height: 350px; /* lebih panjang kebawah */
+    width: 220px;
+    min-height: 350px;
   }
 }
-  .steps-wrapper {
-    gap: 50px; /* kasih jarak lebih lebar antar kartu */
-  }
-
+.steps-wrapper {
+  gap: 50px;
+}
 </style>
+
+<script>
+  // Intersection Observer untuk animasi saat discroll
+  document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll(".fade-up");
+    const options = {
+      threshold: 0.2, // 20% masuk viewport
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // kasih delay biar muncul bertahap
+          entry.target.style.animationDelay = `${index * 0.2}s`;
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    faders.forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>
+
 
 
 <!-- Import Font Poppins -->
