@@ -712,7 +712,7 @@
   font-size: 30px;
   font-weight: 800;
   color: #414c58;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .step-desc {
@@ -735,7 +735,7 @@
 @media (min-width: 769px) {
   .step-card {
     width: 220px;     /* lebih ramping */
-    min-height: 260px; /* lebih panjang kebawah */
+    min-height: 350px; /* lebih panjang kebawah */
   }
 }
   .steps-wrapper {
