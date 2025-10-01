@@ -252,12 +252,12 @@
         <!-- Desktop -->
         <p class="mb-4 d-none d-md-block">
           Temukan orang yang tepat untuk tim Anda - menawarkan layanan <br>
-          rekrutmen yang lengkap dan sesuai kebutuhan.
+          asisten yang membantu tugas rekrutmen Anda.
         </p>
 
         <!-- Mobile -->
         <p class="mb-4 d-block d-md-none">
-          Temukan orang yang tepat untuk tim Anda - menawarkan layanan rekrutmen yang lengkap dan sesuai kebutuhan.
+          Temukan orang yang tepat untuk tim Anda - menawarkan layanan asisten yang membantu tugas rekrutmen Anda.
         </p>
 
         <a class="btn btn-success rounded-pill px-4 py-2 pulse-button tombol-panah">
@@ -613,304 +613,137 @@
   }
 }
 </style>
-<!-- layanan utama -->
-<section class="services-section">
-    <div class="container">
-        <p class="section-subtitle">LAYANAN ASISTEN REKRUTMEN KAMI</p>
-        <h2 class="section-title">
-            Bantu Rekrut Kandidat, Bikin Bisnis Melesat
-        </h2>
+<!-- ==================== 3 Langkah Section ==================== -->
+<section class="steps-section">
+  <div class="container">
+    <h5 class="steps-subtitle">BAGAIMANA PESAN LAYANAN ASISTEN REKRUTMEN DI KLIK REKRUT?</h5>
+    <h2 class="steps-title">Cukup Dengan 3 Langkah Mudah</h2>
 
-        <!-- Baris 1 -->
-        <div class="service-row first-row">
-            <div class="service-img">
-                <img src="assets/img/comu.png" alt="Talent Sourcing">
-            </div>
-            <div class="service-content">
-                <h3>Job Posting</h3>
-                <p>Iklankan loker Anda dengan mudah dan dapatkan calon kandidat potensial tanpa repot sourcing. </p>
-                <ul>
-                  <li>
-                    <span class="title">Media</span>
-                    <span class="desc">Dapatkan dukungan sourcing melalui jaringan media kami dari berbagai kota.</span>
-                  </li>
-                  <li>
-                    <span class="title">Community</span>
-                    <span class="desc">Dapatkan dukungan sourcing lewat komunitas talent kami dari berbagai bidang.</span>
-                  </li>
-                </ul>
-                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-                   class="btn-service" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Pesan Layanan →
-                </a>
-            </div>
-        </div>
+    <div class="steps-wrapper">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Minta<br>Kandidat</h3>
+        <p class="step-desc">
+          Kami bantu kelola seluruh proses rekrutmen dan berikan kandidat yang sesuai permintaan Anda.
+        </p>
+      </div>
 
-        <!-- Baris 2 -->
-        <div class="service-row reverse baris-dua">
-            <div class="service-content">
-                <h3>Interview Support</h3>
-                <p>Tak perlu repot mengatur proses HR Interview, dari persiapan, interviewer hingga laporan akhir, semua dalam satu layanan. </p>
-                <ul>
-                    <li>Interview Scheduling Assistant</li>
-                    <li>Interviewer Support</li>
-                    <li>Selection Candidate Report</li>
-                </ul>
-                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-                   class="btn-service" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Pesan Layanan →
-                </a>
-            </div>
-            <div class="service-img">
-                <img src="assets/img/asistant.png" alt="Recruitment Assistant">
-            </div>
-        </div>
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Pilih<br>Kandidat</h3>
+        <p class="step-desc">
+          Sesuai waktu yang disepakati, kami akan mengirimkan daftar rekomendasi kandidat untuk Anda pilih.
+        </p>
+      </div>
 
-        <!-- Baris 3 -->
-        <div class="service-row reverse">
-            <div class="service-content">
-                <h3>Full Services</h3>
-                <p>Kami bantu kelola seluruh proses rekrutmen, dan berikan kandidat yang sesuai permintaan Anda.</p>
-                <ul>
-      <li>Talent Personalization</li>
-      <li>End-to-end Recruitment</li>
-      <li>Approach Passive Candidate</li>
-      <li>Selection Candidate Report</li>
-      <li>Rejection Guarantee</li>
-      <li>Talent Replacement</li>
-                </ul>
-                <a href="https://api.whatsapp.com/send?phone=6289678868752" 
-                   class="btn-service" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Pesan Layanan →
-                </a>
-            </div>
-            <div class="service-img">
-                <img src="assets/img/asistant.png" alt="Recruitment Assistant">
-            </div>
-        </div>
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Rekrut<br>Kandidat</h3>
+        <p class="step-desc">
+          Rekrut kandidat yang paling cocok dengan Anda. Rekrutmen selesai tanpa Anda harus repot.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
 <style>
-  .service-row.first-row {
-    margin-bottom: 80px; /* contoh jarak lebih besar */
+/* ===== Steps Section ===== */
+.steps-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    .services-section {
-        padding: 40px 0 20px;
-        width: 100%;
-        max-width: none;
-        margin: 0;
-    }
-
-    .services-section .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .section-subtitle {
-        text-align: center;
-        color: #2e6bbc;
-        font-size: 16px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-
-    .section-title {
-        font-weight: 700;
-        margin-bottom: 10px;
-        font-size: 32px;
-        line-height: 1.3;
-        color: #3c678b;
-        text-align: center;
-    }
-
-    .service-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        gap: 50px;
-        background: none;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-  .baris-dua {
-  margin-bottom: 80px; /* lebih besar daripada default */
-}
-    .service-row.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .service-img {
-        flex: 1;
-        text-align: center;
-    }
-
-    .service-img img {
-        max-width: 450px; /* gambar lebih besar */
-        width: 100%;
-        height: auto;
-    }
-.service-content ul li .desc {
+.steps-subtitle {
   font-size: 14px;
-  color: #555;
-  margin-top: 4px;
-  line-height: 1.4;
+  color: #3c678b;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
-    .service-content {
-        flex: 1;
-        text-align: left;
-    }
 
-    .service-content h3 {
-        font-size: 1.8rem;
-        font-weight: 800;
-        color: #000;
-        margin-bottom: 15px;
-    }
+.steps-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #3c678b;
+  margin-bottom: 40px;
+}
 
-    .service-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        color: #555;
-    }
-
-    .service-content ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 25px 0;
-    }
-
-.service-content ul li {
-  position: relative;
+.steps-wrapper {
   display: flex;
-  flex-direction: column; /* Teks utama & deskripsi jadi vertikal */
-  align-items: flex-start; /* Biar rata kiri */
-  padding-left: 35px;
-  margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #444;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-    /* Ganti icon panah → jadi icon centang */
-.service-content ul li::before {
-  content: "";
+.step-card {
+  background: #E9F5FF;
+  border-radius: 12px;
+  padding: 50px 20px 30px; /* kasih padding top lebih besar biar ada ruang */
+  text-align: center;
+  position: relative; /* wajib supaya step-number bisa absolute */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  background: #5892c3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: absolute;
-  left: 0;
-  top: 1px; /* icon sejajar dengan title */
-  width: 20px;
-  height: 20px;
-  background: url('assets/img/check.png') no-repeat center;
-  background-size: 20px 20px;
-}
-.service-content ul li .title {
-  font-weight: 600;
-  color: #000;
+  top: -25px;   /* setengah tinggi bulatan keluar */
+  left: 50%;
+  transform: translateX(-50%); /* biar selalu di tengah */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-    .btn-service {
-        display: inline-block;
-        background: linear-gradient(135deg, #5DE0E6, #004AAD);
-        color: white;
-        padding: 12px 24px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        border: none;
-    }
 
-    .btn-service:hover {
-        background: linear-gradient(135deg, #4BC9D1, #003388);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
-    }
+.step-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #414c58;
+  margin-bottom: 10px;
+}
 
-@media (max-width: 992px) {
-  .service-row {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
+.step-desc {
+  font-size: 14px;
+  color: #414c58;
+  line-height: 1.6;
+  text-align: center;
+}
 
-  .service-row.reverse {
-    flex-direction: column;
-  }
 
-  .service-content {
-    text-align: center;
-  }
-
-  .service-img {
-    order: -1;
-  }
-
-  /* UL di tengah */
-  .service-content ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* <== ini bikin seluruh li ada di tengah */
-    gap: 12px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .service-content ul li {
-    position: relative;
-    list-style: none;
-    padding-left: 28px;    /* ruang icon */
-    text-align: left;      /* teks dalam blok tetap rata kiri */
-    max-width: 280px;      /* biar ada batas lebar rapi */
-    width: 100%;           /* supaya semua li punya lebar sama */
-  }
-
-  .service-content ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background: url('assets/img/check.png') no-repeat center;
-    background-size: contain;  /* biar pas ukurannya */
-  }
-
-  /* ✅ Jarak ekstra baris 2 di mobile juga */
-  .baris-dua {
-    margin-bottom: 60px; /* Bisa disesuaikan lebih kecil dari desktop */
+/* ===== Mobile (tetap seperti semula) ===== */
+@media (max-width: 768px) {
+  .step-card {
+    width: 100%;
+    max-width: 350px;
   }
 }
+
+/* ===== Desktop: buat kartu lebih ramping dan panjang ke bawah ===== */
+@media (min-width: 769px) {
+  .step-card {
+    width: 220px;     /* lebih ramping */
+    min-height: 260px; /* lebih panjang kebawah */
+  }
+}
+  .steps-wrapper {
+    gap: 50px; /* kasih jarak lebih lebar antar kartu */
+  }
 
 </style>
+
 
 <!-- Import Font Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
