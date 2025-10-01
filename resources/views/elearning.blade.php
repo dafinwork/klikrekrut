@@ -71,7 +71,7 @@
    target="_blank" 
    rel="noopener noreferrer"
    class="btn btn-outline-light wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2">
-    Join to Talent Community
+    Join to Community
 </a>
         </li>
       </ul>

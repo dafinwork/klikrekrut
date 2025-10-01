@@ -72,7 +72,7 @@
    id="joinBtn"
    target="_blank" 
    rel="noopener noreferrer">
-    Join to Talent Community 
+    Join to Community 
 </a>
 
         </li>

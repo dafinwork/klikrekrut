@@ -70,7 +70,7 @@
 <a href="community"
    class="btn btn-outline wa-btn rounded-pill px-3 py-1 d-flex align-items-center gap-2"
    id="joinBtn">
-    Join to Talent Community ➝
+    Join to Community ➝
 </a>
         </li>
       </ul>
