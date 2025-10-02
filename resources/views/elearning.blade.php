@@ -225,7 +225,7 @@
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    margin-top: 80px; /* sesuaikan angkanya */
+    margin-top: 40px; /* sesuaikan angkanya */
 }
 
 .btn-hero .btn-icon {
