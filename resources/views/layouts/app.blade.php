@@ -29,6 +29,22 @@
   <link rel="apple-touch-icon" href="https://klikrekrut.com/assets/img/apple-touch-icon.png" sizes="180x180">
   <link rel="shortcut icon" href="https://klikrekrut.com/assets/img/square.png">
 
+  <!-- Structured Data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Klik Rekrut",
+    "url": "https://klikrekrut.com",
+    "logo": "https://klikrekrut.com/assets/img/square.png",
+    "sameAs": [
+      "https://www.facebook.com/klikrekrut",
+      "https://www.instagram.com/klikrekrut",
+      "https://www.linkedin.com/company/klikrekrut"
+    ]
+  }
+  </script>
+
   <!-- CSS -->
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
